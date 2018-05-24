@@ -16,6 +16,7 @@ public class NavigationController : MonoBehaviour {
 
 	void Start()
 	{
+		print("hello git");
 		levelContainerController = GameObject.FindObjectOfType<LevelContainerController>();
 	}
 
