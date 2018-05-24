@@ -45,7 +45,6 @@ public class BallController : MonoBehaviour {
 	private AudioSource musicSource;
 	private AudioSource audiosource;
 	private GameObject arrow;
-	private LevelManager levelManager;
 	private Vector3 endPoint;
 	private int hitCount =	0;
 
@@ -66,12 +65,12 @@ public class BallController : MonoBehaviour {
 
 	#region Level Controller Functions
 	void TryAgain(){
-		levelManager.LoadAgain();
+		LevelManager.LoadSameLevel();
 	}
 
 
 	void InvokeNextLevel(){
-		levelManager.LoadNextLevel();
+		LevelManager.LoadNextLevel();
 	}
 
 	#endregion
@@ -186,7 +185,6 @@ public class BallController : MonoBehaviour {
 		countDown = hitLimit  ;
 		hitCount = 0;
 		inPlayMode = false;
-		levelManager = GameObject.FindObjectOfType<LevelManager>();
 		m_rb = this.GetComponent <Rigidbody2D>();
 		m_rb.gravityScale = GravityScale;
 		if( ! IsAccelModeOn)
