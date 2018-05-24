@@ -51,21 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\LevelContainerController.cs" />
-     <Compile Include="Assets\LevelNavigationController.cs" />
-     <Compile Include="Assets\My_Assets\Portal\portal_Controller.cs" />
-     <Compile Include="Assets\Scripts\ArrowController.cs" />
-     <Compile Include="Assets\Scripts\BallController.cs" />
-     <Compile Include="Assets\Scripts\BlockController.cs" />
-     <Compile Include="Assets\Scripts\HintController.cs" />
-     <Compile Include="Assets\Scripts\LevelButtonController.cs" />
-     <Compile Include="Assets\Scripts\MuteButtonController.cs" />
+     <Compile Include="Assets\Scripts\ComponentScripts\BallBase.cs" />
+     <Compile Include="Assets\Scripts\ComponentScripts\LevelButtonController.cs" />
+     <Compile Include="Assets\Scripts\ComponentScripts\LevelContainerController.cs" />
+     <Compile Include="Assets\Scripts\ComponentScripts\LevelNavigationController.cs" />
+     <Compile Include="Assets\Scripts\ComponentScripts\TargetBase.cs" />
      <Compile Include="Assets\Scripts\NavigationController.cs" />
-     <Compile Include="Assets\Scripts\OneShot_BallController.cs" />
-     <Compile Include="Assets\Scripts\OneShot_RectangleContoller.cs" />
      <Compile Include="Assets\Scripts\PlayerPrefControl.cs" />
      <Compile Include="Assets\Scripts\SceneControllers\SplashSceneController.cs" />
-     <Compile Include="Assets\Scripts\Target_Behaivor.cs" />
      <Compile Include="Assets\Scripts\Utility\Level.cs" />
      <Compile Include="Assets\Scripts\Utility\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Utility\LevelStatus.cs" />
@@ -127,10 +120,10 @@
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Deniz/Desktop/Workspace/OneShot/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Deniz/Desktop/OneShot/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Deniz/Desktop/Workspace/OneShot/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Deniz/Desktop/OneShot/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -322,10 +315,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-2017.1-Editor">
- <HintPath>C:/Users/Deniz/Desktop/Workspace/OneShot/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Editor.dll</HintPath>
+ <HintPath>C:/Users/Deniz/Desktop/OneShot/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Editor.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-2017.1-Runtime">
- <HintPath>C:/Users/Deniz/Desktop/Workspace/OneShot/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Runtime.dll</HintPath>
+ <HintPath>C:/Users/Deniz/Desktop/OneShot/Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.1-Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/Deniz/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
