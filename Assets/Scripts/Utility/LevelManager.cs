@@ -47,7 +47,19 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	public static void LoadLevelsScene(){
-		SceneManager.LoadScene(1);
+		SceneManager.LoadScene("Levels");
+	}
+
+	public static void LoadInfoScene(){
+		SceneManager.LoadScene("Levels");
+	}
+
+	public static void LoadAboutScene(){
+		SceneManager.LoadScene("Levels");
+	}
+
+	public static void LoadSettingsScene(){
+		SceneManager.LoadScene("Levels");
 	}
 
 	public static void LoadNextLevel(){
