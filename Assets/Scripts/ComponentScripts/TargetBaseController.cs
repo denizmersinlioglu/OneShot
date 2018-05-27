@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OneShot_RectangleContoller : MonoBehaviour {
+public class TargetBaseController : MonoBehaviour {
 
 	private IEnumerator coroutine;
 	private ParticleSystem ps;
