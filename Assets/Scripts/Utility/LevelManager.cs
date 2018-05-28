@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour {
        for (int i = 0 ; i < levelCount; i++)
 		{
 			LevelStatus status = (LevelStatus)PlayerPrefs.GetInt("LevelStatus" + i);
-			LevelType type = (LevelType)PlayerPrefs.GetInt("LevelType" + i);
+			LevelControlType type = (LevelControlType)PlayerPrefs.GetInt("LevelType" + i);
 			var newLevel = new Level(number:i, type: type, status: status);
 
 			levelList.Add(newLevel);
@@ -66,13 +66,7 @@ public class LevelManager : MonoBehaviour {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-	public static void StorePlayerLevelInformation()
-	{
-		foreach(Level level in levelList)
-		{
-			PlayerPrefs.SetInt("LevelStatus" + level.number, level.status.GetHashCode());
-			PlayerPrefs.SetInt("LevelType" + level.number, level.type.GetHashCode());
-		}
+	public static void StorePlayerLevelInformation(){
 	}
 
 	public static void deletePlayerLevelInformation()
