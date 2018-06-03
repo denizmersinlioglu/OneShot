@@ -420,6 +420,58 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 908b4ed15010e184380d3a7bd02eb0d3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &814989251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 814989253}
+  - component: {fileID: 814989252}
+  m_Layer: 0
+  m_Name: LevelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &814989252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 814989251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b649c2859be34874b885ea2770e4acd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level:
+    levelIndex: 0
+    levelName: New level
+    levelHint: Dummy Hint
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    levelStatus: 0
+    levelCompletionStatus: 0
+    isLaunchActive: 0
+    isAccelerometerActive: 0
+    isNavigationButtonsActive: 0
+--- !u!4 &814989253
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 814989251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 221.96774, y: -50.489326, z: 221.07123}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1293875550
 Prefab:
   m_ObjectHideFlags: 0

@@ -7,13 +7,4 @@ public class LevelNavigationController : MonoBehaviour {
 	public void returnActiveLevelPage(){
 		LevelManager.LoadLevel("Levels");
 	}
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

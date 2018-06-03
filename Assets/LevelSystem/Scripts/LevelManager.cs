@@ -17,9 +17,12 @@ public class LevelManager : MonoBehaviour
     private IEnumerator InitializeLevelsScene()
     {
         yield return new WaitForSeconds(splashingTime);
-        SceneManager.LoadScene("MainMenu");
+        LoadMainMenu();
     }
 
+    public static void LoadMainMenu(){
+        SceneManager.LoadScene("MainMenu");
+    }
     public static void LoadSameLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

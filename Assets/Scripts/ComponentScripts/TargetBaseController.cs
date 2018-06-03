@@ -42,13 +42,4 @@ public class TargetBaseController : MonoBehaviour {
         yield return new WaitForSeconds(5);
         Destroy(gameObject);
     }
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

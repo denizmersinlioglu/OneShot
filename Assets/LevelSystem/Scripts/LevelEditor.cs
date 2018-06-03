@@ -102,7 +102,7 @@ public class LevelEditor : EditorWindow
 
             GUILayout.Space(5);
 
-            GUILayout.Label("Level List Navigation", EditorStyles.boldLabel);
+            GUILayout.Label("Navigation", EditorStyles.boldLabel);
             GUILayout.BeginHorizontal();
             if (GUILayout.Button("Prev Level", GUILayout.ExpandWidth(false)))
             {
@@ -125,7 +125,7 @@ public class LevelEditor : EditorWindow
                 Debug.Log("wtf");
             if (LevelList.levelList.Count > 0)
             {
-                EditorGUILayout.LabelField("Level Identification", EditorStyles.boldLabel);
+                EditorGUILayout.LabelField("Identification", EditorStyles.boldLabel);
                 GUILayout.BeginHorizontal();
                 viewIndex = Mathf.Clamp(EditorGUILayout.IntField("Current Level Index", viewIndex, GUILayout.ExpandWidth(false)), 1, LevelList.levelList.Count);
                 //Mathf.Clamp (viewIndex, 1, LevelList.levelList.Count);
@@ -137,7 +137,7 @@ public class LevelEditor : EditorWindow
 
                 GUILayout.Space(15);
 
-                EditorGUILayout.LabelField("Level Info", EditorStyles.boldLabel);
+                EditorGUILayout.LabelField("Progression Report", EditorStyles.boldLabel);
 
                 LevelList.levelList[viewIndex - 1].levelStatus = (LevelStatus)EditorGUILayout.EnumPopup("Level Status:", LevelList.levelList[viewIndex - 1].levelStatus, options);
                 LevelList.levelList[viewIndex - 1].levelCompletionStatus = (LevelCompletionStatus)EditorGUILayout.EnumPopup("Level Completion Status:", LevelList.levelList[viewIndex - 1].levelCompletionStatus, options);
@@ -154,6 +154,12 @@ public class LevelEditor : EditorWindow
                 LevelList.levelList[viewIndex - 1].threeStarHitLimit = EditorGUILayout.IntField("Three Stars Hit Limit #", LevelList.levelList[viewIndex - 1].threeStarHitLimit, GUILayout.ExpandWidth(false));
                 LevelList.levelList[viewIndex - 1].twoStarHitLimit = EditorGUILayout.IntField("Two Stars Hit Limit #", LevelList.levelList[viewIndex - 1].twoStarHitLimit, GUILayout.ExpandWidth(false));
                 LevelList.levelList[viewIndex - 1].maximumHitCount = EditorGUILayout.IntField("Maximum Hit #", LevelList.levelList[viewIndex - 1].maximumHitCount, GUILayout.ExpandWidth(false));
+
+                GUILayout.Space(15);
+
+                EditorGUILayout.LabelField("Physical Conditions", EditorStyles.boldLabel);
+                LevelList.levelList[viewIndex - 1].isGravityEnabled = (bool)EditorGUILayout.Toggle("Gravitiy", LevelList.levelList[viewIndex - 1].isGravityEnabled, GUILayout.ExpandWidth(false));
+                LevelList.levelList[viewIndex - 1].gravityConstant = EditorGUILayout.FloatField("Gravitational Constant", LevelList.levelList[viewIndex - 1].gravityConstant, GUILayout.ExpandWidth(false));
             }
             else
             {
