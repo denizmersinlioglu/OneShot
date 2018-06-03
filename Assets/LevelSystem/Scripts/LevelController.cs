@@ -20,7 +20,7 @@ public class LevelController : MonoBehaviour {
 	/// Awake is called when the script instance is being loaded.
 	/// </summary>
 	void Awake()
-	{
-		
+	{	
+		int lastActiveLevelIndex = PlayerPreferencesManager.sharedInstance.GetLastActiveLevel();
 	}
 }

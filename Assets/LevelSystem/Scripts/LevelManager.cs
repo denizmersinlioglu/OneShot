@@ -9,12 +9,14 @@ public class LevelManager : MonoBehaviour
     public LevelList levelListDatabase;
 
     [HideInInspector]
-    public int currentLevelIndex = 0;
-    [HideInInspector]
     public int totalLevelIndex = 0;
     [HideInInspector]
     public int maxLevelIndex = 0;
-
+    [HideInInspector]
+    private Level currentLevel;
+    [HideInInspector]
+    public int currentLevelIndex = 0;
+   
     private static LevelManager instance = null;
     // Game instance Singleton
     public static LevelManager sharedInstance
@@ -41,6 +43,10 @@ public class LevelManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public Level GetActiveLevel(){
+        return levelListDatabase.levelList[currentLevelIndex];
+    }
+
     void Start()
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
@@ -55,14 +61,14 @@ public class LevelManager : MonoBehaviour
         LoadMainMenu();
     }
 
-    public void LoadLevel(int index)
-    {
-        SceneManager.LoadScene("LEvel" + index);
-    }
-
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadGameScene()
+    {
+        SceneManager.LoadScene("Game");
     }
 
     public void LoadLevelsScene()
@@ -70,28 +76,18 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("Levels");
     }
 
-    public void LoadInfoScene()
+    public void LoadLeaderBoardScene()
     {
-        SceneManager.LoadScene("Levels");
-    }
-
-    public void LoadAboutScene()
-    {
-        SceneManager.LoadScene("Levels");
+        SceneManager.LoadScene("LeaderBoard");
     }
 
     public void LoadSettingsScene()
     {
-        SceneManager.LoadScene("Levels");
+        SceneManager.LoadScene("Settings");
     }
 
-    public void StorePlayerLevelInformation()
+    public void LoadInfoScene()
     {
+        SceneManager.LoadScene("Info");
     }
-
-    public void deletePlayerLevelInformation()
-    {
-        PlayerPrefs.DeleteAll();
-    }
-
 }

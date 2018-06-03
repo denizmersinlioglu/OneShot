@@ -12,269 +12,45 @@ MonoBehaviour:
   m_Name: LevelDatabase
   m_EditorClassIdentifier: 
   levelList:
-  - levelIndex: 1
-    levelName: Level1
-    levelHint: Dummy Hint
-    levelStatus: 1
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 2
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 3
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 4
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 5
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 6
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 7
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 8
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
   - levelIndex: 9
-    levelName: New Level
-    levelHint: Dummy Hint
+    levelName: Level 1
+    levelHint: My Hint is Clear
     levelStatus: 1
     levelCompletionStatus: 0
-    isLaunchActive: 0
+    isLaunchActive: 1
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 10
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 11
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 12
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 13
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 14
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 15
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
-  - levelIndex: 16
-    levelName: New Level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
+    maximumHitCount: 10
+    threeStarHitLimit: 7
+    twoStarHitLimit: 8
     isGravityEnabled: 0
     gravityConstant: 1
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 17
-    levelName: New Level
-    levelHint: Dummy Hint
+  - levelIndex: 10
+    levelName: Level 2
+    levelHint: My Hint is Duumy
     levelStatus: 0
     levelCompletionStatus: 0
-    isLaunchActive: 0
+    isLaunchActive: 1
     isAccelerometerActive: 0
+    isNavigationButtonsActive: 0
+    maximumHitCount: 8
+    threeStarHitLimit: 4
+    twoStarHitLimit: 6
+    isGravityEnabled: 1
+    gravityConstant: 0.5
+    isBallPhysicsEnabled: 1
+    ballFrictionRate: 0
+    ballBounceRate: 1
+  - levelIndex: 3
+    levelName: Level3
+    levelHint: It is a Hard Level
+    levelStatus: 0
+    levelCompletionStatus: 0
+    isLaunchActive: 1
+    isAccelerometerActive: 1
     isNavigationButtonsActive: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
