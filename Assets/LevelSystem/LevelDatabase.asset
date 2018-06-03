@@ -15,187 +15,272 @@ MonoBehaviour:
   - levelIndex: 1
     levelName: Level1
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 1
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 2
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 3
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 4
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 5
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 6
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 7
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 8
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
-  - levelIndex: 9
-    levelName: New Level
-    levelHint: Dummy Hint
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
+  - levelIndex: 9
+    levelName: New Level
+    levelHint: Dummy Hint
     levelStatus: 1
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 10
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 11
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 12
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 13
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 14
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 15
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   - levelIndex: 16
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 1
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 1
   - levelIndex: 17
     levelName: New Level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 1
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 1

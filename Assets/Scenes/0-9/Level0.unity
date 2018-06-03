@@ -233,6 +233,16 @@ Prefab:
       propertyPath: m_Offset.y
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 50219187183600032, guid: d43ab78b329f42547b3ee0bfa12062d9,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50219187183600032, guid: d43ab78b329f42547b3ee0bfa12062d9,
+        type: 2}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 78c04174d8f7f475f8c42c76ea1c9407, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d43ab78b329f42547b3ee0bfa12062d9, type: 2}
   m_IsPrefabParent: 0
@@ -451,14 +461,19 @@ MonoBehaviour:
     levelIndex: 0
     levelName: New level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
 --- !u!4 &814989253
 Transform:
   m_ObjectHideFlags: 0

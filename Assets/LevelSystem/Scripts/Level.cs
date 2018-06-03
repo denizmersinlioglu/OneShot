@@ -26,6 +26,7 @@ public class Level
     // Physical Conditions
     public bool isGravityEnabled = false;                                               //  Switch for gravity in the level environment.
     public float gravityConstant = 0.0f;                                                //  Determine gravitational constant of the level environment.
-
-
+    public bool isBallPhysicsEnabled = false;                                           //  Switch for ball physics modifications. If the switch is off, ball will have default physics features.
+    public float ballFrictionRate = 0.0f;                                               //  Determine friction for rigidbody of the ball. Its default value is 0.                                                   
+    public float ballBounceRate = 0.0f;                                                 //  Determine bounce rate for rigidbody of the ball. Its default value is 1.  
 }

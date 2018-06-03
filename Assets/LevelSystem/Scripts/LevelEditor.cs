@@ -47,7 +47,7 @@ public class LevelEditor : EditorWindow
 
 
         if (LevelList == null)
-        {   
+        {
             GUILayout.Label("Welcome to the Level Editor", EditorStyles.boldLabel);
 
             GUILayout.Space(5);
@@ -159,7 +159,41 @@ public class LevelEditor : EditorWindow
 
                 EditorGUILayout.LabelField("Physical Conditions", EditorStyles.boldLabel);
                 LevelList.levelList[viewIndex - 1].isGravityEnabled = (bool)EditorGUILayout.Toggle("Gravitiy", LevelList.levelList[viewIndex - 1].isGravityEnabled, GUILayout.ExpandWidth(false));
-                LevelList.levelList[viewIndex - 1].gravityConstant = EditorGUILayout.FloatField("Gravitational Constant", LevelList.levelList[viewIndex - 1].gravityConstant, GUILayout.ExpandWidth(false));
+                if (LevelList.levelList[viewIndex - 1].isGravityEnabled)
+                {
+                    LevelList.levelList[viewIndex - 1].gravityConstant = EditorGUILayout.FloatField("Gravitational Constant", LevelList.levelList[viewIndex - 1].gravityConstant, GUILayout.ExpandWidth(false));
+                }
+                else
+                {
+                    EditorGUI.BeginDisabledGroup(!LevelList.levelList[viewIndex - 1].isGravityEnabled);
+                    LevelList.levelList[viewIndex - 1].gravityConstant = EditorGUILayout.FloatField("Gravitational Constant", 1.0f, GUILayout.ExpandWidth(false));
+                    EditorGUI.EndDisabledGroup();
+                }
+
+                GUILayout.Space(5);
+
+                LevelList.levelList[viewIndex - 1].isBallPhysicsEnabled = (bool)EditorGUILayout.Toggle("Ball Physics", LevelList.levelList[viewIndex - 1].isBallPhysicsEnabled, GUILayout.ExpandWidth(false));
+                if (LevelList.levelList[viewIndex - 1].isBallPhysicsEnabled)
+                {
+                    LevelList.levelList[viewIndex - 1].ballFrictionRate = EditorGUILayout.FloatField("Ball Friction Rate", LevelList.levelList[viewIndex - 1].ballFrictionRate, GUILayout.ExpandWidth(false));
+                }
+                else
+                {
+                    EditorGUI.BeginDisabledGroup(!LevelList.levelList[viewIndex - 1].isBallPhysicsEnabled);
+                    LevelList.levelList[viewIndex - 1].ballFrictionRate = EditorGUILayout.FloatField("Ball Friction Rate", 0.0f, GUILayout.ExpandWidth(false));
+                    EditorGUI.EndDisabledGroup();
+                }
+
+                if (LevelList.levelList[viewIndex - 1].isBallPhysicsEnabled)
+                {
+                    LevelList.levelList[viewIndex - 1].ballBounceRate = EditorGUILayout.FloatField("Ball Bounce Rate", LevelList.levelList[viewIndex - 1].ballBounceRate, GUILayout.ExpandWidth(false));
+                }
+                else
+                {
+                    EditorGUI.BeginDisabledGroup(!LevelList.levelList[viewIndex - 1].isBallPhysicsEnabled);
+                    LevelList.levelList[viewIndex - 1].ballBounceRate = EditorGUILayout.FloatField("Ball Bounce Rate", 1.0f, GUILayout.ExpandWidth(false));
+                    EditorGUI.EndDisabledGroup();
+                }
             }
             else
             {
