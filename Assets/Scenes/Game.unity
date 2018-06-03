@@ -370,6 +370,19 @@ Prefab:
       propertyPath: m_PlaneDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1958734844646458, guid: d45ec1c6bb6d6b4479b086d7fd6f7ce1, type: 2}
+      propertyPath: m_Name
+      value: GameCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644080776496316, guid: d45ec1c6bb6d6b4479b086d7fd6f7ce1, type: 2}
+      propertyPath: m_Name
+      value: Header
+      objectReference: {fileID: 0}
+    - target: {fileID: 114392911290051678, guid: d45ec1c6bb6d6b4479b086d7fd6f7ce1,
+        type: 2}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d45ec1c6bb6d6b4479b086d7fd6f7ce1, type: 2}
   m_IsPrefabParent: 0
@@ -443,11 +456,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level:
-    levelIndex: 0
-    levelName: New level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+    index: 0
+    name: New level
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0

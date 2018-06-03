@@ -5,13 +5,16 @@ using System.Collections;
 public class Level
 {
     // Identification
-    public int levelIndex = 0;                                                          //  Level index in the continer list.
-    public string levelName = "New level";                                              //  What the level will be called in the game.
-    public string levelHint = "Dummy Hint";                                             //  What the user will be see in the game if s/he watches the ads.
+    public int index = 0;                                                          //  Level index in the continer list.
+    public string name = "New level";                                              //  What the level will be called in the game.
+    public string hint = "Dummy Hint";                                             //  What the user will be see in the game if s/he watches the ads.
+
+    // Level Assets
+    public GameObject structure = null;                                                //  Level environment constructed by prefabs and probs.
 
     // Progression Report
-    public LevelStatus levelStatus = LevelStatus.locked;                                //  Hold the user progression for each level in the game
-    public LevelCompletionStatus levelCompletionStatus = LevelCompletionStatus.none;    //  Hold user succes for each level. Its is none automatically if the level locked. 
+    public LevelStatus status = LevelStatus.locked;                                //  Hold the user progression for each level in the game
+    public LevelCompletionStatus completionStatus = LevelCompletionStatus.none;    //  Hold user succes for each level. Its is none automatically if the level locked. 
 
     // Control Types
     public bool isLaunchActive = false;                                                 //  Determine the control type of the level

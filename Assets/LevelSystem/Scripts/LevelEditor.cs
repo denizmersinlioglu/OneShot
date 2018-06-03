@@ -33,12 +33,12 @@ public class LevelEditor : EditorWindow
         {
             GUILayout.Label("Level Editor", EditorStyles.boldLabel);
             GUILayout.BeginHorizontal();
-            if (GUILayout.Button("Show Level List", options: topButtonOptions))
+            if (GUILayout.Button("Show Level Database", options: topButtonOptions))
             {
                 EditorUtility.FocusProjectWindow();
                 Selection.activeObject = LevelList;
             }
-            if (GUILayout.Button("Open Level List", options: topButtonOptions))
+            if (GUILayout.Button("Open Level Database", options: topButtonOptions))
             {
                 OpenLevelList();
             }
@@ -127,21 +127,26 @@ public class LevelEditor : EditorWindow
             {
                 EditorGUILayout.LabelField("Identification", EditorStyles.boldLabel);
                 GUILayout.BeginHorizontal();
-                viewIndex = Mathf.Clamp(EditorGUILayout.IntField("Current Level Index", viewIndex, GUILayout.ExpandWidth(false)), 1, LevelList.levelList.Count);
+                viewIndex = Mathf.Clamp(EditorGUILayout.IntField("Current Index", viewIndex, GUILayout.ExpandWidth(false)), 1, LevelList.levelList.Count);
                 //Mathf.Clamp (viewIndex, 1, LevelList.levelList.Count);
                 EditorGUILayout.LabelField("of " + LevelList.levelList.Count.ToString() + "  Levels", "", GUILayout.ExpandWidth(false));
                 GUILayout.EndHorizontal();
                 EditorGUI.BeginDisabledGroup(true);
-                LevelList.levelList[viewIndex - 1].levelName = EditorGUILayout.TextField("Level Name", LevelList.levelList[viewIndex - 1].levelName as string, options);
+                LevelList.levelList[viewIndex - 1].name = EditorGUILayout.TextField("Name", LevelList.levelList[viewIndex - 1].name as string, options);
                 EditorGUI.EndDisabledGroup();
-                LevelList.levelList[viewIndex - 1].levelHint = EditorGUILayout.TextField("Level Hint", LevelList.levelList[viewIndex - 1].levelHint as string, options);
+                LevelList.levelList[viewIndex - 1].hint = EditorGUILayout.TextField("Hint", LevelList.levelList[viewIndex - 1].hint as string, options);
 
+                GUILayout.Space(15);
+
+                EditorGUILayout.LabelField("Structure", EditorStyles.boldLabel);
+                LevelList.levelList[viewIndex - 1].structure = EditorGUILayout.ObjectField ("Construction element", LevelList.levelList[viewIndex - 1].structure, typeof (GameObject), false) as GameObject;
+                
                 GUILayout.Space(15);
 
                 EditorGUILayout.LabelField("Progression Report", EditorStyles.boldLabel);
 
-                LevelList.levelList[viewIndex - 1].levelStatus = (LevelStatus)EditorGUILayout.EnumPopup("Level Status:", LevelList.levelList[viewIndex - 1].levelStatus, options);
-                LevelList.levelList[viewIndex - 1].levelCompletionStatus = (LevelCompletionStatus)EditorGUILayout.EnumPopup("Level Completion Status:", LevelList.levelList[viewIndex - 1].levelCompletionStatus, options);
+                LevelList.levelList[viewIndex - 1].status = (LevelStatus)EditorGUILayout.EnumPopup("Status:", LevelList.levelList[viewIndex - 1].status, options);
+                LevelList.levelList[viewIndex - 1].completionStatus = (LevelCompletionStatus)EditorGUILayout.EnumPopup("Completion Status:", LevelList.levelList[viewIndex - 1].completionStatus, options);
 
                 GUILayout.Space(15);
                 EditorGUILayout.LabelField("Control Types", EditorStyles.boldLabel);
@@ -241,8 +246,8 @@ public class LevelEditor : EditorWindow
     void AddItem()
     {
         Level newLevel = new Level();
-        newLevel.levelIndex = LevelList.levelList.Count + 1;
-        newLevel.levelName = "Level" + newLevel.levelIndex;
+        newLevel.index = LevelList.levelList.Count + 1;
+        newLevel.name = "Level" + newLevel.index;
         LevelList.levelList.Add(newLevel);
         viewIndex = LevelList.levelList.Count;
     }

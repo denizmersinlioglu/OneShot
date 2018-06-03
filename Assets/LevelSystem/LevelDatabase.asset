@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Name: LevelDatabase
   m_EditorClassIdentifier: 
   levelList:
-  - levelIndex: 1
-    levelName: Level1
-    levelHint: Dummy Hint
-    levelStatus: 1
-    levelCompletionStatus: 0
+  - index: 1
+    name: Level1
+    hint: Dummy Hint
+    structure: {fileID: 1770953264436128, guid: 57e5f6447a580db4c9711992ab28d510,
+      type: 2}
+    status: 1
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -28,11 +30,13 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 2
-    levelName: Level2
-    levelHint: Dummy Hint
-    levelStatus: 1
-    levelCompletionStatus: 0
+  - index: 2
+    name: Level2
+    hint: Dummy Hint
+    structure: {fileID: 1298435534265334, guid: 2be0cfe9b10b2204ba4d96a1cd52f4ac,
+      type: 2}
+    status: 1
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -44,11 +48,13 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 3
-    levelName: Level3
-    levelHint: Dummy Hint
-    levelStatus: 1
-    levelCompletionStatus: 0
+  - index: 3
+    name: Level3
+    hint: Dummy Hint
+    structure: {fileID: 1948712826245112, guid: 161c4ca9117318541a9a9b90e77e1cb4,
+      type: 2}
+    status: 1
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -60,11 +66,13 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 4
-    levelName: Level4
-    levelHint: Dummy Hint
-    levelStatus: 1
-    levelCompletionStatus: 0
+  - index: 4
+    name: Level4
+    hint: Dummy Hint
+    structure: {fileID: 1657600399728568, guid: e2059375777fd4e418b896c27608cb5b,
+      type: 2}
+    status: 1
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -76,11 +84,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 5
-    levelName: Level5
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 5
+    name: Level5
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -92,11 +101,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 6
-    levelName: Level6
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 6
+    name: Level6
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -108,11 +118,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 7
-    levelName: Level7
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 7
+    name: Level7
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -124,11 +135,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 8
-    levelName: Level8
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 8
+    name: Level8
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -140,11 +152,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 9
-    levelName: Level9
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 9
+    name: Level9
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -156,11 +169,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 10
-    levelName: Level10
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 10
+    name: Level10
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -172,11 +186,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 11
-    levelName: Level11
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 11
+    name: Level11
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -188,11 +203,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 12
-    levelName: Level12
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 12
+    name: Level12
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -204,11 +220,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 13
-    levelName: Level13
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 13
+    name: Level13
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
@@ -220,27 +237,12 @@ MonoBehaviour:
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
-  - levelIndex: 14
-    levelName: Level14
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - levelIndex: 15
-    levelName: Level15
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+  - index: 14
+    name: Level14
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0

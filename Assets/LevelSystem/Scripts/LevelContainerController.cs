@@ -55,8 +55,8 @@ public class LevelContainerController : MonoBehaviour {
 	public int moveToMaximumLevel(){
 		int maximumLevelNumber = 0;
 		foreach(Level level in levelList){
-			if (level.levelStatus != LevelStatus.locked){
-				maximumLevelNumber = Mathf.Max(level.levelIndex, maximumLevelNumber);
+			if (level.status != LevelStatus.locked){
+				maximumLevelNumber = Mathf.Max(level.index, maximumLevelNumber);
 			}
 		}
 		pageNumber = Mathf.FloorToInt(maximumLevelNumber / levelsPerPage);

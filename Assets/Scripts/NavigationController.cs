@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class NavigationController : MonoBehaviour {
 
     //TODO swipe control might be added
-
+	
 	// Mark: - Button Actions
 	public void LoadLevelsScene(){
 		LevelManager.sharedInstance.LoadLevelsScene();

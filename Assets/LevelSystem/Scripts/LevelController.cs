@@ -23,5 +23,6 @@ public class LevelController : MonoBehaviour
     void Awake()
     {
         level = LevelManager.sharedInstance.GetActiveLevel();
+		GameObject structure = (GameObject)GameObject.Instantiate(level.structure, Vector3.zero, Quaternion.identity);
     }
 }
