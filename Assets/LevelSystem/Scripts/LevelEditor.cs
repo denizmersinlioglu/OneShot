@@ -139,7 +139,7 @@ public class LevelEditor : EditorWindow
                 GUILayout.Space(15);
 
                 EditorGUILayout.LabelField("Structure", EditorStyles.boldLabel);
-                LevelList.levelList[viewIndex - 1].structure = EditorGUILayout.ObjectField ("Construction element", LevelList.levelList[viewIndex - 1].structure, typeof (GameObject), false) as GameObject;
+                LevelList.levelList[viewIndex - 1].structure = EditorGUILayout.ObjectField ("Construction Element", LevelList.levelList[viewIndex - 1].structure, typeof (GameObject), false) as GameObject;
                 
                 GUILayout.Space(15);
 
@@ -152,7 +152,7 @@ public class LevelEditor : EditorWindow
                 EditorGUILayout.LabelField("Control Types", EditorStyles.boldLabel);
                 LevelList.levelList[viewIndex - 1].isAccelerometerActive = (bool)EditorGUILayout.Toggle("Accelerometer", LevelList.levelList[viewIndex - 1].isAccelerometerActive, GUILayout.ExpandWidth(false));
                 LevelList.levelList[viewIndex - 1].isLaunchActive = (bool)EditorGUILayout.Toggle("Launch", LevelList.levelList[viewIndex - 1].isLaunchActive, GUILayout.ExpandWidth(false));
-                LevelList.levelList[viewIndex - 1].isNavigationButtonsActive = (bool)EditorGUILayout.Toggle("NavigationButtons", LevelList.levelList[viewIndex - 1].isNavigationButtonsActive, GUILayout.ExpandWidth(false));
+                LevelList.levelList[viewIndex - 1].isNavigationButtonsActive = (bool)EditorGUILayout.Toggle("Navigation Buttons", LevelList.levelList[viewIndex - 1].isNavigationButtonsActive, GUILayout.ExpandWidth(false));
 
                 GUILayout.Space(15);
 

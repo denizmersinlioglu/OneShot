@@ -29,7 +29,7 @@ public class PlayerPreferencesManager : MonoBehaviour
 
     public void SetMaximumUnlockedLevel(int index)
     {
-        if (index < LevelManager.sharedInstance.totalLevelIndex)
+        if (index <= LevelManager.sharedInstance.totalLevelIndex)
         {
             PlayerPrefs.SetInt(MAX_UNLOCK_LEVEL_KEY, index);
         }
@@ -47,7 +47,7 @@ public class PlayerPreferencesManager : MonoBehaviour
 
 	public void SetLastActiveLevel(int index)
     {
-        if (index < LevelManager.sharedInstance.totalLevelIndex)
+        if (index <= LevelManager.sharedInstance.totalLevelIndex)
         {
             PlayerPrefs.SetInt(LAST_ACTIVATE_LEVEL_KEY, index);
         }
