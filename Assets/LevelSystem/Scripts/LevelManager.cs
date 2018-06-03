@@ -5,14 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-	private float splashingTime = 4f;
+    private float splashingTime = 4f;
+    public static int currentLevelIndex = 0;
 
-	void Start()
-	{
-		if (SceneManager.GetActiveScene().buildIndex == 0){
-			StartCoroutine(InitializeLevelsScene());
-		}
-	}
+    private static LevelManager instance = null;
+
+    // Game instance Singleton
+    public static LevelManager sharedInstance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        // if the singleton hasn't been initialized yet
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            StartCoroutine(InitializeLevelsScene());
+        }
+    }
 
     private IEnumerator InitializeLevelsScene()
     {
@@ -20,49 +45,41 @@ public class LevelManager : MonoBehaviour
         LoadMainMenu();
     }
 
-    public static void LoadMainMenu(){
+    public void LoadLevel(int index)
+    {
+        SceneManager.LoadScene("LEvel" + index);
+    }
+
+    public void LoadMainMenu()
+    {
         SceneManager.LoadScene("MainMenu");
     }
-    public static void LoadSameLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 
-    public static void LoadLevel(string name)
-    {
-        SceneManager.LoadScene(name);
-    }
-
-    public static void LoadLevelsScene()
+    public void LoadLevelsScene()
     {
         SceneManager.LoadScene("Levels");
     }
 
-    public static void LoadInfoScene()
+    public void LoadInfoScene()
     {
         SceneManager.LoadScene("Levels");
     }
 
-    public static void LoadAboutScene()
+    public void LoadAboutScene()
     {
         SceneManager.LoadScene("Levels");
     }
 
-    public static void LoadSettingsScene()
+    public void LoadSettingsScene()
     {
         SceneManager.LoadScene("Levels");
     }
 
-    public static void LoadNextLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public static void StorePlayerLevelInformation()
+    public void StorePlayerLevelInformation()
     {
     }
 
-    public static void deletePlayerLevelInformation()
+    public void deletePlayerLevelInformation()
     {
         PlayerPrefs.DeleteAll();
     }

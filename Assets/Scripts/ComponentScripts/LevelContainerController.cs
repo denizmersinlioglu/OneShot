@@ -17,10 +17,10 @@ public class LevelContainerController : MonoBehaviour {
 		levelList = levelListAsset.levelList;
 		totalPageNumber = Mathf.FloorToInt(levelList.Count / levelsPerPage);
 		pageNumber = Mathf.FloorToInt(lastActiveLevelPage / levelsPerPage);
-		FillLevelList();
+		RefreshLevelList();
 	}
 
-	void FillLevelList()
+	void RefreshLevelList()
 	{	
 		foreach(Transform child in transform) {
     		Destroy(child.gameObject);
@@ -40,7 +40,7 @@ public class LevelContainerController : MonoBehaviour {
 	public int moveNextPage(){
 		if (pageNumber < totalPageNumber){
 			pageNumber += 1;
-			FillLevelList();
+			RefreshLevelList();
 		}
 		return pageNumber;
 	}
@@ -48,7 +48,7 @@ public class LevelContainerController : MonoBehaviour {
 	public int movePreviousPage (){
 		if (pageNumber > 0){
 			pageNumber -= 1;
-			FillLevelList();
+			RefreshLevelList();
 		}
 		return pageNumber;
 	}
@@ -61,7 +61,7 @@ public class LevelContainerController : MonoBehaviour {
 			}
 		}
 		pageNumber = Mathf.FloorToInt(maximumLevelNumber / levelsPerPage);
-		FillLevelList();
+		RefreshLevelList();
 		return maximumLevelNumber;
 	}
 }

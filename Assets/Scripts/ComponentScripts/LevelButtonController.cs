@@ -29,13 +29,7 @@ public class LevelButtonController : MonoBehaviour {
 			//TODO print warning: The level is locked
 			print("level is locked");
 		}else{
-			if (levelIndex == 0 || levelIndex == 34){
-				LevelManager.LoadLevel("Level" + levelIndex);
-				// LevelManager.lastActiveLevelPage = levelIndex;
-			}else{
-				LevelManager.LoadLevel("Level" + 0);
-			}
-			
+			LevelManager.sharedInstance.LoadLevel(0);
 		}
 		
 	}

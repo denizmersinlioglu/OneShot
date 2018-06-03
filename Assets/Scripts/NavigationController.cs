@@ -13,7 +13,6 @@ public class NavigationController : MonoBehaviour {
 	Vector2 secondPressPos;
 	Vector2 currentSwipe;
  
-	private const string levelsSceneName = "Levels";
     private LevelContainerController levelContainerController;
 
 	void Start()
@@ -23,7 +22,7 @@ public class NavigationController : MonoBehaviour {
 
 	// Mark: - Button Actions
 	public void BackToLevelMenu(){
-		LevelManager.LoadLevel(levelsSceneName);
+		LevelManager.sharedInstance.LoadLevelsScene();
 	}
 
 	public void NextPageButtonPressed(){
@@ -35,7 +34,7 @@ public class NavigationController : MonoBehaviour {
 	}
 
 	public void HomePageButtonPressed(){
-		LevelManager.LoadMainMenu();
+		LevelManager.sharedInstance.LoadMainMenu();
 	}
 
 	public void ChangeLayoutButtonPressed(){
