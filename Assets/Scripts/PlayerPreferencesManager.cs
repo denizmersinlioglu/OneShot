@@ -32,7 +32,6 @@ public class PlayerPreferencesManager : MonoBehaviour
         if (index < LevelManager.sharedInstance.totalLevelIndex)
         {
             PlayerPrefs.SetInt(MAX_UNLOCK_LEVEL_KEY, index);
-			Debug.Log("Maximum unlocked level is set to " + index); 
         }
         else
         { 
@@ -43,7 +42,6 @@ public class PlayerPreferencesManager : MonoBehaviour
     public int GetMaximumUnlockedLevel()
     {	
 		int index =  PlayerPrefs.GetInt(MAX_UNLOCK_LEVEL_KEY); 
-		Debug.Log("Maximum unlocked level is " + index);
         return index;
     }
 
@@ -52,7 +50,6 @@ public class PlayerPreferencesManager : MonoBehaviour
         if (index < LevelManager.sharedInstance.totalLevelIndex)
         {
             PlayerPrefs.SetInt(LAST_ACTIVATE_LEVEL_KEY, index);
-			Debug.Log("Last active level is set to " + index); 
         }
         else
         { 
@@ -62,8 +59,7 @@ public class PlayerPreferencesManager : MonoBehaviour
 
     public int GetLastActiveLevel()
     {	
-		int index =  PlayerPrefs.GetInt(LAST_ACTIVATE_LEVEL_KEY); 
-		Debug.Log("Last active level is " + index);
+		int index =  PlayerPrefs.GetInt(LAST_ACTIVATE_LEVEL_KEY);
         return index;
     }
 

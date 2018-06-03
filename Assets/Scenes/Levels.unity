@@ -485,7 +485,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 299433822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b56a9d21518d2344979988d8bdef92b, type: 3}
+  m_Script: {fileID: 11500000, guid: 036bb713360157b43a552066e67616e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelListAsset: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_fontStyle: 32
   m_textAlignment: 258
   m_isAlignmentEnumConverted: 1
-  m_characterSpacing: 7
+  m_characterSpacing: 4
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0

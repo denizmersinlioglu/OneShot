@@ -6,31 +6,34 @@ using System;
 using TMPro;
 
 
-public class LevelButtonController : MonoBehaviour {
+public class LevelButtonController : MonoBehaviour
+{
 
-	public Button levelNavigationButton;
-	public Level level;
+    public Button levelNavigationButton;
+    public Level level;
 
-	public GameObject star1;
-	public GameObject star2;
-	public GameObject star3;
+    public GameObject star1;
+    public GameObject star2;
+    public GameObject star3;
 
-	// Use this for initialization
-	void Start () {
-		gameObject.GetComponentInChildren<TextMeshProUGUI>().text = level.levelIndex.ToString();
-		levelNavigationButton.onClick.AddListener(initializeLevel);
-//		button.enabled = !level.locked;
-//		button.onClick.AddListener(() => loadLevels("Level" + level.levelNumber));
-	}
+    // Use this for initialization
+    void Start()
+    {	
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = level.levelIndex.ToString();
+        levelNavigationButton.onClick.AddListener(initializeLevel);
+    }
 
-	public void initializeLevel(){
-		// var levelIndex = level.levelIndex;
-		if (level.levelStatus == LevelStatus.locked){
-			//TODO print warning: The level is locked
-			print("level is locked");
-		}else{
-			LevelManager.sharedInstance.LoadGameScene();
-		}
-		
-	}
+    public void initializeLevel()
+    {
+        // var levelIndex = level.levelIndex;
+        if (level.levelStatus == LevelStatus.locked)
+        {
+            //TODO print warning: The level is locked
+            print("level is locked");
+        }
+        else
+        {
+            LevelManager.sharedInstance.LoadGameScene(level.levelIndex);
+        }
+    }
 }

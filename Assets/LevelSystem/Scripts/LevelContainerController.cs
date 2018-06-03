@@ -27,6 +27,7 @@ public class LevelContainerController : MonoBehaviour {
 		}
 		var startingIndex = levelsPerPage * pageNumber;
 		var lastIndex = Mathf.Min(levelsPerPage * (pageNumber + 1), levelList.Count);
+		
 		for (int i = startingIndex; i < lastIndex; i++)
 		{
 			GameObject instanceButton = Instantiate(levelButton) as GameObject;

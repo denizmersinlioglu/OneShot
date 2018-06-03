@@ -131,8 +131,9 @@ public class LevelEditor : EditorWindow
                 //Mathf.Clamp (viewIndex, 1, LevelList.levelList.Count);
                 EditorGUILayout.LabelField("of " + LevelList.levelList.Count.ToString() + "  Levels", "", GUILayout.ExpandWidth(false));
                 GUILayout.EndHorizontal();
-
+                EditorGUI.BeginDisabledGroup(true);
                 LevelList.levelList[viewIndex - 1].levelName = EditorGUILayout.TextField("Level Name", LevelList.levelList[viewIndex - 1].levelName as string, options);
+                EditorGUI.EndDisabledGroup();
                 LevelList.levelList[viewIndex - 1].levelHint = EditorGUILayout.TextField("Level Hint", LevelList.levelList[viewIndex - 1].levelHint as string, options);
 
                 GUILayout.Space(15);
@@ -241,7 +242,7 @@ public class LevelEditor : EditorWindow
     {
         Level newLevel = new Level();
         newLevel.levelIndex = LevelList.levelList.Count + 1;
-        newLevel.levelName = "New Level";
+        newLevel.levelName = "Level" + newLevel.levelIndex;
         LevelList.levelList.Add(newLevel);
         viewIndex = LevelList.levelList.Count;
     }

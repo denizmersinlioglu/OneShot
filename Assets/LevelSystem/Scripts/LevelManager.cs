@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    private float splashingTime = 4f;
+    private float splashingTime = 1f;
     public LevelList levelListDatabase;
 
     [HideInInspector]
@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     private Level currentLevel;
     [HideInInspector]
     public int currentLevelIndex = 0;
-   
+
     private static LevelManager instance = null;
     // Game instance Singleton
     public static LevelManager sharedInstance
@@ -38,13 +38,24 @@ public class LevelManager : MonoBehaviour
         maxLevelIndex = PlayerPreferencesManager.sharedInstance.GetMaximumUnlockedLevel();
         currentLevelIndex = PlayerPreferencesManager.sharedInstance.GetLastActiveLevel();
         totalLevelIndex = levelListDatabase.levelList.Count;
+        Debug.Log("Player maximum level index is " + maxLevelIndex);
+        Debug.Log("Player current level index is " + currentLevelIndex);
+        Debug.Log("Game total level index is " + totalLevelIndex);
 
         instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public Level GetActiveLevel(){
+    public Level GetActiveLevel()
+    {
         return levelListDatabase.levelList[currentLevelIndex];
+    }
+
+    private void setActiveLevel(int index)
+    {
+        currentLevelIndex = index;
+        PlayerPreferencesManager.sharedInstance.SetLastActiveLevel(index);
+        Debug.Log("New active scene is Level" + index);
     }
 
     void Start()
@@ -66,8 +77,9 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void LoadGameScene()
+    public void LoadGameScene(int index)
     {
+        setActiveLevel(index);
         SceneManager.LoadScene("Game");
     }
 

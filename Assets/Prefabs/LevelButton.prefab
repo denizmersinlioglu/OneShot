@@ -549,7 +549,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1706032868317688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41eb49e25f77b254fac4795d17f97f98, type: 3}
+  m_Script: {fileID: 11500000, guid: 11d736c6e72299b4c91cdfa68bb9d414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelNavigationButton: {fileID: 114410384831230986}
@@ -557,14 +557,19 @@ MonoBehaviour:
     levelIndex: 0
     levelName: New level
     levelHint: Dummy Hint
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
     levelStatus: 0
     levelCompletionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
   star1: {fileID: 1648947683647508}
   star2: {fileID: 1314610443563756}
   star3: {fileID: 1067692110123436}

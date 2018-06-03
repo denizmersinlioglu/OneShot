@@ -9,10 +9,6 @@ public class NavigationController : MonoBehaviour {
 
     //TODO swipe control might be added
 	
-	Vector2 firstPressPos;
-	Vector2 secondPressPos;
-	Vector2 currentSwipe;
- 
     private LevelContainerController levelContainerController;
 
 	void Start()
