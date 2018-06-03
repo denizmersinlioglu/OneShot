@@ -554,11 +554,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNavigationButton: {fileID: 114410384831230986}
   level:
-    levelIndex: 0
-    levelName: New level
-    levelHint: Dummy Hint
-    levelStatus: 0
-    levelCompletionStatus: 0
+    index: 0
+    name: New level
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0

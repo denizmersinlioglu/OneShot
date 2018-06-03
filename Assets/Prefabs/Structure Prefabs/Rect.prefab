@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 198797449675728116}
   - component: {fileID: 114735046147975258}
   m_Layer: 0
-  m_Name: Rects
+  m_Name: Rect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

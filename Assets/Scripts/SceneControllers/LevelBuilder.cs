@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using TMPro;
 
-public class LevelController : MonoBehaviour
+public class LevelBuilder : MonoBehaviour
 {
 
-    // A moderator will give the level of this level container.
+    // A moderator will give the level of this level container. DONE
     // The aim of this class is building level according the acquired data from moderator.
 
     // Get control type from level instance - Create game mechanics according to control types.
@@ -14,8 +13,11 @@ public class LevelController : MonoBehaviour
     // Get success limit numbers from level instance - Control user success rate according to twoStarsHit# and threeStarsHit#.
 
     // When user complete the level - Update LevelDatabase asset according to users success.
+	[SerializeField]
+	private TextMeshProUGUI headerLabel;
 
-    public Level level;
+	[SerializeField]
+    private Level level;
 
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -24,5 +26,6 @@ public class LevelController : MonoBehaviour
     {
         level = LevelManager.sharedInstance.GetActiveLevel();
 		GameObject structure = (GameObject)GameObject.Instantiate(level.structure, Vector3.zero, Quaternion.identity);
+		headerLabel.text = "Level " + level.index;
     }
 }
