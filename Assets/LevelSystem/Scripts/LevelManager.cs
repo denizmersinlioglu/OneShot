@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     private float splashingTime = 4f;
-    public static int currentLevelIndex = 0;
+    public LevelList levelListDatabase;
+
+    [HideInInspector]
+    public int currentLevelIndex = 0;
+    [HideInInspector]
+    public int totalLevelIndex = 0;
+    [HideInInspector]
+    public int maxLevelIndex = 0;
 
     private static LevelManager instance = null;
-
     // Game instance Singleton
     public static LevelManager sharedInstance
     {
@@ -26,6 +32,10 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        maxLevelIndex = PlayerPreferencesManager.sharedInstance.GetMaximumUnlockedLevel();
+        currentLevelIndex = PlayerPreferencesManager.sharedInstance.GetLastActiveLevel();
+        totalLevelIndex = levelListDatabase.levelList.Count;
 
         instance = this;
         DontDestroyOnLoad(this.gameObject);

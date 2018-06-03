@@ -24,7 +24,7 @@ public class LevelButtonController : MonoBehaviour {
 	}
 
 	public void initializeLevel(){
-		var levelIndex = level.levelIndex;
+		// var levelIndex = level.levelIndex;
 		if (level.levelStatus == LevelStatus.locked){
 			//TODO print warning: The level is locked
 			print("level is locked");

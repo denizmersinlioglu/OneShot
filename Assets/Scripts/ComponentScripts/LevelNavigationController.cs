@@ -5,6 +5,6 @@ using UnityEngine;
 public class LevelNavigationController : MonoBehaviour {
 
 	public void returnActiveLevelPage(){
-		LevelManager.LoadLevelsScene();
+		LevelManager.sharedInstance.LoadLevelsScene();
 	}
 }
