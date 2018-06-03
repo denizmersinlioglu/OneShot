@@ -4,15 +4,17 @@ using TMPro;
 public class LevelBuilder : MonoBehaviour
 {
 
-    // A moderator will give the level of this level container. DONE
-    // The aim of this class is building level according the acquired data from moderator.
+    /* 
+        A moderator will give the level of this level container.(DONE)
+        The aim of this class is building level construction according the acquired data (level structure) from moderator class.
 
-    // Get control type from level instance - Create game mechanics according to control types.
-    // Get level hint from level instance - Edit the hint text according to hint string.
-    // Get hit count from level instance - Control win/lose state of the level.
-    // Get success limit numbers from level instance - Control user success rate according to twoStarsHit# and threeStarsHit#.
-
-    // When user complete the level - Update LevelDatabase asset according to users success.
+        Get the index of the level - Rename the header of the game. (DONE)
+        Get level hint from level instance - Edit the hint text according to hint string.
+        Get control type booleans from level instance - Create game control mechanics according to control types.
+        Get physics features from level instance - Assign these properties to target component.
+        Get ball physics features from level instance - You may need to create new physics 2D material. Ball is in the level structure prefab.
+    */
+    
     [SerializeField]
     private LevelList levelDatabase;
 
