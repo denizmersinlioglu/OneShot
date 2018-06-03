@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class LevelContainerController : MonoBehaviour {
 
+	public LevelList levelListAsset;
 	public GameObject levelButton;
+
+	private List<Level> levelList;
 	private int pageNumber = 0;
-	
+	private int totalPageNumber = 0;
+	private int lastActiveLevelPage = 0;
+	private int levelsPerPage = 10;
 	// Use this for initialization
 	void Start () {
-		pageNumber = Mathf.FloorToInt(LevelManager.lastActiveLevelPage / LevelManager.levelCountForPage);
+		levelList = levelListAsset.levelList;
+		totalPageNumber = Mathf.FloorToInt(levelList.Count / levelsPerPage);
+		pageNumber = Mathf.FloorToInt(lastActiveLevelPage / levelsPerPage);
 		FillLevelList();
 	}
 
@@ -18,20 +25,20 @@ public class LevelContainerController : MonoBehaviour {
 		foreach(Transform child in transform) {
     		Destroy(child.gameObject);
 		}
-		var startingIndex = LevelManager.levelCountForPage * pageNumber;
-		var lastIndex = Mathf.Min(LevelManager.levelCountForPage * (pageNumber + 1), LevelManager.levelCount);
+		var startingIndex = levelsPerPage * pageNumber;
+		var lastIndex = Mathf.Min(levelsPerPage * (pageNumber + 1), levelList.Count);
 		for (int i = startingIndex; i < lastIndex; i++)
 		{
 			GameObject instanceButton = Instantiate(levelButton) as GameObject;
 			LevelButtonController newLevelButton = instanceButton.GetComponent<LevelButtonController>();
-			var level = LevelManager.levelList[i];
+			var level = levelList[i];
 			newLevelButton.level = level;
 			newLevelButton.transform.SetParent(this.transform,false); 
 		}			
 	}
 
 	public int moveNextPage(){
-		if (pageNumber < LevelManager.levelPageCount){
+		if (pageNumber < totalPageNumber){
 			pageNumber += 1;
 			FillLevelList();
 		}
@@ -48,12 +55,12 @@ public class LevelContainerController : MonoBehaviour {
 
 	public int moveToMaximumLevel(){
 		int maximumLevelNumber = 0;
-		foreach(Level level in LevelManager.levelList){
-			if (level.status != LevelStatus.locked){
-				maximumLevelNumber = Mathf.Max(level.number, maximumLevelNumber);
+		foreach(Level level in levelList){
+			if (level.levelStatus != LevelStatus.locked){
+				maximumLevelNumber = Mathf.Max(level.levelIndex, maximumLevelNumber);
 			}
 		}
-		pageNumber = Mathf.FloorToInt(maximumLevelNumber / LevelManager.levelCountForPage);
+		pageNumber = Mathf.FloorToInt(maximumLevelNumber / levelsPerPage);
 		FillLevelList();
 		return maximumLevelNumber;
 	}

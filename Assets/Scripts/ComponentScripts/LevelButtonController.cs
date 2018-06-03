@@ -17,21 +17,21 @@ public class LevelButtonController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameObject.GetComponentInChildren<TextMeshProUGUI>().text = level.number.ToString();
+		gameObject.GetComponentInChildren<TextMeshProUGUI>().text = level.levelIndex.ToString();
 		levelNavigationButton.onClick.AddListener(initializeLevel);
 //		button.enabled = !level.locked;
 //		button.onClick.AddListener(() => loadLevels("Level" + level.levelNumber));
 	}
 
 	public void initializeLevel(){
-		var levelIndex = level.number;
-		if (level.status == LevelStatus.locked){
+		var levelIndex = level.levelIndex;
+		if (level.levelStatus == LevelStatus.locked){
 			//TODO print warning: The level is locked
 			print("level is locked");
 		}else{
 			if (levelIndex == 0 || levelIndex == 34){
 				LevelManager.LoadLevel("Level" + levelIndex);
-				LevelManager.lastActiveLevelPage = levelIndex;
+				// LevelManager.lastActiveLevelPage = levelIndex;
 			}else{
 				LevelManager.LoadLevel("Level" + 0);
 			}

@@ -602,6 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b56a9d21518d2344979988d8bdef92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelListAsset: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
   levelButton: {fileID: 1706032868317688, guid: fa70b4bd9321d4396a6d6a16e1014a66,
     type: 2}
 --- !u!114 &299433825
