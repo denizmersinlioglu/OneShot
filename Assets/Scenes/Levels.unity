@@ -263,8 +263,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 465620517}
-        m_MethodName: PreviousPageButtonPressed
+      - m_Target: {fileID: 299433824}
+        m_MethodName: movePreviousPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1022,8 +1022,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 465620517}
-        m_MethodName: NextPageButtonPressed
+      - m_Target: {fileID: 299433824}
+        m_MethodName: moveNextPage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

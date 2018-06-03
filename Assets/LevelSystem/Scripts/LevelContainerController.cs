@@ -27,7 +27,7 @@ public class LevelContainerController : MonoBehaviour {
 		}
 		var startingIndex = levelsPerPage * pageNumber;
 		var lastIndex = Mathf.Min(levelsPerPage * (pageNumber + 1), levelList.Count);
-		
+
 		for (int i = startingIndex; i < lastIndex; i++)
 		{
 			GameObject instanceButton = Instantiate(levelButton) as GameObject;
@@ -38,20 +38,18 @@ public class LevelContainerController : MonoBehaviour {
 		}			
 	}
 
-	public int moveNextPage(){
+	public void moveNextPage(){
 		if (pageNumber < totalPageNumber){
 			pageNumber += 1;
 			RefreshLevelList();
 		}
-		return pageNumber;
 	}
 
-	public int movePreviousPage (){
+	public void movePreviousPage (){
 		if (pageNumber > 0){
 			pageNumber -= 1;
 			RefreshLevelList();
 		}
-		return pageNumber;
 	}
 
 	public int moveToMaximumLevel(){

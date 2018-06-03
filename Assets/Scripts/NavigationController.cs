@@ -8,25 +8,14 @@ using UnityEngine.SceneManagement;
 public class NavigationController : MonoBehaviour {
 
     //TODO swipe control might be added
-	
-    private LevelContainerController levelContainerController;
-
-	void Start()
-	{
-		levelContainerController = GameObject.FindObjectOfType<LevelContainerController>();
-	}
 
 	// Mark: - Button Actions
-	public void BackToLevelMenu(){
+	public void LoadLevelsScene(){
 		LevelManager.sharedInstance.LoadLevelsScene();
 	}
 
-	public void NextPageButtonPressed(){
-		levelContainerController.moveNextPage();
-	}
-
-	public void PreviousPageButtonPressed(){
-		levelContainerController.movePreviousPage();
+	public void LoadLastActiveLevel(){
+		LevelManager.sharedInstance.LoadLastActiveLevel();
 	}
 
 	public void HomePageButtonPressed(){
@@ -34,10 +23,10 @@ public class NavigationController : MonoBehaviour {
 	}
 
 	public void ChangeLayoutButtonPressed(){
-
+		//TODO Change the layout of the levels scene
 	}
 
 	public void InfoButtonPressed(){
-
+		//TO DO Give Info About Levels
 	}
 }

@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
 
     public Level GetActiveLevel()
     {
-        return levelListDatabase.levelList[currentLevelIndex];
+        return levelListDatabase.levelList[currentLevelIndex-1];
     }
 
     private void setActiveLevel(int index)
@@ -75,6 +75,10 @@ public class LevelManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadLastActiveLevel(){
+        LoadGameScene(currentLevelIndex);
     }
 
     public void LoadGameScene(int index)
