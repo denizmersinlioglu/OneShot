@@ -523,6 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b649c2859be34874b885ea2770e4acd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDatabase: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
+  levelNumber: 2
   headerLabel: {fileID: 1916483237}
   level:
     index: 0

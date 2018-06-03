@@ -13,6 +13,12 @@ public class LevelBuilder : MonoBehaviour
     // Get success limit numbers from level instance - Control user success rate according to twoStarsHit# and threeStarsHit#.
 
     // When user complete the level - Update LevelDatabase asset according to users success.
+    [SerializeField]
+    private LevelList levelDatabase;
+
+    [SerializeField]
+    private int levelNumber = 1;
+
 	[SerializeField]
 	private TextMeshProUGUI headerLabel;
 
@@ -24,7 +30,13 @@ public class LevelBuilder : MonoBehaviour
     /// </summary>
     void Awake()
     {
-        level = LevelManager.sharedInstance.GetActiveLevel();
+        if(LevelManager.sharedInstance != null)
+        {
+            level = LevelManager.sharedInstance.GetActiveLevel();
+        }else
+        {
+            level = levelDatabase.levelList[levelNumber-1];
+        }
 		GameObject structure = (GameObject)GameObject.Instantiate(level.structure, Vector3.zero, Quaternion.identity);
 		headerLabel.text = "Level " + level.index;
     }
