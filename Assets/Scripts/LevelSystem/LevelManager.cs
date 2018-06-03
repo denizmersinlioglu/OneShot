@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    private float splashingTime = 1f;
+    private float splashingTime = 2f;
     public LevelList levelListDatabase;
 
     [HideInInspector]
@@ -44,6 +44,7 @@ public class LevelManager : MonoBehaviour
 
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+        StartCoroutine(InitializeLevelsScene());
     }
 
     public Level GetActiveLevel()
@@ -56,14 +57,6 @@ public class LevelManager : MonoBehaviour
         currentLevelIndex = index;
         PlayerPreferencesManager.sharedInstance.SetLastActiveLevel(index);
         Debug.Log("New active scene is Level" + index);
-    }
-
-    void Start()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            StartCoroutine(InitializeLevelsScene());
-        }
     }
 
     private IEnumerator InitializeLevelsScene()
