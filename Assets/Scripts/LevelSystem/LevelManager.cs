@@ -67,7 +67,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        Initiate.Fade("MainMenu", Color.black, 2f);
     }
 
     public void LoadLastActiveLevel(){
@@ -77,12 +77,14 @@ public class LevelManager : MonoBehaviour
     public void LoadGameScene(int index)
     {
         setActiveLevel(index);
-        SceneManager.LoadScene("Game");
+        Initiate.Fade("Game", Color.black, 3f);
+        // SceneManager.LoadScene("Game");
     }
 
     public void LoadLevelsScene()
     {
-        SceneManager.LoadScene("Levels");
+        Initiate.Fade("Levels", Color.black, 3f);
+        // SceneManager.LoadScene("Levels");
     }
 
     public void LoadLeaderBoardScene()

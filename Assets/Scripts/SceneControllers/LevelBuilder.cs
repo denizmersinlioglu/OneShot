@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class LevelBuilder : MonoBehaviour
@@ -15,6 +16,9 @@ public class LevelBuilder : MonoBehaviour
         Get ball physics features from level instance - You may need to create new physics 2D material. Ball is in the level structure prefab.
     */
     
+    [SerializeField]
+    private Image fadePanel;
+
     [SerializeField]
     private LevelList levelDatabase;
 

@@ -11,7 +11,7 @@ public class LevelContainerController : MonoBehaviour {
 	private int pageNumber = 0;
 	private int totalPageNumber = 0;
 	private int lastActiveLevelPage = 0;
-	private int levelsPerPage = 10;
+	private int levelsPerPage = 18;
 	// Use this for initialization
 	void Start () {
 		levelList = levelListAsset.levelList;
