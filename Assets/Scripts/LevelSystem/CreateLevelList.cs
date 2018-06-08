@@ -1,19 +1,21 @@
 ﻿#if UNITY_EDITOR
 
-using UnityEngine;
-using System.Collections;
 using UnityEditor;
+using UnityEngine;
 
-public class CreateLevelList
+namespace LevelSystem
 {
-    [MenuItem("Assets/Create/LevelList")]
-    public static LevelList Create()
+    public static class CreateLevelList
     {
-        LevelList asset = ScriptableObject.CreateInstance<LevelList>();
+        [MenuItem("Assets/Create/LevelList")]
+        public static LevelList Create()
+        {
+            var asset = ScriptableObject.CreateInstance<LevelList>();
 
-        AssetDatabase.CreateAsset(asset, "Assets/LevelList.asset");
-        AssetDatabase.SaveAssets();
-        return asset;
+            AssetDatabase.CreateAsset(asset, "Assets/LevelList.asset");
+            AssetDatabase.SaveAssets();
+            return asset;
+        }
     }
 }
 

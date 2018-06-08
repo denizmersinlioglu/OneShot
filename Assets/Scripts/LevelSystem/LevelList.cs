@@ -1,7 +1,10 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class LevelList : ScriptableObject
+namespace LevelSystem
 {
-    public List<Level> levelList;
+    public class LevelList : ScriptableObject
+    {
+        public List<Level> LevelListDatabase;
+    }
 }

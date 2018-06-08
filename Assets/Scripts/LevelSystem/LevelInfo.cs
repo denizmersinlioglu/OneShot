@@ -1,10 +1,12 @@
-﻿
-public enum LevelStatus
+﻿namespace LevelSystem
 {
-    locked, unlocked, completed
-}
+    public enum LevelStatus
+    {
+        Locked, Unlocked, Completed
+    }
 
-public enum LevelCompletionStatus
-{
-    none, oneStar, twoStars, treeStars
+    public enum LevelCompletionStatus
+    {
+        None, OneStar, TwoStars, TreeStars
+    }
 }

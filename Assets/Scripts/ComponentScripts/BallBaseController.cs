@@ -1,21 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class BallBaseController : MonoBehaviour {
+namespace ComponentScripts
+{
+	public class BallBaseController : MonoBehaviour {
 
-	public float velocityConstant = 1f;
-	private float velocityHolder = 1f;
-	public Vector2 velo;
-	// Use this for initialization
-	void Start () {
-		gameObject.GetComponent<Rigidbody2D>().velocity = velo;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (velocityHolder != velocityConstant && velocityConstant != 0) {
-			gameObject.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<Rigidbody2D>().velocity * velocityConstant ;
+		public float VelocityConstant = 1f;
+		private float _velocityHolder = 1f;
+		public Vector2 Velo;
+		// Use this for initialization
+		private void Start () {
+			gameObject.GetComponent<Rigidbody2D>().velocity = Velo;
 		}
-		velocityHolder = velocityConstant;
+	
+		// Update is called once per frame
+		private void Update () {
+			if (Math.Abs(_velocityHolder - VelocityConstant) > 10f && Math.Abs(VelocityConstant) < 1) {
+				gameObject.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<Rigidbody2D>().velocity * VelocityConstant ;
+			}
+			_velocityHolder = VelocityConstant;
 		
+		}
 	}
 }

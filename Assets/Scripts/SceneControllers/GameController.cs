@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GameController : MonoBehaviour {
+namespace SceneControllers
+{
+	public class GameController : MonoBehaviour {
 	
-	/*  
+		/*  
 		Level Builder has already created the game environment according to current level.
 	 	The aim of this class is control the game state according to existing level structure, control types and active levels win/lose statements.
 	
@@ -18,13 +18,14 @@ public class GameController : MonoBehaviour {
     	When user complete the level - Update LevelDatabase asset according to users success.
  	*/
 
-	// Use this for initialization
-	void Start () {
+		// Use this for initialization
+		private void Start () {
 		
-	}
+		}
 	
-	// Update is called once per frame
-	void Update () {
+		// Update is called once per frame
+		private void Update () {
 		
+		}
 	}
 }

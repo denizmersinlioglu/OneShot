@@ -1,37 +1,38 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
+using LevelSystem;
 using TMPro;
 
 
 public class LevelButtonController : MonoBehaviour
 {
 
-    public Button levelNavigationButton;
-    public Level level;
+    public Button LevelNavigationButton;
+    public Level Level;
 
-    public GameObject star1;
-    public GameObject star2;
-    public GameObject star3;
+    public GameObject Star1;
+    public GameObject Star2;
+    public GameObject Star3;
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {	
-        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = level.index.ToString();
-        levelNavigationButton.onClick.AddListener(initializeLevel);
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = Level.Index.ToString();
+        LevelNavigationButton.onClick.AddListener(InitializeLevel);
     }
 
-    public void initializeLevel()
+    private void InitializeLevel()
     {
         // var levelIndex = level.levelIndex;
-        if (level.status == LevelStatus.locked)
+        if (Level.Status == LevelStatus.Locked)
         {
             //TODO print warning: The level is locked
             print("level is locked");
         }
         else
         {
-            LevelManager.sharedInstance.LoadGameScene(level.index);
+            LevelManager.SharedInstance.LoadGameScene(Level.Index);
         }
     }
 }

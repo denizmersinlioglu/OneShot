@@ -1,129 +1,131 @@
 ﻿using UnityEngine;
 
-public class LauncherDragController : MonoBehaviour
+namespace ComponentScripts
 {
-
-    [SerializeField]
-    private float maxStretch = 2f;
-
-    private GameObject ball;
-    private Vector2 prevVelocity;
-    private Rigidbody2D ballRigidBody;
-
-    private LineRenderer lineRenderer;
-    private SpringJoint2D spring;
-    private Transform launcher;
-    private Ray rayToMouse;
-    private Ray launcherToProjectile;
-    private float circleRadius;
-    private bool clickedOn;
-
-
-    void Awake()
-    {
-        spring = GetComponent<SpringJoint2D>();
-        launcher = spring.transform;
-    }
-
-    void Start()
+    public class LauncherDragController : MonoBehaviour
     {
 
-        ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
+        [SerializeField]
+        private float _maxStretch = 2f;
 
-        if (ball != null)
+        private GameObject _ball;
+        private Vector2 _prevVelocity;
+        private Rigidbody2D _ballRigidBody;
+
+        private LineRenderer _lineRenderer;
+        private SpringJoint2D _spring;
+        private Transform _launcher;
+        private Ray _rayToMouse;
+        private Ray _launcherToProjectile;
+        private float _circleRadius;
+        private bool _clickedOn;
+
+
+        void Awake()
         {
-            transform.position = ball.transform.position;
-            ballRigidBody = ball.GetComponent<Rigidbody2D>();
-            spring.connectedBody = ballRigidBody;
+            _spring = GetComponent<SpringJoint2D>();
+            _launcher = _spring.transform;
         }
 
-        lineRenderer = GetComponent<LineRenderer>();
-
-        lineRenderer.SetPosition(0, lineRenderer.transform.position);
-        lineRenderer.sortingOrder = 10;
-        rayToMouse = new Ray(launcher.position, Vector3.zero);
-        launcherToProjectile = new Ray(lineRenderer.transform.position, Vector3.zero);
-
-
-        CircleCollider2D circleCollider = ball.GetComponent<Collider2D>() as CircleCollider2D;
-        circleRadius = circleCollider.radius;
-
-    }
-
-    void Update()
-    {
-
-        if (ball == null)
-        {
-            ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
-            transform.position = ball.transform.position;
-            ballRigidBody = ball.GetComponent<Rigidbody2D>();
-            spring.connectedBody = ballRigidBody;
-        }
-
-        if (clickedOn)
-        {
-            Dragging();
-        }
-
-        if (spring != null)
+        void Start()
         {
 
-            if (!ballRigidBody.isKinematic && prevVelocity.sqrMagnitude > ballRigidBody.velocity.sqrMagnitude)
+            _ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
+
+            if (_ball != null)
             {
-                Destroy(spring);
-                ballRigidBody.velocity = prevVelocity;
+                transform.position = _ball.transform.position;
+                _ballRigidBody = _ball.GetComponent<Rigidbody2D>();
+                _spring.connectedBody = _ballRigidBody;
             }
 
-            if (!clickedOn)
+            _lineRenderer = GetComponent<LineRenderer>();
+
+            _lineRenderer.SetPosition(0, _lineRenderer.transform.position);
+            _lineRenderer.sortingOrder = 10;
+            _rayToMouse = new Ray(_launcher.position, Vector3.zero);
+            _launcherToProjectile = new Ray(_lineRenderer.transform.position, Vector3.zero);
+
+
+            var circleCollider = _ball.GetComponent<Collider2D>() as CircleCollider2D;
+            if (circleCollider != null) _circleRadius = circleCollider.radius;
+        }
+
+        void Update()
+        {
+
+            if (_ball == null)
             {
-                prevVelocity = ballRigidBody.velocity;
+                _ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
+                transform.position = _ball.transform.position;
+                _ballRigidBody = _ball.GetComponent<Rigidbody2D>();
+                _spring.connectedBody = _ballRigidBody;
             }
 
-            LineRendererUpdate();
+            if (_clickedOn)
+            {
+                Dragging();
+            }
+
+            if (_spring != null)
+            {
+
+                if (!_ballRigidBody.isKinematic && _prevVelocity.sqrMagnitude > _ballRigidBody.velocity.sqrMagnitude)
+                {
+                    Destroy(_spring);
+                    _ballRigidBody.velocity = _prevVelocity;
+                }
+
+                if (!_clickedOn)
+                {
+                    _prevVelocity = _ballRigidBody.velocity;
+                }
+
+                LineRendererUpdate();
+            }
+            else
+            {
+                _lineRenderer.enabled = false;
+            }
         }
-        else
+
+        void OnMouseDown()
         {
-            lineRenderer.enabled = false;
+            _spring.enabled = false;
+            _clickedOn = true;
+
         }
-    }
 
-    void OnMouseDown()
-    {
-        spring.enabled = false;
-        clickedOn = true;
-
-    }
-
-    void OnMouseUp()
-    {
-        spring.enabled = true;
-        ballRigidBody.isKinematic = false;
-        clickedOn = false;
-        GetComponent<CircleCollider2D>().enabled = false;
-    }
-
-    void Dragging()
-    {
-        Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 ballToMouse = mouseWorldPoint - ball.transform.position;
-        Vector3 launcherPosition = ball.transform.position - ballToMouse;
-
-        var maxStretchSqr = maxStretch * maxStretch;
-        if (ballToMouse.sqrMagnitude > maxStretchSqr)
+        void OnMouseUp()
         {
-            rayToMouse.direction = -ballToMouse;
-            launcherPosition = rayToMouse.GetPoint(maxStretch);
+            _spring.enabled = true;
+            _ballRigidBody.isKinematic = false;
+            _clickedOn = false;
+            GetComponent<CircleCollider2D>().enabled = false;
         }
-        launcherPosition.z = 0;
-        transform.position = launcherPosition;
-    }
 
-    void LineRendererUpdate()
-    {
-        Vector2 _launcherToProjectile = lineRenderer.transform.localPosition - ball.transform.position;
-        launcherToProjectile.direction = _launcherToProjectile;
-        Vector3 holdPoint = launcherToProjectile.GetPoint(_launcherToProjectile.magnitude - circleRadius);
-        lineRenderer.SetPosition(1, holdPoint);
+        void Dragging()
+        {
+            Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 ballToMouse = mouseWorldPoint - _ball.transform.position;
+            Vector3 launcherPosition = _ball.transform.position - ballToMouse;
+
+            var maxStretchSqr = _maxStretch * _maxStretch;
+            if (ballToMouse.sqrMagnitude > maxStretchSqr)
+            {
+                _rayToMouse.direction = -ballToMouse;
+                launcherPosition = _rayToMouse.GetPoint(_maxStretch);
+            }
+            launcherPosition.z = 0;
+            transform.position = launcherPosition;
+        }
+
+        void LineRendererUpdate()
+        {
+            Vector2 launcherToProjectile = _lineRenderer.transform.localPosition - _ball.transform.position;
+            this._launcherToProjectile.direction = launcherToProjectile;
+            Vector3 holdPoint = this._launcherToProjectile.GetPoint(launcherToProjectile.magnitude - _circleRadius);
+            _lineRenderer.SetPosition(1, holdPoint);
+        }
     }
 }

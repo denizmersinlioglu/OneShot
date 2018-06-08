@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LevelSystem;
+using UnityEngine;
 
 public class PlayerPreferencesManager : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class PlayerPreferencesManager : MonoBehaviour
 
     public void SetMaximumUnlockedLevel(int index)
     {
-        if (index <= LevelManager.sharedInstance.totalLevelIndex)
+        if (index <= LevelManager.SharedInstance.TotalLevelIndex)
         {
             PlayerPrefs.SetInt(MAX_UNLOCK_LEVEL_KEY, index);
         }
@@ -47,7 +48,7 @@ public class PlayerPreferencesManager : MonoBehaviour
 
 	public void SetLastActiveLevel(int index)
     {
-        if (index <= LevelManager.sharedInstance.totalLevelIndex)
+        if (index <= LevelManager.SharedInstance.TotalLevelIndex)
         {
             PlayerPrefs.SetInt(LAST_ACTIVATE_LEVEL_KEY, index);
         }

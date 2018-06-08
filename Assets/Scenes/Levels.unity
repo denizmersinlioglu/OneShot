@@ -488,8 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036bb713360157b43a552066e67616e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelListAsset: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
-  levelButton: {fileID: 1063268192309010, guid: baa728af1756df64ab1948dac592aff9,
+  LevelButton: {fileID: 1063268192309010, guid: baa728af1756df64ab1948dac592aff9,
     type: 2}
 --- !u!114 &299433825
 MonoBehaviour:
@@ -1097,9 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036bb713360157b43a552066e67616e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelListAsset: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
-  levelButton: {fileID: 1400235012212368, guid: b08794914b9188e4ba0c58bca5b31b4b,
-    type: 2}
+  LevelButton: {fileID: 0}
 --- !u!222 &1091480586
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1887,6 +1884,10 @@ Prefab:
         type: 2}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063268192309010, guid: baa728af1756df64ab1948dac592aff9, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baa728af1756df64ab1948dac592aff9, type: 2}

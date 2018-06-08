@@ -519,28 +519,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b649c2859be34874b885ea2770e4acd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadePanel: {fileID: 0}
-  levelDatabase: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
-  levelNumber: 2
-  headerLabel: {fileID: 1916483237}
-  level:
-    index: 0
-    name: New level
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 0
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 0
+  _levelDatabase: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
+  _levelNumber: 1
+  _headerLabel: {fileID: 1916483237}
+  _level:
+    Index: 0
+    Name: New level
+    Hint: Dummy Hint
+    Structure: {fileID: 0}
+    Status: 0
+    CompletionStatus: 0
+    IsLaunchActive: 0
+    IsAccelerometerActive: 0
+    IsNavigationButtonsActive: 0
+    MaximumHitCount: 0
+    ThreeStarHitLimit: 0
+    TwoStarHitLimit: 0
+    IsGravityEnabled: 0
+    GravityConstant: 0
+    IsBallPhysicsEnabled: 0
+    BallFrictionRate: 0
+    BallBounceRate: 0
 --- !u!4 &814989253
 Transform:
   m_ObjectHideFlags: 0
@@ -1294,7 +1293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082aa5ac7a2fcfd4fa564c087eb56fe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStretch: 3
+  _maxStretch: 2
 --- !u!58 &1749368366
 CircleCollider2D:
   m_ObjectHideFlags: 0

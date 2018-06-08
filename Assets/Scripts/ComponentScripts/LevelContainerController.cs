@@ -1,66 +1,57 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using LevelSystem;
 using UnityEngine;
 
-public class LevelContainerController : MonoBehaviour {
+namespace ComponentScripts
+{
+	public class LevelContainerController : MonoBehaviour {
 
-	public LevelList levelListAsset;
-	public GameObject levelButton;
+		private readonly int _lastActiveLevelPage;
+		public GameObject LevelButton;
 
-	private List<Level> levelList;
-	private int pageNumber = 0;
-	private int totalPageNumber = 0;
-	private int lastActiveLevelPage = 0;
-	private int levelsPerPage = 18;
-	// Use this for initialization
-	void Start () {
-		levelList = levelListAsset.levelList;
-		totalPageNumber = Mathf.FloorToInt(levelList.Count / levelsPerPage);
-		pageNumber = Mathf.FloorToInt(lastActiveLevelPage / levelsPerPage);
-		RefreshLevelList();
-	}
+		private List<Level> _levelList;
+		private int _pageNumber;
+		private int _totalPageNumber;
 
-	void RefreshLevelList()
-	{	
-		foreach(Transform child in transform) {
-    		Destroy(child.gameObject);
-		}
-		var startingIndex = levelsPerPage * pageNumber;
-		var lastIndex = Mathf.Min(levelsPerPage * (pageNumber + 1), levelList.Count);
+		private const int LevelsPerPage = 18;
 
-		for (int i = startingIndex; i < lastIndex; i++)
+		// Use this for initialization
+		private void Start ()
 		{
-			GameObject instanceButton = Instantiate(levelButton) as GameObject;
-			LevelButtonController newLevelButton = instanceButton.GetComponent<LevelButtonController>();
-			var level = levelList[i];
-			newLevelButton.level = level;
-			newLevelButton.transform.SetParent(this.transform,false); 
-		}			
-	}
-
-	public void moveNextPage(){
-		if (pageNumber < totalPageNumber){
-			pageNumber += 1;
+			_levelList = LevelManager.SharedInstance.LevelListDatabase.LevelListDatabase;
+			if (_levelList != null) _totalPageNumber = Mathf.FloorToInt(_levelList.Count / LevelsPerPage);
+			_pageNumber = Mathf.FloorToInt(_lastActiveLevelPage / LevelsPerPage);
 			RefreshLevelList();
 		}
-	}
 
-	public void movePreviousPage (){
-		if (pageNumber > 0){
-			pageNumber -= 1;
-			RefreshLevelList();
-		}
-	}
-
-	public int moveToMaximumLevel(){
-		int maximumLevelNumber = 0;
-		foreach(Level level in levelList){
-			if (level.status != LevelStatus.locked){
-				maximumLevelNumber = Mathf.Max(level.index, maximumLevelNumber);
+		private void RefreshLevelList()
+		{	
+			foreach(Transform child in transform) {
+				Destroy(child.gameObject);
 			}
+			var startingIndex = LevelsPerPage * _pageNumber;
+			var lastIndex = Mathf.Min(LevelsPerPage * (_pageNumber + 1), _levelList.Count);
+
+			for (var i = startingIndex; i < lastIndex; i++)
+			{
+				var instanceButton = Instantiate(LevelButton);
+				var newLevelButton = instanceButton.GetComponent<LevelButtonController>();
+				var level = _levelList[i];
+				newLevelButton.Level = level;
+				newLevelButton.transform.SetParent(transform,false); 
+			}			
 		}
-		pageNumber = Mathf.FloorToInt(maximumLevelNumber / levelsPerPage);
-		RefreshLevelList();
-		return maximumLevelNumber;
+
+		public void MoveNextPage(){
+			if (_pageNumber >= _totalPageNumber) return;
+			_pageNumber += 1;
+			RefreshLevelList();
+		}
+
+		public void MovePreviousPage (){
+			if (_pageNumber <= 0) return;
+			_pageNumber -= 1;
+			RefreshLevelList();
+		}
 	}
 }

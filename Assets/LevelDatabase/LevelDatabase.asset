@@ -11,348 +11,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f583dcfbb56c964eb1ece86923501a7, type: 3}
   m_Name: LevelDatabase
   m_EditorClassIdentifier: 
-  levelList:
-  - index: 1
-    name: Level1
-    hint: Dummy Hint
-    structure: {fileID: 1770953264436128, guid: 57e5f6447a580db4c9711992ab28d510,
+  LevelListDatabase:
+  - Index: 1
+    Name: Level1
+    Hint: Dummy Hint
+    Structure: {fileID: 1770953264436128, guid: 57e5f6447a580db4c9711992ab28d510,
       type: 2}
-    status: 1
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 2
-    name: Level2
-    hint: Dummy Hint
-    structure: {fileID: 1298435534265334, guid: 2be0cfe9b10b2204ba4d96a1cd52f4ac,
+    Status: 1
+    CompletionStatus: 0
+    IsLaunchActive: 0
+    IsAccelerometerActive: 0
+    IsNavigationButtonsActive: 0
+    MaximumHitCount: 0
+    ThreeStarHitLimit: 0
+    TwoStarHitLimit: 0
+    IsGravityEnabled: 0
+    GravityConstant: 1
+    IsBallPhysicsEnabled: 0
+    BallFrictionRate: 0
+    BallBounceRate: 1
+  - Index: 2
+    Name: Level2
+    Hint: Dummy Hint
+    Structure: {fileID: 1298435534265334, guid: 2be0cfe9b10b2204ba4d96a1cd52f4ac,
       type: 2}
-    status: 1
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 3
-    name: Level3
-    hint: Dummy Hint
-    structure: {fileID: 1948712826245112, guid: 161c4ca9117318541a9a9b90e77e1cb4,
+    Status: 1
+    CompletionStatus: 0
+    IsLaunchActive: 0
+    IsAccelerometerActive: 0
+    IsNavigationButtonsActive: 0
+    MaximumHitCount: 0
+    ThreeStarHitLimit: 0
+    TwoStarHitLimit: 0
+    IsGravityEnabled: 0
+    GravityConstant: 1
+    IsBallPhysicsEnabled: 0
+    BallFrictionRate: 0
+    BallBounceRate: 1
+  - Index: 3
+    Name: Level3
+    Hint: Dummy Hint
+    Structure: {fileID: 1948712826245112, guid: 161c4ca9117318541a9a9b90e77e1cb4,
       type: 2}
-    status: 1
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 4
-    name: Level4
-    hint: Dummy Hint
-    structure: {fileID: 1657600399728568, guid: e2059375777fd4e418b896c27608cb5b,
+    Status: 1
+    CompletionStatus: 0
+    IsLaunchActive: 0
+    IsAccelerometerActive: 0
+    IsNavigationButtonsActive: 0
+    MaximumHitCount: 0
+    ThreeStarHitLimit: 0
+    TwoStarHitLimit: 0
+    IsGravityEnabled: 0
+    GravityConstant: 1
+    IsBallPhysicsEnabled: 0
+    BallFrictionRate: 0
+    BallBounceRate: 1
+  - Index: 4
+    Name: Level4
+    Hint: Dummy Hint
+    Structure: {fileID: 1657600399728568, guid: e2059375777fd4e418b896c27608cb5b,
       type: 2}
-    status: 1
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 5
-    name: Level5
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 6
-    name: Level6
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 7
-    name: Level7
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 8
-    name: Level8
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 9
-    name: Level9
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 10
-    name: Level10
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 11
-    name: Level11
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 12
-    name: Level12
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 13
-    name: Level13
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 14
-    name: Level14
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 15
-    name: Level15
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 16
-    name: Level16
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 17
-    name: Level17
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 18
-    name: Level18
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 19
-    name: Level19
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
-  - index: 20
-    name: Level20
-    hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
-    completionStatus: 0
-    isLaunchActive: 0
-    isAccelerometerActive: 0
-    isNavigationButtonsActive: 0
-    maximumHitCount: 0
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
-    isBallPhysicsEnabled: 0
-    ballFrictionRate: 0
-    ballBounceRate: 1
+    Status: 0
+    CompletionStatus: 0
+    IsLaunchActive: 0
+    IsAccelerometerActive: 0
+    IsNavigationButtonsActive: 0
+    MaximumHitCount: 0
+    ThreeStarHitLimit: 0
+    TwoStarHitLimit: 0
+    IsGravityEnabled: 0
+    GravityConstant: 1
+    IsBallPhysicsEnabled: 0
+    BallFrictionRate: 0
+    BallBounceRate: 1

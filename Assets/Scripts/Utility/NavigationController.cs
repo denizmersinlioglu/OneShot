@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LevelSystem;
+using UnityEngine;
 
 public class NavigationController : MonoBehaviour {
 
@@ -6,15 +7,15 @@ public class NavigationController : MonoBehaviour {
 	
 	// Mark: - Button Actions
 	public void LoadLevelsScene(){
-		LevelManager.sharedInstance.LoadLevelsScene();
+		LevelManager.LoadLevelsScene();
 	}
 
 	public void LoadLastActiveLevel(){
-		LevelManager.sharedInstance.LoadLastActiveLevel();
+		LevelManager.SharedInstance.LoadLastActiveLevel();
 	}
 
 	public void HomePageButtonPressed(){
-		LevelManager.sharedInstance.LoadMainMenu();
+		LevelManager.LoadMainMenu();
 	}
 
 	public void ChangeLayoutButtonPressed(){
