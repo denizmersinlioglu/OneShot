@@ -6,115 +6,115 @@ namespace ComponentScripts
     {
 
         [SerializeField]
-        private float _maxStretch = 2f;
+        private float maxStretch = 2f;
 
-        private GameObject _ball;
-        private Vector2 _prevVelocity;
-        private Rigidbody2D _ballRigidBody;
+        private GameObject ball;
+        private Vector2 prevVelocity;
+        private Rigidbody2D ballRigidBody;
 
-        private LineRenderer _lineRenderer;
-        private SpringJoint2D _spring;
-        private Transform _launcher;
-        private Ray _rayToMouse;
-        private Ray _launcherToProjectile;
-        private float _circleRadius;
-        private bool _clickedOn;
+        private LineRenderer lineRenderer;
+        private SpringJoint2D spring;
+        private Transform launcher;
+        private Ray rayToMouse;
+        private Ray launcherToProjectile;
+        private float circleRadius;
+        private bool clickedOn;
 
 
         void Awake()
         {
-            _spring = GetComponent<SpringJoint2D>();
-            _launcher = _spring.transform;
+            spring = GetComponent<SpringJoint2D>();
+            launcher = spring.transform;
         }
 
         void Start()
         {
 
-            _ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
+            ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
 
-            if (_ball != null)
+            if (ball != null)
             {
-                transform.position = _ball.transform.position;
-                _ballRigidBody = _ball.GetComponent<Rigidbody2D>();
-                _spring.connectedBody = _ballRigidBody;
+                transform.position = ball.transform.position;
+                ballRigidBody = ball.GetComponent<Rigidbody2D>();
+                spring.connectedBody = ballRigidBody;
             }
 
-            _lineRenderer = GetComponent<LineRenderer>();
+            lineRenderer = GetComponent<LineRenderer>();
 
-            _lineRenderer.SetPosition(0, _lineRenderer.transform.position);
-            _lineRenderer.sortingOrder = 10;
-            _rayToMouse = new Ray(_launcher.position, Vector3.zero);
-            _launcherToProjectile = new Ray(_lineRenderer.transform.position, Vector3.zero);
+            lineRenderer.SetPosition(0, lineRenderer.transform.position);
+            lineRenderer.sortingOrder = 10;
+            rayToMouse = new Ray(launcher.position, Vector3.zero);
+            launcherToProjectile = new Ray(lineRenderer.transform.position, Vector3.zero);
 
 
-            var circleCollider = _ball.GetComponent<Collider2D>() as CircleCollider2D;
-            if (circleCollider != null) _circleRadius = circleCollider.radius;
+            var circleCollider = ball.GetComponent<Collider2D>() as CircleCollider2D;
+            if (circleCollider != null) circleRadius = circleCollider.radius;
         }
 
         void Update()
         {
 
-            if (_ball == null)
+            if (ball == null)
             {
-                _ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
-                transform.position = _ball.transform.position;
-                _ballRigidBody = _ball.GetComponent<Rigidbody2D>();
-                _spring.connectedBody = _ballRigidBody;
+                ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
+                transform.position = ball.transform.position;
+                ballRigidBody = ball.GetComponent<Rigidbody2D>();
+                spring.connectedBody = ballRigidBody;
             }
 
-            if (_clickedOn)
+            if (clickedOn)
             {
                 Dragging();
             }
 
-            if (_spring != null)
+            if (spring != null)
             {
 
-                if (!_ballRigidBody.isKinematic && _prevVelocity.sqrMagnitude > _ballRigidBody.velocity.sqrMagnitude)
+                if (!ballRigidBody.isKinematic && prevVelocity.sqrMagnitude > ballRigidBody.velocity.sqrMagnitude)
                 {
-                    Destroy(_spring);
-                    _ballRigidBody.velocity = _prevVelocity;
+                    Destroy(spring);
+                    ballRigidBody.velocity = prevVelocity;
                 }
 
-                if (!_clickedOn)
+                if (!clickedOn)
                 {
-                    _prevVelocity = _ballRigidBody.velocity;
+                    prevVelocity = ballRigidBody.velocity;
                 }
 
                 LineRendererUpdate();
             }
             else
             {
-                _lineRenderer.enabled = false;
+                lineRenderer.enabled = false;
             }
         }
 
         void OnMouseDown()
         {
-            _spring.enabled = false;
-            _clickedOn = true;
+            spring.enabled = false;
+            clickedOn = true;
 
         }
 
         void OnMouseUp()
         {
-            _spring.enabled = true;
-            _ballRigidBody.isKinematic = false;
-            _clickedOn = false;
+            spring.enabled = true;
+            ballRigidBody.isKinematic = false;
+            clickedOn = false;
             GetComponent<CircleCollider2D>().enabled = false;
         }
 
         void Dragging()
         {
             Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 ballToMouse = mouseWorldPoint - _ball.transform.position;
-            Vector3 launcherPosition = _ball.transform.position - ballToMouse;
+            Vector3 ballToMouse = mouseWorldPoint - ball.transform.position;
+            Vector3 launcherPosition = ball.transform.position - ballToMouse;
 
-            var maxStretchSqr = _maxStretch * _maxStretch;
+            var maxStretchSqr = maxStretch * maxStretch;
             if (ballToMouse.sqrMagnitude > maxStretchSqr)
             {
-                _rayToMouse.direction = -ballToMouse;
-                launcherPosition = _rayToMouse.GetPoint(_maxStretch);
+                rayToMouse.direction = -ballToMouse;
+                launcherPosition = rayToMouse.GetPoint(maxStretch);
             }
             launcherPosition.z = 0;
             transform.position = launcherPosition;
@@ -122,10 +122,10 @@ namespace ComponentScripts
 
         void LineRendererUpdate()
         {
-            Vector2 launcherToProjectile = _lineRenderer.transform.localPosition - _ball.transform.position;
-            this._launcherToProjectile.direction = launcherToProjectile;
-            Vector3 holdPoint = this._launcherToProjectile.GetPoint(launcherToProjectile.magnitude - _circleRadius);
-            _lineRenderer.SetPosition(1, holdPoint);
+            Vector2 launcherToProjectile = lineRenderer.transform.localPosition - ball.transform.position;
+            this.launcherToProjectile.direction = launcherToProjectile;
+            Vector3 holdPoint = this.launcherToProjectile.GetPoint(launcherToProjectile.magnitude - circleRadius);
+            lineRenderer.SetPosition(1, holdPoint);
         }
     }
 }

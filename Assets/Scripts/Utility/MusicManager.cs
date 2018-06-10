@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour {
 
-	public AudioClip[] LevelMusic;
+	public AudioClip[] levelMusic;
 	
 	public AudioSource music;
 	

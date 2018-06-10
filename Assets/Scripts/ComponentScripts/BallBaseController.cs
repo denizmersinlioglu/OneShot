@@ -5,20 +5,20 @@ namespace ComponentScripts
 {
 	public class BallBaseController : MonoBehaviour {
 
-		public float VelocityConstant = 1f;
-		private float _velocityHolder = 1f;
-		public Vector2 Velo;
+		public float velocityConstant = 1f;
+		private float velocityHolder = 1f;
+		public Vector2 velo;
 		// Use this for initialization
 		private void Start () {
-			gameObject.GetComponent<Rigidbody2D>().velocity = Velo;
+			gameObject.GetComponent<Rigidbody2D>().velocity = velo;
 		}
 	
 		// Update is called once per frame
 		private void Update () {
-			if (Math.Abs(_velocityHolder - VelocityConstant) > 10f && Math.Abs(VelocityConstant) < 1) {
-				gameObject.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<Rigidbody2D>().velocity * VelocityConstant ;
+			if (Math.Abs(velocityHolder - velocityConstant) > 10f && Math.Abs(velocityConstant) < 1) {
+				gameObject.GetComponent<Rigidbody2D>().velocity = gameObject.GetComponent<Rigidbody2D>().velocity * velocityConstant ;
 			}
-			_velocityHolder = VelocityConstant;
+			velocityHolder = velocityConstant;
 		
 		}
 	}

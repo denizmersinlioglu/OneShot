@@ -8,31 +8,31 @@ using TMPro;
 public class LevelButtonController : MonoBehaviour
 {
 
-    public Button LevelNavigationButton;
-    public Level Level;
+    public Button levelNavigationButton;
+    public Level level;
 
-    public GameObject Star1;
-    public GameObject Star2;
-    public GameObject Star3;
+    public GameObject star1;
+    public GameObject star2;
+    public GameObject star3;
 
     // Use this for initialization
     private void Start()
     {	
-        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = Level.Index.ToString();
-        LevelNavigationButton.onClick.AddListener(InitializeLevel);
+        gameObject.GetComponentInChildren<TextMeshProUGUI>().text = level.index.ToString();
+        levelNavigationButton.onClick.AddListener(InitializeLevel);
     }
 
     private void InitializeLevel()
     {
         // var levelIndex = level.levelIndex;
-        if (Level.Status == LevelStatus.Locked)
+        if (level.status == LevelStatus.locked)
         {
             //TODO print warning: The level is locked
             print("level is locked");
         }
         else
         {
-            LevelManager.SharedInstance.LoadGameScene(Level.Index);
+            LevelManager.SharedInstance.LoadGameScene(level.index);
         }
     }
 }

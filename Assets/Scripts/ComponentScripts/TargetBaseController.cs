@@ -6,21 +6,21 @@ namespace ComponentScripts
 {
 	public class TargetBaseController : MonoBehaviour {
 
-		private IEnumerator _coroutine;
-		private ParticleSystem _ps;
+		private IEnumerator coroutine;
+		private ParticleSystem ps;
 		void OnCollisionEnter2D(Collision2D coll) {
 			if (!coll.gameObject.CompareTag("OneShot_Ball")) return;
-			_ps = GetComponent<ParticleSystem>();
-			var no = _ps.noise;
+			ps = GetComponent<ParticleSystem>();
+			var no = ps.noise;
 			no.enabled = true;
 			no.strength = 1.0f;
 			no.quality = ParticleSystemNoiseQuality.High;
 
-			var main = _ps.main;
+			var main = ps.main;
 			main.loop = false;
 			
-			_coroutine = FadeTo(0f, 0.5f);
-			StartCoroutine(_coroutine);
+			coroutine = FadeTo(0f, 0.5f);
+			StartCoroutine(coroutine);
 
 			var collider = GetComponent<Collider2D>();
 			if (collider == null) throw new ArgumentNullException("collider");

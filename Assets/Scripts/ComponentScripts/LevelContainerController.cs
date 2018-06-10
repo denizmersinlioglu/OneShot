@@ -6,21 +6,21 @@ namespace ComponentScripts
 {
 	public class LevelContainerController : MonoBehaviour {
 
-		private readonly int _lastActiveLevelPage;
-		public GameObject LevelButton;
+		private readonly int lastActiveLevelPage;
+		public GameObject levelButton;
 
-		private List<Level> _levelList;
-		private int _pageNumber;
-		private int _totalPageNumber;
+		private List<Level> levelList;
+		private int pageNumber;
+		private int totalPageNumber;
 
-		private const int LevelsPerPage = 18;
+		private const int levelsPerPage = 18;
 
 		// Use this for initialization
 		private void Start ()
 		{
-			_levelList = LevelManager.SharedInstance.LevelListDatabase.LevelListDatabase;
-			if (_levelList != null) _totalPageNumber = Mathf.FloorToInt(_levelList.Count / LevelsPerPage);
-			_pageNumber = Mathf.FloorToInt(_lastActiveLevelPage / LevelsPerPage);
+			levelList = LevelManager.SharedInstance.levelListDatabase.levelListDatabase;
+			if (levelList != null) totalPageNumber = Mathf.FloorToInt(levelList.Count / levelsPerPage);
+			pageNumber = Mathf.FloorToInt(lastActiveLevelPage / levelsPerPage);
 			RefreshLevelList();
 		}
 
@@ -29,28 +29,28 @@ namespace ComponentScripts
 			foreach(Transform child in transform) {
 				Destroy(child.gameObject);
 			}
-			var startingIndex = LevelsPerPage * _pageNumber;
-			var lastIndex = Mathf.Min(LevelsPerPage * (_pageNumber + 1), _levelList.Count);
+			var startingIndex = levelsPerPage * pageNumber;
+			var lastIndex = Mathf.Min(levelsPerPage * (pageNumber + 1), levelList.Count);
 
 			for (var i = startingIndex; i < lastIndex; i++)
 			{
-				var instanceButton = Instantiate(LevelButton);
+				var instanceButton = Instantiate(levelButton);
 				var newLevelButton = instanceButton.GetComponent<LevelButtonController>();
-				var level = _levelList[i];
-				newLevelButton.Level = level;
+				var level = levelList[i];
+				newLevelButton.level = level;
 				newLevelButton.transform.SetParent(transform,false); 
 			}			
 		}
 
 		public void MoveNextPage(){
-			if (_pageNumber >= _totalPageNumber) return;
-			_pageNumber += 1;
+			if (pageNumber >= totalPageNumber) return;
+			pageNumber += 1;
 			RefreshLevelList();
 		}
 
 		public void MovePreviousPage (){
-			if (_pageNumber <= 0) return;
-			_pageNumber -= 1;
+			if (pageNumber <= 0) return;
+			pageNumber -= 1;
 			RefreshLevelList();
 		}
 	}

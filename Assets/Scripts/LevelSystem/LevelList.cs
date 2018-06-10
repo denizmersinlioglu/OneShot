@@ -5,6 +5,6 @@ namespace LevelSystem
 {
     public class LevelList : ScriptableObject
     {
-        public List<Level> LevelListDatabase;
+        public List<Level> levelListDatabase;
     }
 }

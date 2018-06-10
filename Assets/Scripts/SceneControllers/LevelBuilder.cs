@@ -22,22 +22,22 @@ namespace SceneControllers
     */
     
         [SerializeField]
-        private LevelList _levelDatabase;
+        private LevelList levelDatabase;
 
         [SerializeField]
-        private int _levelNumber = 1;
+        private int levelNumber = 1;
 
         [SerializeField]
-        private TextMeshProUGUI _headerLabel;
+        private TextMeshProUGUI headerLabel;
 
         [SerializeField]
-        private Level _level;
+        private Level level;
 
         private void Awake()
         {
-            _level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : _levelDatabase.LevelListDatabase[_levelNumber-1];
-            Instantiate(_level.Structure, Vector3.zero, Quaternion.identity);
-            _headerLabel.text = "Level " + _level.Index;
+            level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : levelDatabase.levelListDatabase[levelNumber-1];
+            Instantiate(level.structure, Vector3.zero, Quaternion.identity);
+            headerLabel.text = "Level " + level.index;
         }
     }
 }

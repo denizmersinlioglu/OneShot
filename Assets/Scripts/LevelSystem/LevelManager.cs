@@ -1,22 +1,23 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Utility;
 
 namespace LevelSystem
 {
     public class LevelManager : MonoBehaviour
     {
-        private const float SplashingTime = 2f;
-        public LevelList LevelListDatabase;
+        private const float splashingTime = 2f;
+        public LevelList levelListDatabase;
 
         [HideInInspector]
-        public int TotalLevelIndex;
+        public int totalLevelIndex;
         [HideInInspector]
-        public int MaxLevelIndex;
+        public int maxLevelIndex;
         [HideInInspector]
-        private Level _currentLevel;
+        private Level currentLevel;
         [HideInInspector]
-        public int CurrentLevelIndex;
+        public int currentLevelIndex;
 
         static LevelManager()
         {
@@ -34,12 +35,12 @@ namespace LevelSystem
                 Destroy(gameObject);
             }
 
-            MaxLevelIndex = PlayerPreferencesManager.sharedInstance.GetMaximumUnlockedLevel();
-            CurrentLevelIndex = PlayerPreferencesManager.sharedInstance.GetLastActiveLevel();
-            TotalLevelIndex = LevelListDatabase.LevelListDatabase.Count;
-            Debug.Log("Player maximum level index is " + MaxLevelIndex);
-            Debug.Log("Player current level index is " + CurrentLevelIndex);
-            Debug.Log("Game total level index is " + TotalLevelIndex);
+            maxLevelIndex = PlayerPreferencesManager.SharedInstance.GetMaximumUnlockedLevel();
+            currentLevelIndex = PlayerPreferencesManager.SharedInstance.GetLastActiveLevel();
+            totalLevelIndex = levelListDatabase.levelListDatabase.Count;
+            Debug.Log("Player maximum level index is " + maxLevelIndex);
+            Debug.Log("Player current level index is " + currentLevelIndex);
+            Debug.Log("Game total level index is " + totalLevelIndex);
 
             SharedInstance = this;
             DontDestroyOnLoad(gameObject);
@@ -48,19 +49,19 @@ namespace LevelSystem
 
         public Level GetActiveLevel()
         {
-            return LevelListDatabase.LevelListDatabase[CurrentLevelIndex-1];
+            return levelListDatabase.levelListDatabase[currentLevelIndex-1];
         }
 
         private void SetActiveLevel(int index)
         {
-            CurrentLevelIndex = index;
-            PlayerPreferencesManager.sharedInstance.SetLastActiveLevel(index);
+            currentLevelIndex = index;
+            PlayerPreferencesManager.SharedInstance.SetLastActiveLevel(index);
             Debug.Log("New active scene is Level" + index);
         }
 
-        private IEnumerator InitializeLevelsScene()
+        private static IEnumerator InitializeLevelsScene()
         {
-            yield return new WaitForSeconds(SplashingTime);
+            yield return new WaitForSeconds(splashingTime);
             LoadMainMenu();
         }
 
@@ -70,7 +71,7 @@ namespace LevelSystem
         }
 
         public void LoadLastActiveLevel(){
-            LoadGameScene(CurrentLevelIndex);
+            LoadGameScene(currentLevelIndex);
         }
 
         public void LoadGameScene(int index)

@@ -2,11 +2,11 @@
 {
     public enum LevelStatus
     {
-        Locked, Unlocked, Completed
+        locked, unlocked, completed
     }
 
     public enum LevelCompletionStatus
     {
-        None, OneStar, TwoStars, TreeStars
+        none, oneStar, twoStars, treeStars
     }
 }

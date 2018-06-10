@@ -305,28 +305,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11d736c6e72299b4c91cdfa68bb9d414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelNavigationButton: {fileID: 114191693799040002}
-  Level:
-    Index: 0
-    Name: New level
-    Hint: Dummy Hint
-    Structure: {fileID: 0}
-    Status: 0
-    CompletionStatus: 0
-    IsLaunchActive: 0
-    IsAccelerometerActive: 0
-    IsNavigationButtonsActive: 0
-    MaximumHitCount: 0
-    ThreeStarHitLimit: 0
-    TwoStarHitLimit: 0
-    IsGravityEnabled: 0
-    GravityConstant: 0
-    IsBallPhysicsEnabled: 0
-    BallFrictionRate: 0
-    BallBounceRate: 0
-  Star1: {fileID: 1566265537678450}
-  Star2: {fileID: 1669816063096104}
-  Star3: {fileID: 1261953455527318}
+  levelNavigationButton: {fileID: 114191693799040002}
+  level:
+    index: 0
+    name: New level
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
+    isLaunchActive: 0
+    isAccelerometerActive: 0
+    isNavigationButtonsActive: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
+  star1: {fileID: 1566265537678450}
+  star2: {fileID: 1669816063096104}
+  star3: {fileID: 1261953455527318}
 --- !u!114 &114182237126081848
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,67 +1,67 @@
 ﻿using LevelSystem;
 using UnityEngine;
 
-public class PlayerPreferencesManager : MonoBehaviour
+namespace Utility
 {
-    private readonly string MAX_UNLOCK_LEVEL_KEY = "MaximumUnlockedLevelIndex";
-	private readonly string LAST_ACTIVATE_LEVEL_KEY = "LastActivateLevelIndex";
-
-    private static PlayerPreferencesManager instance = null;
-
-    public static PlayerPreferencesManager sharedInstance
+    public class PlayerPreferencesManager : MonoBehaviour
     {
-        get
-        {
-            return instance;
-        }
-    }
+        private const string maxUnlockLevelKey = "MaximumUnlockedLevelIndex";
+        private const string lastActivateLevelKey = "LastActivateLevelIndex";
 
-    private void Awake()
-    {
-        // if the singleton hasn't been initialized yet
-        if (instance != null && instance != this)
+        static PlayerPreferencesManager()
         {
-            Destroy(this.gameObject);
+            SharedInstance = null;
         }
 
-        instance = this;
-        DontDestroyOnLoad(this.gameObject);
-    }
+        public static PlayerPreferencesManager SharedInstance { get; private set; }
 
-    public void SetMaximumUnlockedLevel(int index)
-    {
-        if (index <= LevelManager.SharedInstance.TotalLevelIndex)
+        private void Awake()
         {
-            PlayerPrefs.SetInt(MAX_UNLOCK_LEVEL_KEY, index);
+            // if the singleton hasn't been initialized yet
+            if (SharedInstance != null && SharedInstance != this)
+            {
+                Destroy(this.gameObject);
+            }
+
+            SharedInstance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
-        else
-        { 
-			Debug.LogError("An error occured while getting max unlocked level"); 
-		}
-    }
 
-    public int GetMaximumUnlockedLevel()
-    {	
-		int index =  PlayerPrefs.GetInt(MAX_UNLOCK_LEVEL_KEY); 
-        return index;
-    }
-
-	public void SetLastActiveLevel(int index)
-    {
-        if (index <= LevelManager.SharedInstance.TotalLevelIndex)
+        public void SetMaximumUnlockedLevel(int index)
         {
-            PlayerPrefs.SetInt(LAST_ACTIVATE_LEVEL_KEY, index);
+            if (index <= LevelManager.SharedInstance.totalLevelIndex)
+            {
+                PlayerPrefs.SetInt(maxUnlockLevelKey, index);
+            }
+            else
+            { 
+                Debug.LogError("An error occured while getting max unlocked level"); 
+            }
         }
-        else
-        { 
-			Debug.LogError("An error occured while getting last active level"); 
-		}
-    }
 
-    public int GetLastActiveLevel()
-    {	
-		int index =  PlayerPrefs.GetInt(LAST_ACTIVATE_LEVEL_KEY);
-        return index;
-    }
+        public int GetMaximumUnlockedLevel()
+        {	
+            var index =  PlayerPrefs.GetInt(maxUnlockLevelKey); 
+            return index;
+        }
 
+        public void SetLastActiveLevel(int index)
+        {
+            if (index <= LevelManager.SharedInstance.totalLevelIndex)
+            {
+                PlayerPrefs.SetInt(lastActivateLevelKey, index);
+            }
+            else
+            { 
+                Debug.LogError("An error occured while getting last active level"); 
+            }
+        }
+
+        public int GetLastActiveLevel()
+        {	
+            var index =  PlayerPrefs.GetInt(lastActivateLevelKey);
+            return index;
+        }
+
+    }
 }

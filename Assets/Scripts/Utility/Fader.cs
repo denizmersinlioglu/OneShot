@@ -74,7 +74,7 @@ public class Fader : MonoBehaviour
             if (!isFadeIn)
             {
                 //Fade in
-                alpha = newAlpha(coDelta, 1, alpha);
+                alpha = NewAlpha(coDelta, 1, alpha);
                 if (alpha == 1 && !startedLoading)
                 {
                     startedLoading = true;
@@ -85,7 +85,7 @@ public class Fader : MonoBehaviour
             else
             {
                 //Fade out
-                alpha = newAlpha(coDelta, 0, alpha);
+                alpha = NewAlpha(coDelta, 0, alpha);
                 if (alpha == 0)
                 {
                     hasFadedIn = true;
@@ -108,7 +108,7 @@ public class Fader : MonoBehaviour
     }
 
 
-    float newAlpha(float delta, int to, float currAlpha)
+    float NewAlpha(float delta, int to, float currAlpha)
     {
 
         switch (to)

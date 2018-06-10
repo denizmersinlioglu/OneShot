@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036bb713360157b43a552066e67616e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelButton: {fileID: 1063268192309010, guid: baa728af1756df64ab1948dac592aff9,
+  levelButton: {fileID: 1063268192309010, guid: baa728af1756df64ab1948dac592aff9,
     type: 2}
 --- !u!114 &299433825
 MonoBehaviour:
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036bb713360157b43a552066e67616e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelButton: {fileID: 0}
+  levelButton: {fileID: 0}
 --- !u!222 &1091480586
 CanvasRenderer:
   m_ObjectHideFlags: 0
