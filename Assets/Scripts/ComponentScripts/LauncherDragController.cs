@@ -6,9 +6,10 @@ namespace ComponentScripts
     {
 
         [SerializeField]
-        private float maxStretch = 2f;
+        private float maxStretch;
 
         private GameObject ball;
+        private Vector3 pointerDownPoint;
         private Vector2 prevVelocity;
         private Rigidbody2D ballRigidBody;
 
@@ -16,18 +17,17 @@ namespace ComponentScripts
         private SpringJoint2D spring;
         private Transform launcher;
         private Ray rayToMouse;
-        private Ray launcherToProjectile;
+        private Ray offsetVector;
         private float circleRadius;
-        private bool clickedOn;
+        private bool isLaunched;
 
-
-        void Awake()
+        private void Awake()
         {
             spring = GetComponent<SpringJoint2D>();
             launcher = spring.transform;
         }
 
-        void Start()
+        private void Start()
         {
 
             ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
@@ -44,16 +44,14 @@ namespace ComponentScripts
             lineRenderer.SetPosition(0, lineRenderer.transform.position);
             lineRenderer.sortingOrder = 10;
             rayToMouse = new Ray(launcher.position, Vector3.zero);
-            launcherToProjectile = new Ray(lineRenderer.transform.position, Vector3.zero);
-
+            offsetVector = new Ray(lineRenderer.transform.position, Vector3.zero);
 
             var circleCollider = ball.GetComponent<Collider2D>() as CircleCollider2D;
             if (circleCollider != null) circleRadius = circleCollider.radius;
         }
 
-        void Update()
+        private void FixedUpdate()
         {
-
             if (ball == null)
             {
                 ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
@@ -62,23 +60,18 @@ namespace ComponentScripts
                 spring.connectedBody = ballRigidBody;
             }
 
-            if (clickedOn)
-            {
-                Dragging();
-            }
-
             if (spring != null)
             {
-
                 if (!ballRigidBody.isKinematic && prevVelocity.sqrMagnitude > ballRigidBody.velocity.sqrMagnitude)
                 {
                     Destroy(spring);
                     ballRigidBody.velocity = prevVelocity;
                 }
 
-                if (!clickedOn)
+                if(isLaunched)
                 {
                     prevVelocity = ballRigidBody.velocity;
+
                 }
 
                 LineRendererUpdate();
@@ -89,31 +82,35 @@ namespace ComponentScripts
             }
         }
 
-        void OnMouseDown()
+        // Launcher Control Panel Pointer Down
+        public void pointerDown()
         {
+            pointerDownPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pointerDownPoint.z = 0;
             spring.enabled = false;
-            clickedOn = true;
-
+            isLaunched = false;
         }
-
-        void OnMouseUp()
+    
+        // Launcher Control Panel Pointer Down
+        public void pointerUp()
         {
+            isLaunched = true;
             spring.enabled = true;
             ballRigidBody.isKinematic = false;
-            clickedOn = false;
             GetComponent<CircleCollider2D>().enabled = false;
         }
-
-        void Dragging()
+        
+        // Launcher Control Panel Drag
+        public void drag()
         {
-            Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 ballToMouse = mouseWorldPoint - ball.transform.position;
-            Vector3 launcherPosition = ball.transform.position - ballToMouse;
+            var pointerPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var deltaMousePosition = pointerPosition - pointerDownPoint;
+            var launcherPosition = ball.transform.position - deltaMousePosition;
 
             var maxStretchSqr = maxStretch * maxStretch;
-            if (ballToMouse.sqrMagnitude > maxStretchSqr)
+            if (deltaMousePosition.sqrMagnitude > maxStretchSqr)
             {
-                rayToMouse.direction = -ballToMouse;
+                rayToMouse.direction = -deltaMousePosition;
                 launcherPosition = rayToMouse.GetPoint(maxStretch);
             }
             launcherPosition.z = 0;
@@ -122,9 +119,9 @@ namespace ComponentScripts
 
         void LineRendererUpdate()
         {
-            Vector2 launcherToProjectile = lineRenderer.transform.localPosition - ball.transform.position;
-            this.launcherToProjectile.direction = launcherToProjectile;
-            Vector3 holdPoint = this.launcherToProjectile.GetPoint(launcherToProjectile.magnitude - circleRadius);
+            var launcherToProjectile = lineRenderer.transform.localPosition - ball.transform.position;
+            offsetVector.direction = launcherToProjectile;
+            var holdPoint = offsetVector.GetPoint(launcherToProjectile.magnitude - circleRadius);
             lineRenderer.SetPosition(1, holdPoint);
         }
     }
