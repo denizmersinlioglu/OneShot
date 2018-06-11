@@ -51,7 +51,7 @@ MonoBehaviour:
   - index: 3
     name: Level3
     hint: Dummy Hint
-    structure: {fileID: 1732779889058026, guid: 161c4ca9117318541a9a9b90e77e1cb4,
+    structure: {fileID: 1461938992531158, guid: dd29d5490f285ef4098b73a82fc3ca2d,
       type: 2}
     status: 1
     completionStatus: 0
@@ -87,8 +87,9 @@ MonoBehaviour:
   - index: 5
     name: Level5
     hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
+    structure: {fileID: 1495642519175236, guid: 2eb451b1b3e3ab44481e8fec477e7f1d,
+      type: 2}
+    status: 1
     completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
@@ -104,8 +105,9 @@ MonoBehaviour:
   - index: 6
     name: Level6
     hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
+    structure: {fileID: 1476571019462298, guid: e04345b9fc216244e8fe22073a18337c,
+      type: 2}
+    status: 1
     completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
@@ -172,8 +174,9 @@ MonoBehaviour:
   - index: 10
     name: Level10
     hint: Dummy Hint
-    structure: {fileID: 0}
-    status: 0
+    structure: {fileID: 1732779889058026, guid: 161c4ca9117318541a9a9b90e77e1cb4,
+      type: 2}
+    status: 1
     completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0

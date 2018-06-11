@@ -1,11 +1,16 @@
 ﻿using System.Collections.Generic;
 using LevelSystem;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ComponentScripts
 {
-	public class LevelContainerController : MonoBehaviour {
-
+	public class LevelContainerController : MonoBehaviour
+	{
+		private const int col = 3;
+		private const int row = 7;
+		private Vector2 resolution;
+		
 		private readonly int lastActiveLevelPage;
 		public GameObject levelButton;
 
@@ -22,6 +27,24 @@ namespace ComponentScripts
 			if (levelList != null) totalPageNumber = Mathf.FloorToInt(levelList.Count / levelsPerPage);
 			pageNumber = Mathf.FloorToInt(lastActiveLevelPage / levelsPerPage);
 			RefreshLevelList();
+
+			updateGridResolution();
+			resolution = new Vector2(Screen.width, Screen.height);
+		}
+
+		private void Update()
+		{
+			if (resolution.x == Screen.width && resolution.y == Screen.height) return;
+			updateGridResolution();
+			resolution.x = Screen.width;
+			resolution.y = Screen.height;
+		}
+
+		private void updateGridResolution()
+		{
+			var parent = GetComponent<RectTransform>();
+			var grid = GetComponent<GridLayoutGroup>();
+			grid.cellSize = new Vector2(parent.rect.width/(col+1) , parent.rect.height/(row + 2));
 		}
 
 		private void RefreshLevelList()
