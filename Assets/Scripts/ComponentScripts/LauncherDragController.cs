@@ -1,4 +1,5 @@
-﻿using LevelSystem;
+﻿using System.Collections;
+using LevelSystem;
 using UnityEngine;
 
 namespace ComponentScripts
@@ -107,8 +108,15 @@ namespace ComponentScripts
             spring.enabled = true;
             ballRigidBody.isKinematic = false;
             GetComponent<CircleCollider2D>().enabled = false;
+            StartCoroutine(destroy());
         }
-        
+
+        IEnumerator destroy()
+        {
+            yield return new WaitForSeconds(2);
+            
+        }
+
         // Launcher Control Panel Drag
         public void drag()
         {
