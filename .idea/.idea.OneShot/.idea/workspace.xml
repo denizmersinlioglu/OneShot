@@ -2,8 +2,347 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2eead30-2798-4ae4-83be-00e143696e64" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OneShot/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OneShot/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.OneShot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.OneShot/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelDatabase/LevelDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelDatabase/LevelDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelStructure/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelStructure/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelStructure/Level1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelStructure/Level1.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelStructure/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelStructure/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelStructure/Level2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelStructure/Level2.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelStructure/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelStructure/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelStructure/Level3.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelStructure/Level3.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelStructure/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelStructure/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structure Prefabs/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structure Prefabs/Ball.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structure Prefabs/Ball.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structure Prefabs/Ball.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structure Prefabs/Rect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structure Prefabs/Rect.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Structure Prefabs/Rect.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Structure Prefabs/Rect.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ButtonImages/Icons_Help.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ButtonImages/Icons_Help.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Splash.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LauncherDragController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LauncherDragController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LevelContainerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LevelContainerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/TargetBaseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/TargetBaseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneControllers/LevelBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneControllers/LevelBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Behaviors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Behaviors/Cursors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Behaviors/Cursors/CursorManagerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Behaviors/Cursors/CursorManagerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Behaviors/TransformerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Behaviors/TransformerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Debugging.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Debugging/PointerDebuggerWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Debugging/PointerDebuggerWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorResources.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorResources.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorUI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorUI/GUIElements.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorUI/GUIElements.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorUI/GUIUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorUI/GUIUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorUI/PagedList.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/EditorUI/PagedList.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/FlickGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/FlickGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/GestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/GestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/LongPressGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/LongPressGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/MetaGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/MetaGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/PressGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/PressGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/ReleaseGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/ReleaseGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TapGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TapGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/Base.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/Base/OnePointTransformGestureBaseEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/Base/OnePointTransformGestureBaseEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/Base/TransformGestureBaseEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/Base/TransformGestureBaseEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/Base/TwoPointTransformGestureBaseEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/Base/TwoPointTransformGestureBaseEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/PinnedTransformGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/PinnedTransformGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/ScreenTransformGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/ScreenTransformGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/TransformGestureEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Gestures/TransformGestures/TransformGestureEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/InputSources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/InputSources/InputSourceEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/InputSources/InputSourceEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/InputSources/StandardInputEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/InputSources/StandardInputEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Layers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Layers/FullscreenLayerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Layers/FullscreenLayerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Layers/StandardLayerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Layers/StandardLayerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/TouchManagerEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/TouchManagerEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/TouchScriptSettingsWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/TouchScriptSettingsWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Utils/PropertyDrawers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Utils/PropertyDrawers/NullToggleDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Utils/PropertyDrawers/NullToggleDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Utils/PropertyDrawers/ToggleLeftDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Editor/Utils/PropertyDrawers/ToggleLeftDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Editor/InputSources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Editor/InputSources/TuioInputEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Editor/InputSources/TuioInputEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Libraries.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Libraries/OSCsharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Libraries/OSCsharp.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Libraries/TUIOsharp.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Scripts/InputSources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Scripts/InputSources/TuioInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Modules/TUIO/Scripts/InputSources/TuioInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Plugins.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Plugins/WindowsTouch.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Plugins/WindowsTouch/WindowsTouch.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Plugins/WindowsTouch/WindowsTouch.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Plugins/WindowsTouch/x64.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Plugins/WindowsTouch/x64/WindowsTouch.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Plugins/WindowsTouch/x64/WindowsTouch.dll.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Cursor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Cursor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Mouse Cursor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Mouse Cursor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Pen Cursor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Pen Cursor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Pointer.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Pointer.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Touch Cursor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/Cursors/Touch Cursor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/TouchManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Prefabs/TouchManager.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/CursorManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/CursorManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/MouseCursor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/MouseCursor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/ObjectCursor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/ObjectCursor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/PenCursor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/PenCursor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/PointerCursor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/PointerCursor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/TouchCursor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/TouchCursor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/UI/GradientTexture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/UI/GradientTexture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/UI/TextureSwitch.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Cursors/UI/TextureSwitch.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Transformer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/Transformer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/UI/OverHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Behaviors/UI/OverHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Clusters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Clusters/Clusters2D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Clusters/Clusters2D.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core/DebuggableMonoBehaviour.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core/DebuggableMonoBehaviour.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core/GestureManagerInstance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core/GestureManagerInstance.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core/LayerManagerInstance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core/LayerManagerInstance.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core/TouchManagerInstance.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Core/TouchManagerInstance.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Filters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Filters/IPointerDataFilter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Filters/IPointerDataFilter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Filters/IPointerLogFilter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Filters/IPointerLogFilter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Filters/PointerLogFilter.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Filters/PointerLogFilter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/GL.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/GL/DebugHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/GL/DebugHelper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/GL/GLDebug.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/GL/GLDebug.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers/FileReaderLogger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers/FileReaderLogger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers/FileWriterLogger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers/FileWriterLogger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers/IPointerLogger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers/IPointerLogger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers/PointerLogger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/Loggers/PointerLogger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/TouchScriptDebugger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Debugging/TouchScriptDebugger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Devices.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Devices/Display.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Devices/Display/DisplayDevice.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Devices/Display/DisplayDevice.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Devices/Display/GenericDisplayDevice.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Devices/Display/GenericDisplayDevice.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Devices/Display/IDisplayDevice.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Devices/Display/IDisplayDevice.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/GestureManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/GestureManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/FlickGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/FlickGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/Gesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/Gesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/IGestureDelegate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/IGestureDelegate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/LongPressGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/LongPressGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/MetaGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/MetaGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/PressGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/PressGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/ReleaseGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/ReleaseGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TapGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TapGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Base.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/OnePointTrasformGestureBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/OnePointTrasformGestureBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/TransformGestureBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/TransformGestureBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/TwoPointTransformGestureBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Base/TwoPointTransformGestureBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredPinnedTransformGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredPinnedTransformGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredScreenTransformGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredScreenTransformGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredTransformGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/Clustered/ClusteredTransformGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/ITransformGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/ITransformGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/PinnedTransformGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/PinnedTransformGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/ScreenTransformGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/ScreenTransformGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/TransformGesture.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Gestures/TransformGestures/TransformGesture.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit/HitData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit/HitData.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit/HitTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit/HitTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit/RaycastHitUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit/RaycastHitUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit/Untouchable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Hit/Untouchable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/IDebuggable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/IDebuggable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/IGestureManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/IGestureManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/ILayerManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/ILayerManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/ITouchManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/ITouchManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/ICoordinatesRemapper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/ICoordinatesRemapper.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/IInputSource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/IInputSource.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputHandlers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputHandlers/MouseHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputHandlers/MouseHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputHandlers/TouchHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputHandlers/TouchHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputHandlers/WindowsPointerHandlers.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputHandlers/WindowsPointerHandlers.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputSource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/InputSource.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/StandardInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/InputSources/StandardInput.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/LayerManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/LayerManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/FullscreenLayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/FullscreenLayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/ILayerDelegate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/ILayerDelegate.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/ProjectionParams.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/ProjectionParams.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/StandardLayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/StandardLayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/TouchLayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/TouchLayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/UI/TouchScriptInputModule.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Layers/UI/TouchScriptInputModule.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/FakePointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/FakePointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/IPointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/IPointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/MousePointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/MousePointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/ObjectPointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/ObjectPointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/PenPointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/PenPointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/Pointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/Pointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/PointerFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/PointerFactory.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/TouchPointer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Pointers/TouchPointer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/TouchManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/TouchManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Attributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Attributes/NullToggleAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Attributes/NullToggleAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Attributes/ToggleLeftAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Attributes/ToggleLeftAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/BinaryUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/BinaryUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/ClusterUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/ClusterUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/EventHandlerExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/EventHandlerExtensions.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Geom.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Geom/ProjectionUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Geom/ProjectionUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Geom/TwoD.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Geom/TwoD.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/ObjectPool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/ObjectPool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Platform.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Platform/WindowsUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/Platform/WindowsUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/PointerUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/PointerUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/TimedSequence.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/TimedSequence.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/TransformUtils.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/Scripts/Utils/TransformUtils.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TouchScript/license.txt.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,28 +353,142 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LauncherDragController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LauncherDragController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LauncherDragController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+            <state relative-caret-position="437">
+              <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
               <folding>
-                <marker date="1528634705578" expanded="true" signature="46:4154" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="104:4152" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="610:723" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="753:1576" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="864:1074" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="1607:2508" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="1647:1930" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="1963:2407" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="2092:2224" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="2257:2354" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="2424:2498" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="2590:2798" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="2882:3077" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="3152:3779" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="3526:3682" ph="{...}" />
-                <marker date="1528634705578" expanded="true" signature="3814:4146" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="6:37" ph="..." />
+                <marker date="1528674290510" expanded="true" signature="65:4300" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="123:4298" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="646:759" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="789:1612" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="900:1110" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="1648:2572" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="1713:1996" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="2029:2471" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="2158:2290" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="2322:2418" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="2488:2562" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="2654:2904" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="2988:3223" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="3298:3925" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="3672:3828" ph="{...}" />
+                <marker date="1528674290510" expanded="true" signature="3960:4292" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelContainerController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LevelContainerController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+              <folding>
+                <marker date="1528674836967" expanded="false" signature="6:71" ph="..." />
+                <marker date="1528674836967" expanded="true" signature="99:1519" ph="{...}" />
+                <marker date="1528674836967" expanded="true" signature="157:1517" ph="{...}" />
+                <marker date="1528674836967" expanded="true" signature="426:703" ph="{...}" />
+                <marker date="1528674836967" expanded="true" signature="738:1275" ph="{...}" />
+                <marker date="1528674836967" expanded="true" signature="785:822" ph="{...}" />
+                <marker date="1528674836967" expanded="true" signature="1006:1268" ph="{...}" />
+                <marker date="1528674836967" expanded="true" signature="1305:1399" ph="{...}" />
+                <marker date="1528674836967" expanded="true" signature="1434:1514" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelManager.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="781">
+              <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+              <folding>
+                <marker date="1528675077758" expanded="false" signature="6:94" ph="..." />
+                <marker date="1528675077758" expanded="true" signature="117:3034" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="165:3032" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="543:598" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="736:1563" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="872:937" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="1602:1699" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="1747:1945" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="2005:2113" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="2156:2232" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="2275:2332" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="2378:2532" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="2578:2701" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="2745:2816" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="2857:2925" ph="{...}" />
+                <marker date="1528675077758" expanded="true" signature="2962:3026" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TargetBaseController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/TargetBaseController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding>
+                <marker date="1528668041598" expanded="false" signature="6:58" ph="..." />
+                <marker date="1528668041598" expanded="true" signature="86:821" ph="{...}" />
+                <marker date="1528668041598" expanded="true" signature="140:819" ph="{...}" />
+                <marker date="1528668041598" expanded="true" signature="249:703" ph="{...}" />
+                <marker date="1528668041598" expanded="true" signature="745:816" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BallBaseController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+              <folding>
+                <marker date="1528672623148" expanded="true" signature="6:37" ph="..." />
+                <marker date="1528672623148" expanded="true" signature="65:683" ph="{...}" />
+                <marker date="1528672623148" expanded="true" signature="116:677" ph="{...}" />
+                <marker date="1528672623148" expanded="true" signature="265:351" ph="{...}" />
+                <marker date="1528672623148" expanded="true" signature="376:674" ph="{...}" />
+                <marker date="1528672623148" expanded="true" signature="416:670" ph="{...}" />
+                <marker date="1528672623148" expanded="true" signature="458:582" ph="{...}" />
+                <marker date="1528672623148" expanded="true" signature="587:665" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HitParticleEffectController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/HitParticleEffectController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+              <folding>
+                <marker date="1528671802858" expanded="false" signature="6:78" ph="..." />
+                <marker date="1528671802858" expanded="true" signature="137:332" ph="{...}" />
+                <marker date="1528671802858" expanded="true" signature="196:231" ph="{...}" />
+                <marker date="1528671802858" expanded="true" signature="263:330" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelBuilder.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/SceneControllers/LevelBuilder.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <marker date="1528673559478" expanded="false" signature="6:91" ph="..." />
+                <marker date="1528673559478" expanded="true" signature="120:1402" ph="{...}" />
+                <marker date="1528673559478" expanded="true" signature="168:1400" ph="{...}" />
+                <marker date="1528673559478" expanded="true" signature="184:913" ph="/* A moderator will give the level of this level container.(DONE) ... */" />
+                <marker date="1528673559478" expanded="true" signature="1132:1394" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -65,25 +518,27 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LevelButtonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HitParticleEffectController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/TargetBaseController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LevelButtonController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/TargetBaseController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSystem/CreateLevelList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSystem/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelList.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneControllers/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utility/PlayerPreferencesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/TargetBaseController.cs" />
+        <option value="$PROJECT_DIR$/Assets/HitParticleEffectController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SceneControllers/LevelBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LauncherDragController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LevelContainerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utility/PlayerPreferencesManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LauncherDragController.cs" />
       </list>
     </option>
   </component>
@@ -105,6 +560,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
       <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
@@ -113,25 +571,11 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="OneShot (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="OneShot (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="OneShot (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
-      </pane>
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
       </pane>
     </panes>
   </component>
@@ -174,11 +618,12 @@
       <workItem from="1528458699284" duration="3642000" />
       <workItem from="1528629672358" duration="206000" />
       <workItem from="1528629903848" duration="3847000" />
+      <workItem from="1528667997079" duration="5411000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8000000" />
+    <option name="totallyTimeSpent" value="13411000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -198,26 +643,26 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Unit Tests" order="7" weight="0.32923076" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3723077" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32977462" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4945534" visible="true" weight="0.21748401" />
-      <window_info anchor="bottom" id="Unity" order="9" weight="0.32923076" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49346405" visible="true" weight="0.2196162" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="9" weight="0.32923076" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info id="Structure" order="1" sideWeight="0.5054466" side_tool="true" visible="true" weight="0.21748401" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Structure" order="1" sideWeight="0.50653595" side_tool="true" visible="true" weight="0.2196162" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="9" weight="0.32923076" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="8" weight="0.32977462" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,10 +674,51 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs" initialLine="22">
+            <startOffsets>
+              <startOffset value="499" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="520" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LauncherDragController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="980">
+          <caret line="70" column="17" lean-forward="true" selection-start-line="70" selection-start-column="17" selection-end-line="70" selection-end-column="17" />
+          <folding>
+            <marker date="1528674290510" expanded="true" signature="6:37" ph="..." />
+            <marker date="1528674290510" expanded="true" signature="65:4300" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="123:4298" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="646:759" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="789:1612" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="900:1110" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="1648:2572" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="1713:1996" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2029:2471" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2158:2290" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2322:2418" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2488:2562" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2654:2904" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2988:3223" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3298:3925" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3672:3828" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3960:4292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelSystem/CreateLevelList.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -258,11 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <marker date="1528630070708" expanded="false" signature="6:52" ph="..." />
-            <marker date="1528630070708" expanded="true" signature="75:183" ph="{...}" />
-            <marker date="1528630070708" expanded="true" signature="123:181" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -270,24 +751,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="52" selection-start-line="38" selection-start-column="52" selection-end-line="38" selection-end-column="52" />
-          <folding>
-            <marker date="1528631895541" expanded="true" signature="6:94" ph="..." />
-            <marker date="1528631895541" expanded="true" signature="117:3034" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="165:3032" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="543:598" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="736:1563" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="872:937" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="1602:1699" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="1747:1945" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2005:2113" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2156:2232" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2275:2332" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2378:2532" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2578:2701" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2745:2816" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2857:2925" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2962:3026" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -296,22 +759,23 @@
         <state relative-caret-position="885">
           <caret line="59" selection-start-line="59" selection-end-line="59" />
           <folding>
-            <marker date="1528634705578" expanded="true" signature="46:4154" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="104:4152" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="610:723" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="753:1576" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="864:1074" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="1607:2508" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="1647:1930" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="1963:2407" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2092:2224" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2257:2354" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2424:2498" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2590:2798" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2882:3077" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="3152:3779" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="3526:3682" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="3814:4146" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="6:37" ph="..." />
+            <marker date="1528674290510" expanded="true" signature="65:4300" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="123:4298" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="646:759" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="789:1612" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="900:1110" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="1648:2572" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="1713:1996" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2029:2471" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2158:2290" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2322:2418" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2488:2562" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2654:2904" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2988:3223" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3298:3925" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3672:3828" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3960:4292" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -321,11 +785,11 @@
         <state relative-caret-position="615">
           <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
-            <marker date="1528630070757" expanded="false" signature="6:91" ph="..." />
-            <marker date="1528630070757" expanded="true" signature="120:1516" ph="{...}" />
-            <marker date="1528630070757" expanded="true" signature="168:1514" ph="{...}" />
-            <marker date="1528630070757" expanded="true" signature="184:913" ph="/* A moderator will give the level of this level container.(DONE) ... */" />
-            <marker date="1528630070757" expanded="true" signature="1203:1508" ph="{...}" />
+            <marker date="1528673559478" expanded="false" signature="6:91" ph="..." />
+            <marker date="1528673559478" expanded="true" signature="120:1402" ph="{...}" />
+            <marker date="1528673559478" expanded="true" signature="168:1400" ph="{...}" />
+            <marker date="1528673559478" expanded="true" signature="184:913" ph="/* A moderator will give the level of this level container.(DONE) ... */" />
+            <marker date="1528673559478" expanded="true" signature="1132:1394" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -334,44 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <marker date="1528630070734" expanded="false" signature="24:89" ph="..." />
-            <marker date="1528630070734" expanded="true" signature="112:13148" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="158:13146" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="553:630" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="663:907" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="937:11446" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="983:1569" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="1203:1351" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="1439:1512" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="1606:2581" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2079:2378" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2269:2359" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2451:2524" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2650:11328" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2870:3141" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="3044:3123" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="3225:3697" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="3584:3679" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="3976:4088" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="4206:4394" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="4295:4376" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="4669:11191" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="8676:8949" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="8974:9363" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="9721:9992" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="10017:10407" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="10497:10762" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="10787:11173" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="11212:11314" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="11357:11436" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="11489:12060" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="11512:11753" ph="/* There is no overwrite protection here! ... */" />
-            <marker date="1528630070734" expanded="true" signature="12098:12713" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="12613:12703" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="12745:13019" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="13063:13140" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -379,13 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding>
-            <marker date="1528629195335" expanded="true" signature="46:1149" ph="{...}" />
-            <marker date="1528629195335" expanded="true" signature="94:1147" ph="{...}" />
-            <marker date="1528629195335" expanded="true" signature="100:1004" ph="/* Level Builder has already created the game environment according to current level. ... */" />
-            <marker date="1528629195335" expanded="true" signature="1063:1071" ph="{...}" />
-            <marker date="1528629195335" expanded="true" signature="1136:1144" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -480,20 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/TargetBaseController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelSystem/CreateLevelList.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -520,36 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <marker date="1528630070708" expanded="false" signature="6:52" ph="..." />
-            <marker date="1528630070708" expanded="true" signature="75:183" ph="{...}" />
-            <marker date="1528630070708" expanded="true" signature="123:181" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1162">
-          <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
-          <folding>
-            <marker date="1528631895541" expanded="true" signature="6:94" ph="..." />
-            <marker date="1528631895541" expanded="true" signature="117:3034" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="165:3032" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="543:598" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="736:1563" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="872:937" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="1602:1699" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="1747:1945" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2005:2113" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2156:2232" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2275:2332" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2378:2532" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2578:2701" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2745:2816" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2857:2925" ph="{...}" />
-            <marker date="1528631895541" expanded="true" signature="2962:3026" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,36 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
-          <folding>
-            <marker date="1528631895558" expanded="false" signature="6:37" ph="..." />
-            <marker date="1528631895558" expanded="true" signature="56:1846" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="116:1844" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="321:376" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="491:791" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="627:697" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="847:1159" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="927:1017" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="1034:1149" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="1205:1317" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="1368:1682" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="1448:1541" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="1558:1672" ph="{...}" />
-            <marker date="1528631895558" expanded="true" signature="1723:1837" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SceneControllers/LevelBuilder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <marker date="1528630070757" expanded="false" signature="6:91" ph="..." />
-            <marker date="1528630070757" expanded="true" signature="120:1516" ph="{...}" />
-            <marker date="1528630070757" expanded="true" signature="168:1514" ph="{...}" />
-            <marker date="1528630070757" expanded="true" signature="184:913" ph="/* A moderator will give the level of this level container.(DONE) ... */" />
-            <marker date="1528630070757" expanded="true" signature="1203:1508" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,44 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-28">
           <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-          <folding>
-            <marker date="1528630070734" expanded="false" signature="24:89" ph="..." />
-            <marker date="1528630070734" expanded="true" signature="112:13148" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="158:13146" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="553:630" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="663:907" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="937:11446" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="983:1569" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="1203:1351" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="1439:1512" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="1606:2581" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2079:2378" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2269:2359" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2451:2524" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2650:11328" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="2870:3141" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="3044:3123" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="3225:3697" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="3584:3679" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="3976:4088" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="4206:4394" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="4295:4376" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="4669:11191" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="8676:8949" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="8974:9363" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="9721:9992" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="10017:10407" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="10497:10762" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="10787:11173" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="11212:11314" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="11357:11436" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="11489:12060" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="11512:11753" ph="/* There is no overwrite protection here! ... */" />
-            <marker date="1528630070734" expanded="true" signature="12098:12713" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="12613:12703" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="12745:13019" ph="{...}" />
-            <marker date="1528630070734" expanded="true" signature="13063:13140" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -639,45 +946,115 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/HitParticleEffectController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding>
-            <marker date="1528629195335" expanded="true" signature="46:1149" ph="{...}" />
-            <marker date="1528629195335" expanded="true" signature="94:1147" ph="{...}" />
-            <marker date="1528629195335" expanded="true" signature="100:1004" ph="/* Level Builder has already created the game environment according to current level. ... */" />
-            <marker date="1528629195335" expanded="true" signature="1063:1071" ph="{...}" />
-            <marker date="1528629195335" expanded="true" signature="1136:1144" ph="{...}" />
+            <marker date="1528671802858" expanded="false" signature="6:78" ph="..." />
+            <marker date="1528671802858" expanded="true" signature="137:332" ph="{...}" />
+            <marker date="1528671802858" expanded="true" signature="196:231" ph="{...}" />
+            <marker date="1528671802858" expanded="true" signature="263:330" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/BallBaseController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <marker date="1528672623148" expanded="true" signature="6:37" ph="..." />
+            <marker date="1528672623148" expanded="true" signature="65:683" ph="{...}" />
+            <marker date="1528672623148" expanded="true" signature="116:677" ph="{...}" />
+            <marker date="1528672623148" expanded="true" signature="265:351" ph="{...}" />
+            <marker date="1528672623148" expanded="true" signature="376:674" ph="{...}" />
+            <marker date="1528672623148" expanded="true" signature="416:670" ph="{...}" />
+            <marker date="1528672623148" expanded="true" signature="458:582" ph="{...}" />
+            <marker date="1528672623148" expanded="true" signature="587:665" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/SceneControllers/LevelBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <marker date="1528673559478" expanded="false" signature="6:91" ph="..." />
+            <marker date="1528673559478" expanded="true" signature="120:1402" ph="{...}" />
+            <marker date="1528673559478" expanded="true" signature="168:1400" ph="{...}" />
+            <marker date="1528673559478" expanded="true" signature="184:913" ph="/* A moderator will give the level of this level container.(DONE) ... */" />
+            <marker date="1528673559478" expanded="true" signature="1132:1394" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/TargetBaseController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding>
+            <marker date="1528668041598" expanded="false" signature="6:58" ph="..." />
+            <marker date="1528668041598" expanded="true" signature="86:821" ph="{...}" />
+            <marker date="1528668041598" expanded="true" signature="140:819" ph="{...}" />
+            <marker date="1528668041598" expanded="true" signature="249:703" ph="{...}" />
+            <marker date="1528668041598" expanded="true" signature="745:816" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LauncherDragController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
+          <folding>
+            <marker date="1528674290510" expanded="true" signature="6:37" ph="..." />
+            <marker date="1528674290510" expanded="true" signature="65:4300" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="123:4298" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="646:759" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="789:1612" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="900:1110" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="1648:2572" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="1713:1996" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2029:2471" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2158:2290" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2322:2418" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2488:2562" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2654:2904" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="2988:3223" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3298:3925" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3672:3828" ph="{...}" />
+            <marker date="1528674290510" expanded="true" signature="3960:4292" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LevelContainerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="182">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <marker date="1528674836967" expanded="false" signature="6:71" ph="..." />
+            <marker date="1528674836967" expanded="true" signature="99:1519" ph="{...}" />
+            <marker date="1528674836967" expanded="true" signature="157:1517" ph="{...}" />
+            <marker date="1528674836967" expanded="true" signature="426:703" ph="{...}" />
+            <marker date="1528674836967" expanded="true" signature="738:1275" ph="{...}" />
+            <marker date="1528674836967" expanded="true" signature="785:822" ph="{...}" />
+            <marker date="1528674836967" expanded="true" signature="1006:1268" ph="{...}" />
+            <marker date="1528674836967" expanded="true" signature="1305:1399" ph="{...}" />
+            <marker date="1528674836967" expanded="true" signature="1434:1514" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComponentScripts/LauncherDragController.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelSystem/LevelManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
-          <folding>
-            <marker date="1528634705578" expanded="true" signature="46:4154" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="104:4152" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="610:723" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="753:1576" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="864:1074" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="1607:2508" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="1647:1930" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="1963:2407" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2092:2224" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2257:2354" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2424:2498" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2590:2798" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="2882:3077" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="3152:3779" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="3526:3682" ph="{...}" />
-            <marker date="1528634705578" expanded="true" signature="3814:4146" ph="{...}" />
-          </folding>
+        <state relative-caret-position="781">
+          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
         </state>
       </provider>
     </entry>

@@ -13,7 +13,7 @@ namespace ComponentScripts
 		private int pageNumber;
 		private int totalPageNumber;
 
-		private const int levelsPerPage = 18;
+		private const int levelsPerPage = 20;
 
 		// Use this for initialization
 		private void Start ()

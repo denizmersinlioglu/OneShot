@@ -28,16 +28,13 @@ namespace SceneControllers
         private int levelNumber = 1;
 
         [SerializeField]
-        private TextMeshProUGUI headerLabel;
-
-        [SerializeField]
         private Level level;
 
         private void Awake()
         {
             level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : levelDatabase.levelListDatabase[levelNumber-1];
             Instantiate(level.structure, Vector3.zero, Quaternion.identity);
-            headerLabel.text = "Level " + level.index;
+           
         }
     }
 }

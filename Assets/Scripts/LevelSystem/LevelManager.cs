@@ -67,7 +67,7 @@ namespace LevelSystem
 
         public static void LoadMainMenu()
         {
-            Initiate.Fade("MainMenu", Color.black, 2f);
+            Initiate.Fade("MainMenu", Color.black, 3f);
         }
 
         public void LoadLastActiveLevel(){
@@ -77,13 +77,13 @@ namespace LevelSystem
         public void LoadGameScene(int index)
         {
             SetActiveLevel(index);
-            Initiate.Fade("Game", Color.black, 3f);
+            Initiate.Fade("Game", Color.black, 4f);
             // SceneManager.LoadScene("Game");
         }
 
         public static void LoadLevelsScene()
         {
-            Initiate.Fade("Levels", Color.black, 3f);
+            Initiate.Fade("Levels", Color.black, 4f);
             // SceneManager.LoadScene("Levels");
         }
 

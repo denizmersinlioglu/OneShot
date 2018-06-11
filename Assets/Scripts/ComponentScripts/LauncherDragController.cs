@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LevelSystem;
+using UnityEngine;
 
 namespace ComponentScripts
 {
@@ -21,6 +22,8 @@ namespace ComponentScripts
         private float circleRadius;
         private bool isLaunched;
 
+       
+        
         private void Awake()
         {
             spring = GetComponent<SpringJoint2D>();
@@ -52,6 +55,8 @@ namespace ComponentScripts
 
         private void FixedUpdate()
         {
+            
+           
             if (ball == null)
             {
                 ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
@@ -85,15 +90,19 @@ namespace ComponentScripts
         // Launcher Control Panel Pointer Down
         public void pointerDown()
         {
+            if (spring == null) return;
             pointerDownPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             pointerDownPoint.z = 0;
             spring.enabled = false;
             isLaunched = false;
+
+
         }
     
         // Launcher Control Panel Pointer Down
         public void pointerUp()
         {
+            if (spring == null) return;
             isLaunched = true;
             spring.enabled = true;
             ballRigidBody.isKinematic = false;
