@@ -679,6 +679,7 @@ MonoBehaviour:
   levelNumber: 5
   level:
     index: 0
+    levelType: 0
     name: New level
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -687,6 +688,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -943,7 +947,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1206735995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.921032, y: -0.4825651, z: 11.996029}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -960,6 +964,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a35a03eaeb730d49953dc2b32d5be8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDatabase: {fileID: 0}
+  levelNumber: 1
+  level:
+    index: 0
+    levelType: 0
+    name: New level
+    hint: Dummy Hint
+    structure: {fileID: 0}
+    status: 0
+    completionStatus: 0
+    isLaunchActive: 0
+    isAccelerometerActive: 0
+    isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
+    maximumHitCount: 0
+    threeStarHitLimit: 0
+    twoStarHitLimit: 0
+    isGravityEnabled: 0
+    gravityConstant: 0
+    isBallPhysicsEnabled: 0
+    ballFrictionRate: 0
+    ballBounceRate: 0
 --- !u!1 &1294364558
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelListDatabase:
   - index: 1
+    levelType: 0
     name: Level1
     hint: Dummy Hint
     structure: {fileID: 1084923362155602, guid: 57e5f6447a580db4c9711992ab28d510,
@@ -22,6 +23,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -31,6 +35,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 2
+    levelType: 0
     name: Level2
     hint: Dummy Hint
     structure: {fileID: 1107666154803400, guid: 2be0cfe9b10b2204ba4d96a1cd52f4ac,
@@ -40,6 +45,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -49,6 +57,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 3
+    levelType: 0
     name: Level3
     hint: Dummy Hint
     structure: {fileID: 1461938992531158, guid: dd29d5490f285ef4098b73a82fc3ca2d,
@@ -58,6 +67,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -67,6 +79,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 4
+    levelType: 0
     name: Level4
     hint: Dummy Hint
     structure: {fileID: 1657600399728568, guid: e2059375777fd4e418b896c27608cb5b,
@@ -76,6 +89,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -85,6 +101,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 5
+    levelType: 0
     name: Level5
     hint: Dummy Hint
     structure: {fileID: 1495642519175236, guid: 2eb451b1b3e3ab44481e8fec477e7f1d,
@@ -94,6 +111,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -103,6 +123,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 6
+    levelType: 0
     name: Level6
     hint: Dummy Hint
     structure: {fileID: 1476571019462298, guid: e04345b9fc216244e8fe22073a18337c,
@@ -112,6 +133,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -121,6 +145,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 7
+    levelType: 0
     name: Level7
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -129,6 +154,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -138,6 +166,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 8
+    levelType: 0
     name: Level8
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -146,6 +175,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -155,6 +187,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 9
+    levelType: 0
     name: Level9
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -163,6 +196,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -172,6 +208,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 10
+    levelType: 1
     name: Level10
     hint: Dummy Hint
     structure: {fileID: 1732779889058026, guid: 161c4ca9117318541a9a9b90e77e1cb4,
@@ -181,6 +218,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -190,6 +230,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 11
+    levelType: 0
     name: Level11
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -198,6 +239,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -207,6 +251,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 12
+    levelType: 0
     name: Level12
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -215,6 +260,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -224,6 +272,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 13
+    levelType: 0
     name: Level13
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -232,6 +281,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -241,6 +293,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 14
+    levelType: 0
     name: Level14
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -249,6 +302,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -258,6 +314,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 15
+    levelType: 0
     name: Level15
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -266,6 +323,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -275,6 +335,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 16
+    levelType: 0
     name: Level16
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -283,6 +344,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -292,6 +356,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 17
+    levelType: 0
     name: Level17
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -300,6 +365,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -309,6 +377,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 18
+    levelType: 0
     name: Level18
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -317,6 +386,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -326,6 +398,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 19
+    levelType: 0
     name: Level19
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -334,6 +407,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -343,6 +419,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 20
+    levelType: 0
     name: Level20
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -351,6 +428,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -360,6 +440,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 21
+    levelType: 0
     name: Level21
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -368,6 +449,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -377,6 +461,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 22
+    levelType: 0
     name: Level22
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -385,6 +470,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -394,6 +482,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 23
+    levelType: 0
     name: Level23
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -402,6 +491,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -411,6 +503,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 24
+    levelType: 0
     name: Level24
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -419,6 +512,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -428,6 +524,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 25
+    levelType: 0
     name: Level25
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -436,6 +533,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0
@@ -445,6 +545,7 @@ MonoBehaviour:
     ballFrictionRate: 0
     ballBounceRate: 1
   - index: 26
+    levelType: 0
     name: Level26
     hint: Dummy Hint
     structure: {fileID: 0}
@@ -453,6 +554,9 @@ MonoBehaviour:
     isLaunchActive: 0
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
+    maximumTimeLimit: 0
+    threeStarTimeLimit: 0
+    twoStarTimeLimit: 0
     maximumHitCount: 0
     threeStarHitLimit: 0
     twoStarHitLimit: 0

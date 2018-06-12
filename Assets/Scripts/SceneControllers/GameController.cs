@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using LevelSystem;
 namespace SceneControllers
 {
 	public class GameController : MonoBehaviour {
@@ -18,9 +18,20 @@ namespace SceneControllers
     		When user complete the level - Update LevelDatabase asset according to users success.
  		*/
 
+		[SerializeField]
+		private LevelList levelDatabase;
+
+		[SerializeField]
+		private int levelNumber = 1;
+
+		[SerializeField]
+		private Level level;
+		
+		
+		
 		// Use this for initialization
 		private void Start () {
-		
+			level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : levelDatabase.levelListDatabase[levelNumber-1];
 		}
 	
 		// Update is called once per frame

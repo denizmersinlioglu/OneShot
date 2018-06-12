@@ -135,6 +135,7 @@ namespace LevelSystem
                     EditorGUI.BeginDisabledGroup(true);
                     levelList.levelListDatabase[viewIndex - 1].name = EditorGUILayout.TextField("Name", levelList.levelListDatabase[viewIndex - 1].name as string, options);
                     EditorGUI.EndDisabledGroup();
+                    levelList.levelListDatabase[viewIndex - 1].levelType = (LevelType)EditorGUILayout.EnumPopup("Type:", levelList.levelListDatabase[viewIndex - 1].levelType, options);
                     levelList.levelListDatabase[viewIndex - 1].hint = EditorGUILayout.TextField("Hint", levelList.levelListDatabase[viewIndex - 1].hint as string, options);
 
                     GUILayout.Space(15);
@@ -156,12 +157,22 @@ namespace LevelSystem
                     levelList.levelListDatabase[viewIndex - 1].isNavigationButtonsActive = (bool)EditorGUILayout.Toggle("Navigation Buttons", levelList.levelListDatabase[viewIndex - 1].isNavigationButtonsActive, GUILayout.ExpandWidth(false));
 
                     GUILayout.Space(15);
-
+                    
+                    EditorGUI.BeginDisabledGroup(levelList.levelListDatabase[viewIndex - 1].levelType == LevelType.hitBased);
+                    EditorGUILayout.LabelField("Time Limits", EditorStyles.boldLabel);
+                    levelList.levelListDatabase[viewIndex - 1].threeStarTimeLimit = EditorGUILayout.FloatField("Three Stars Time Limit", levelList.levelListDatabase[viewIndex - 1].threeStarTimeLimit, GUILayout.ExpandWidth(false));
+                    levelList.levelListDatabase[viewIndex - 1].twoStarTimeLimit = EditorGUILayout.FloatField("Two Stars Time Limit", levelList.levelListDatabase[viewIndex - 1].twoStarTimeLimit, GUILayout.ExpandWidth(false));
+                    levelList.levelListDatabase[viewIndex - 1].maximumTimeLimit = EditorGUILayout.FloatField("Maximum Time Limit", levelList.levelListDatabase[viewIndex - 1].maximumTimeLimit, GUILayout.ExpandWidth(false));
+                    EditorGUI.EndDisabledGroup();
+                    
+                    GUILayout.Space(15);
+                    
+                    EditorGUI.BeginDisabledGroup(levelList.levelListDatabase[viewIndex - 1].levelType == LevelType.timeBased);
                     EditorGUILayout.LabelField("Hit Limits", EditorStyles.boldLabel);
                     levelList.levelListDatabase[viewIndex - 1].threeStarHitLimit = EditorGUILayout.IntField("Three Stars Hit Limit #", levelList.levelListDatabase[viewIndex - 1].threeStarHitLimit, GUILayout.ExpandWidth(false));
                     levelList.levelListDatabase[viewIndex - 1].twoStarHitLimit = EditorGUILayout.IntField("Two Stars Hit Limit #", levelList.levelListDatabase[viewIndex - 1].twoStarHitLimit, GUILayout.ExpandWidth(false));
                     levelList.levelListDatabase[viewIndex - 1].maximumHitCount = EditorGUILayout.IntField("Maximum Hit #", levelList.levelListDatabase[viewIndex - 1].maximumHitCount, GUILayout.ExpandWidth(false));
-
+                    EditorGUI.EndDisabledGroup();
                     GUILayout.Space(15);
 
                     EditorGUILayout.LabelField("Physical Conditions", EditorStyles.boldLabel);
