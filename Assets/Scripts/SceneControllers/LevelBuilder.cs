@@ -1,9 +1,6 @@
 ﻿using LevelSystem;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using LevelSystem;
-
 
 namespace SceneControllers
 {
@@ -23,18 +20,30 @@ namespace SceneControllers
     
         [SerializeField]
         private LevelList levelDatabase;
-
         [SerializeField]
         private int levelNumber = 1;
-
         [SerializeField]
         private Level level;
+        
+        [SerializeField]
+        private TextMeshProUGUI hitLabel;
+        [SerializeField]
+        private TextMeshProUGUI timerLabel;
+        
+        private TextMeshProUGUI currentLabel;
 
         private void Awake()
         {
             level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : levelDatabase.levelListDatabase[levelNumber-1];
             Instantiate(level.structure, Vector3.zero, Quaternion.identity);
-           
+            
+            hitLabel.enabled = level.levelType == LevelType.hitBased;
+            timerLabel.enabled = level.levelType == LevelType.timeBased;
+
+            currentLabel = level.levelType == LevelType.hitBased ? hitLabel : timerLabel;
+
+            currentLabel.text = level.levelType == LevelType.hitBased ? level.maximumHitCount.ToString() : level.maximumTimeLimit.ToString();
+
         }
     }
 }

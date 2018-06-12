@@ -16,9 +16,9 @@ MonoBehaviour:
     levelType: 0
     name: Level1
     hint: Dummy Hint
-    structure: {fileID: 1084923362155602, guid: 57e5f6447a580db4c9711992ab28d510,
+    structure: {fileID: 1000772213784792, guid: 57e5f6447a580db4c9711992ab28d510,
       type: 2}
-    status: 0
+    status: 1
     completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 3
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     levelType: 0
     name: Level2
     hint: Dummy Hint
-    structure: {fileID: 1107666154803400, guid: 2be0cfe9b10b2204ba4d96a1cd52f4ac,
+    structure: {fileID: 1084742329549480, guid: 2be0cfe9b10b2204ba4d96a1cd52f4ac,
       type: 2}
     status: 0
     completionStatus: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 8
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     levelType: 0
     name: Level3
     hint: Dummy Hint
-    structure: {fileID: 1461938992531158, guid: dd29d5490f285ef4098b73a82fc3ca2d,
+    structure: {fileID: 1981537187527728, guid: dd29d5490f285ef4098b73a82fc3ca2d,
       type: 2}
     status: 0
     completionStatus: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 10
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
     levelType: 0
     name: Level4
     hint: Dummy Hint
-    structure: {fileID: 1657600399728568, guid: e2059375777fd4e418b896c27608cb5b,
+    structure: {fileID: 1163125063205310, guid: e2059375777fd4e418b896c27608cb5b,
       type: 2}
     status: 0
     completionStatus: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 16
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
     hint: Dummy Hint
     structure: {fileID: 1495642519175236, guid: 2eb451b1b3e3ab44481e8fec477e7f1d,
       type: 2}
-    status: 1
+    status: 0
     completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 150
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
     levelType: 0
     name: Level6
     hint: Dummy Hint
-    structure: {fileID: 1476571019462298, guid: e04345b9fc216244e8fe22073a18337c,
+    structure: {fileID: 1495642519175236, guid: 2eb451b1b3e3ab44481e8fec477e7f1d,
       type: 2}
     status: 0
     completionStatus: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 90
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0
@@ -148,7 +148,8 @@ MonoBehaviour:
     levelType: 0
     name: Level7
     hint: Dummy Hint
-    structure: {fileID: 0}
+    structure: {fileID: 1495642519175236, guid: 2eb451b1b3e3ab44481e8fec477e7f1d,
+      type: 2}
     status: 0
     completionStatus: 0
     isLaunchActive: 0
@@ -157,7 +158,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 80
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0
@@ -178,7 +179,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 70
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0
@@ -199,7 +200,7 @@ MonoBehaviour:
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 0
+    maximumHitCount: 40
     threeStarHitLimit: 0
     twoStarHitLimit: 0
     isGravityEnabled: 0

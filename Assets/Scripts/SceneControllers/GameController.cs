@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using LevelSystem;
+using ComponentScripts;
+using TMPro;
+
 namespace SceneControllers
 {
 	public class GameController : MonoBehaviour {
@@ -26,17 +29,57 @@ namespace SceneControllers
 
 		[SerializeField]
 		private Level level;
-		
-		
-		
-		// Use this for initialization
-		private void Start () {
-			level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : levelDatabase.levelListDatabase[levelNumber-1];
-		}
+
+		[SerializeField]
+		private TextMeshProUGUI hitLabel;
 	
-		// Update is called once per frame
-		private void Update () {
+		private int hitCount = 1000;
+		private int targetCount = 1000;
 		
+		private void Awake()
+		{
+			level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : levelDatabase.levelListDatabase[levelNumber-1];
+			targetCount = GameObject.FindGameObjectsWithTag("Target").Length;
+			hitCount = level.maximumHitCount;
+			
+			TargetBaseController.TargetDestroyedEvent += UpdateTargetCount;
+			BallBaseController.BallCollideEvent += UpdateHitCount;
+			
 		}
+
+		private void UpdateHitCount()
+		{
+			hitCount -= 1;
+			ControlGameState();
+		}
+
+		private void UpdateTargetCount()
+		{
+			targetCount -= 1;
+			ControlGameState();
+		}
+
+		private void ControlGameState()
+		{
+			if (hitCount <= 0)
+			{
+				LevelManager.SharedInstance.LoadLastActiveLevel();
+				return;
+			}
+			
+			hitLabel.text = hitCount.ToString();
+
+			if (targetCount != 0) return;
+			var nextLevelIndex = level.index + 1;
+			LevelManager.SharedInstance.UnlockLevel(nextLevelIndex);
+			LevelManager.SharedInstance.LoadGameScene(nextLevelIndex);
+		}
+
+		private void OnDisable()
+		{
+			BallBaseController.BallCollideEvent -= UpdateHitCount;
+			TargetBaseController.TargetDestroyedEvent -= UpdateTargetCount;
+		}
+
 	}
 }

@@ -1252,7 +1252,6 @@ MonoBehaviour:
   levelListDatabase: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
   totalLevelIndex: 0
   maxLevelIndex: 0
-  currentLevelIndex: 0
 --- !u!4 &2143515680
 Transform:
   m_ObjectHideFlags: 0

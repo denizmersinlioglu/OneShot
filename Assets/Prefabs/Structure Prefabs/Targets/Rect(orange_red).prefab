@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114972621962834690}
   m_Layer: 0
   m_Name: Rect(orange_red)
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,6 +8,7 @@ TagManager:
   - Up
   - Side
   - Portal
+  - Target
   layers:
   - Default
   - TransparentFX

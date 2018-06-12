@@ -7,10 +7,14 @@ namespace ComponentScripts
 	{
 		[SerializeField]
 		private ParticleSystem particleSystem;
-	
+		
+		public delegate void BallCollide();
+		public static event BallCollide BallCollideEvent;
+		
 		private float lastTime = 0f;
 		private void OnCollisionEnter2D(Collision2D other)
 		{
+			if (BallCollideEvent != null) BallCollideEvent();
 			Instantiate(particleSystem, other.contacts[0].point, Quaternion.identity);
 		}
 

@@ -8,8 +8,14 @@ namespace ComponentScripts
 
 		private IEnumerator coroutine;
 		private ParticleSystem ps;
+		
+		public delegate void TargetDestroyed();
+		public static event TargetDestroyed TargetDestroyedEvent;
+		
 		void OnCollisionEnter2D(Collision2D coll) {
 			if (!coll.gameObject.CompareTag("OneShot_Ball")) return;
+			
+			if (TargetDestroyedEvent != null) TargetDestroyedEvent();
 			ps = GetComponent<ParticleSystem>();
 			var no = ps.noise;
 			no.enabled = true;

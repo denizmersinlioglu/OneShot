@@ -17,7 +17,7 @@ namespace LevelSystem
         [HideInInspector]
         private Level currentLevel;
         [HideInInspector]
-        public int currentLevelIndex;
+        private int currentLevelIndex;
 
         static LevelManager()
         {
@@ -52,7 +52,7 @@ namespace LevelSystem
             return levelListDatabase.levelListDatabase[currentLevelIndex-1];
         }
 
-        private void SetActiveLevel(int index)
+        private void SetPlayersActiveLevel(int index)
         {
             currentLevelIndex = index;
             PlayerPreferencesManager.SharedInstance.SetLastActiveLevel(index);
@@ -76,9 +76,15 @@ namespace LevelSystem
 
         public void LoadGameScene(int index)
         {
-            SetActiveLevel(index);
+            if (levelListDatabase.levelListDatabase[index-1].status == LevelStatus.locked) return;
+            SetPlayersActiveLevel(index);
             Initiate.Fade("Game", Color.black, 4f);
             // SceneManager.LoadScene("Game");
+        }
+
+        public void UnlockLevel(int index)
+        {
+            levelListDatabase.levelListDatabase[index-1].status = LevelStatus.unlocked;
         }
 
         public static void LoadLevelsScene()
