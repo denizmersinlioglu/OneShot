@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelDatabase: {fileID: 11400000, guid: b1cb046b8e12075498de29981ca581d8, type: 2}
-  levelNumber: 4
+  levelNumber: 5
   level:
     index: 0
     name: New level
