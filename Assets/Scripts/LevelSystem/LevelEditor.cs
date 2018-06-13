@@ -132,9 +132,7 @@ namespace LevelSystem
                     //Mathf.Clamp (viewIndex, 1, LevelList.levelList.Count);
                     EditorGUILayout.LabelField("of " + levelList.levelListDatabase.Count.ToString() + "  Levels", "", GUILayout.ExpandWidth(false));
                     GUILayout.EndHorizontal();
-                    EditorGUI.BeginDisabledGroup(true);
-                    levelList.levelListDatabase[viewIndex - 1].name = EditorGUILayout.TextField("Name", levelList.levelListDatabase[viewIndex - 1].name as string, options);
-                    EditorGUI.EndDisabledGroup();
+                    EditorGUILayout.LabelField("Name", levelList.levelListDatabase[viewIndex - 1].name as string, options);
                     levelList.levelListDatabase[viewIndex - 1].levelType = (LevelType)EditorGUILayout.EnumPopup("Type:", levelList.levelListDatabase[viewIndex - 1].levelType, options);
                     levelList.levelListDatabase[viewIndex - 1].hint = EditorGUILayout.TextField("Hint", levelList.levelListDatabase[viewIndex - 1].hint as string, options);
 
