@@ -20,17 +20,17 @@ MonoBehaviour:
       type: 2}
     status: 1
     completionStatus: 0
-    isLaunchActive: 0
+    isLaunchActive: 1
     isAccelerometerActive: 0
     isNavigationButtonsActive: 0
     maximumTimeLimit: 0
     threeStarTimeLimit: 0
     twoStarTimeLimit: 0
-    maximumHitCount: 3
-    threeStarHitLimit: 0
-    twoStarHitLimit: 0
-    isGravityEnabled: 0
-    gravityConstant: 1
+    maximumHitCount: 8
+    threeStarHitLimit: 5
+    twoStarHitLimit: 6
+    isGravityEnabled: 1
+    gravityConstant: 0.5
     isBallPhysicsEnabled: 0
     ballFrictionRate: 0
     ballBounceRate: 1
@@ -40,7 +40,7 @@ MonoBehaviour:
     hint: Dummy Hint
     structure: {fileID: 1084742329549480, guid: 2be0cfe9b10b2204ba4d96a1cd52f4ac,
       type: 2}
-    status: 0
+    status: 1
     completionStatus: 0
     isLaunchActive: 0
     isAccelerometerActive: 0

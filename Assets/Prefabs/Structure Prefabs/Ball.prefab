@@ -171,7 +171,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.17
+  m_Radius: 0.22
 --- !u!114 &114489933152414888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9432,8 +9432,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.09558821, g: 0.550913, b: 1, a: 0.30588236}
-      maxColor: {r: 0.0043793293, g: 0.032920357, b: 0.5955882, a: 0.21568628}
+      minColor: {r: 0.09558821, g: 0.550913, b: 1, a: 0.91764706}
+      maxColor: {r: 0.0043793293, g: 0.032920357, b: 0.5955882, a: 0.8392157}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9496,7 +9496,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 0.5
-      minScalar: 0.4
+      minScalar: 0.6
       maxCurve:
         serializedVersion: 2
         m_Curve:

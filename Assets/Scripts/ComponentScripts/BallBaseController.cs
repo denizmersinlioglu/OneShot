@@ -24,7 +24,6 @@ namespace ComponentScripts
 			{
 				if (Time.time - lastTime < 0.2f)
 				{	
-					print("asdasdasdasd");
 					lastTime = Time.time;
 					LevelManager.SharedInstance.LoadLastActiveLevel();
 				} else

@@ -1,25 +1,26 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
 
-public class MusicManager : MonoBehaviour {
+namespace Utility
+{
+	public class MusicManager : MonoBehaviour {
 
-	public AudioClip[] levelMusic;
+		public AudioClip[] levelMusic;
 	
-	public AudioSource music;
+		public AudioSource music;
 	
-	private void OnEnable() {
+		private void OnEnable() {
 
-	}
-	void Awake(){
-		// DontDestroyOnLoad(gameObject);
-	}
+		}
+		void Awake(){
+			// DontDestroyOnLoad(gameObject);
+		}
 	
-	void Start () {
+		void Start () {
 	
-	}
+		}
 	
-	public void ChangeVolume(float volume){
+		public void ChangeVolume(float volume){
 		
+		}
 	}
 }

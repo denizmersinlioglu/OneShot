@@ -28,11 +28,12 @@ namespace SceneControllers
 		private int levelNumber = 1;
 
 		[SerializeField]
-		private Level level;
+		private TextMeshProUGUI hitLabel;
 
 		[SerializeField]
-		private TextMeshProUGUI hitLabel;
-	
+		private Level level;
+
+		
 		private int hitCount = 1000;
 		private int targetCount = 1000;
 		
@@ -61,6 +62,15 @@ namespace SceneControllers
 
 		private void ControlGameState()
 		{
+
+			if (targetCount == 0)
+			{
+				var nextLevelIndex = level.index + 1;
+				LevelManager.SharedInstance.UnlockLevel(nextLevelIndex);
+				LevelManager.SharedInstance.LoadGameScene(nextLevelIndex);
+				return;
+			}
+
 			if (hitCount <= 0)
 			{
 				LevelManager.SharedInstance.LoadLastActiveLevel();
@@ -69,10 +79,7 @@ namespace SceneControllers
 			
 			hitLabel.text = hitCount.ToString();
 
-			if (targetCount != 0) return;
-			var nextLevelIndex = level.index + 1;
-			LevelManager.SharedInstance.UnlockLevel(nextLevelIndex);
-			LevelManager.SharedInstance.LoadGameScene(nextLevelIndex);
+			
 		}
 
 		private void OnDisable()

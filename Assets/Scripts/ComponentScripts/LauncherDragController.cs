@@ -44,7 +44,7 @@ namespace ComponentScripts
             }
 
             lineRenderer = GetComponent<LineRenderer>();
-
+            
             lineRenderer.SetPosition(0, lineRenderer.transform.position);
             lineRenderer.sortingOrder = 10;
             rayToMouse = new Ray(launcher.position, Vector3.zero);
@@ -111,7 +111,7 @@ namespace ComponentScripts
             StartCoroutine(destroy());
         }
 
-        IEnumerator destroy()
+        private IEnumerator destroy()
         {
             yield return new WaitForSeconds(2);
             
@@ -122,6 +122,11 @@ namespace ComponentScripts
         {
             var pointerPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             var deltaMousePosition = pointerPosition - pointerDownPoint;
+            if (ball == null)
+            {
+                ball = GameObject.FindGameObjectWithTag("OneShot_Ball");
+            }
+
             var launcherPosition = ball.transform.position - deltaMousePosition;
 
             var maxStretchSqr = maxStretch * maxStretch;

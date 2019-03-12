@@ -18,17 +18,13 @@ namespace SceneControllers
         Get ball physics features from level instance - You may need to create new physics 2D material. Ball is in the level structure prefab.
     */
     
-        [SerializeField]
-        private LevelList levelDatabase;
-        [SerializeField]
-        private int levelNumber = 1;
-        [SerializeField]
-        private Level level;
-        
-        [SerializeField]
-        private TextMeshProUGUI hitLabel;
-        [SerializeField]
-        private TextMeshProUGUI timerLabel;
+        [SerializeField] private LevelList levelDatabase;
+        [SerializeField] private int levelNumber = 1;
+        [SerializeField] private Level level;
+        [SerializeField] private GameObject launcher;
+        [SerializeField] private GameObject launcherControlPanel;
+        [SerializeField] private TextMeshProUGUI hitLabel;
+        [SerializeField] private TextMeshProUGUI timerLabel;
         
         private TextMeshProUGUI currentLabel;
 
@@ -43,7 +39,12 @@ namespace SceneControllers
             currentLabel = level.levelType == LevelType.hitBased ? hitLabel : timerLabel;
 
             currentLabel.text = level.levelType == LevelType.hitBased ? level.maximumHitCount.ToString() : level.maximumTimeLimit.ToString();
-
+    
+            if (level.isLaunchActive)
+            {
+                var gameCanvas = GameObject.Find("GameCanvas");
+                Instantiate(launcherControlPanel, new Vector3(), Quaternion.identity).transform.SetParent(gameCanvas.transform,false);
+            }
         }
     }
 }
