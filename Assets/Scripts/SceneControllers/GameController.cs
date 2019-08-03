@@ -34,7 +34,6 @@ namespace SceneControllers {
 
 			TargetBaseController.TargetDestroyedEvent += UpdateTargetCount;
 			BallBaseController.BallCollideEvent += UpdateHitCount;
-
 		}
 
 		private void UpdateHitCount() {

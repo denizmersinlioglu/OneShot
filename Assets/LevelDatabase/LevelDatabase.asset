@@ -3,8 +3,9 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -17,7 +18,7 @@ MonoBehaviour:
     name: Level1
     hint: Dummy Hint
     structure: {fileID: 1000772213784792, guid: 57e5f6447a580db4c9711992ab28d510,
-      type: 2}
+      type: 3}
     status: 1
     completionStatus: 0
     isLaunchActive: 1
@@ -38,8 +39,8 @@ MonoBehaviour:
     levelType: 0
     name: Level2
     hint: Dummy Hint
-    structure: {fileID: 1084742329549480, guid: 2be0cfe9b10b2204ba4d96a1cd52f4ac,
-      type: 2}
+    structure: {fileID: 1000772213784792, guid: 57e5f6447a580db4c9711992ab28d510,
+      type: 3}
     status: 1
     completionStatus: 0
     isLaunchActive: 0
