@@ -1,12 +1,11 @@
-﻿using UnityEngine;
+﻿using ComponentScripts;
 using LevelSystem;
-using ComponentScripts;
-using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
-namespace SceneControllers
-{
+namespace SceneControllers {
 	public class GameController : MonoBehaviour {
-	
+
 		/*  
 			Level Builder has already created the game environment according to current level.
 	 		The aim of this class is control the game state according to existing level structure, control types and active levels win/lose statements.
@@ -21,69 +20,52 @@ namespace SceneControllers
     		When user complete the level - Update LevelDatabase asset according to users success.
  		*/
 
-		[SerializeField]
-		private LevelList levelDatabase;
-
-		[SerializeField]
-		private int levelNumber = 1;
-
-		[SerializeField]
-		private TextMeshProUGUI hitLabel;
-
-		[SerializeField]
-		private Level level;
-
-		
+		[SerializeField] private LevelList levelDatabase;
+		[SerializeField] private int levelNumber = 1;
+		[SerializeField] private Text hitLabel;
+		[SerializeField] private Level level;
 		private int hitCount = 1000;
 		private int targetCount = 1000;
-		
-		private void Awake()
-		{
-			level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : levelDatabase.levelListDatabase[levelNumber-1];
+
+		private void Awake() {
+			level = LevelManager.SharedInstance != null ? LevelManager.SharedInstance.GetActiveLevel() : levelDatabase.levelListDatabase[levelNumber - 1];
 			targetCount = GameObject.FindGameObjectsWithTag("Target").Length;
 			hitCount = level.maximumHitCount;
-			
+
 			TargetBaseController.TargetDestroyedEvent += UpdateTargetCount;
 			BallBaseController.BallCollideEvent += UpdateHitCount;
-			
+
 		}
 
-		private void UpdateHitCount()
-		{
+		private void UpdateHitCount() {
 			hitCount -= 1;
 			ControlGameState();
 		}
 
-		private void UpdateTargetCount()
-		{
+		private void UpdateTargetCount() {
 			targetCount -= 1;
 			ControlGameState();
 		}
 
-		private void ControlGameState()
-		{
+		private void ControlGameState() {
 
-			if (targetCount == 0)
-			{
+			if (targetCount == 0) {
 				var nextLevelIndex = level.index + 1;
 				LevelManager.SharedInstance.UnlockLevel(nextLevelIndex);
 				LevelManager.SharedInstance.LoadGameScene(nextLevelIndex);
 				return;
 			}
 
-			if (hitCount <= 0)
-			{
+			if (hitCount <= 0) {
 				LevelManager.SharedInstance.LoadLastActiveLevel();
 				return;
 			}
-			
+
 			hitLabel.text = hitCount.ToString();
 
-			
 		}
 
-		private void OnDisable()
-		{
+		private void OnDisable() {
 			BallBaseController.BallCollideEvent -= UpdateHitCount;
 			TargetBaseController.TargetDestroyedEvent -= UpdateTargetCount;
 		}
