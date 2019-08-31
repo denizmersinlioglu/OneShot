@@ -6,17 +6,16 @@ using UnityEngine;
 public class UserInteractionController : MonoBehaviour {
 
     ObservableLaunchPointerTrigger launchTrigger;
+
     private void Start() {
-        // SubscribeClickPosition();
-        // SubscribeDoubleClick();
+        if (gameObject.GetComponent(typeof(ObservableLaunchPointerTrigger)) == null) {
+            launchTrigger = gameObject.AddComponent<ObservableLaunchPointerTrigger>();
+        }
         SubscribeLaunch();
         SubscribeMove();
     }
 
     private void SubscribeLaunch() {
-        if (gameObject.GetComponent(typeof(ObservableLaunchPointerTrigger)) == null) {
-            launchTrigger = gameObject.AddComponent<ObservableLaunchPointerTrigger>();
-        }
         launchTrigger.OnLaunchPointerAsObservable()
             .Subscribe(vector =>
                 Debug.Log(string.Format("Launch -> Start {0}, End {1}, Diff {2}",
@@ -27,9 +26,6 @@ public class UserInteractionController : MonoBehaviour {
     }
 
     private void SubscribeMove() {
-        if (gameObject.GetComponent(typeof(ObservableLaunchPointerTrigger)) == null) {
-            launchTrigger = gameObject.AddComponent<ObservableLaunchPointerTrigger>();
-        }
         launchTrigger.OnMovePointerAsObservable()
             .Where(vector => vector.diff.magnitude > 100)
             .Subscribe(vector =>
@@ -38,15 +34,6 @@ public class UserInteractionController : MonoBehaviour {
                     vector.current,
                     vector.diff))
             );
-    }
-
-    private void SubscribeClickPosition() {
-        var clickStream = this.OnMouseDownAsObservable()
-            .Select(_ => Input.mousePosition);
-
-        clickStream.Where(pos => pos.x >= 0)
-            .Select(pos => pos.x)
-            .Subscribe(x => Debug.Log("Clicked at X position: " + x.ToString()));
     }
 
     private void SubscribeDoubleClick() {

@@ -8,6 +8,7 @@ namespace DottedLine {
         [Range(0.01f, 1f)] public float Size;
         [Range(0.1f, 2f)] public float Delta;
 
+
         //Static Property with backing field
         private static DottedLine instance;
         public static DottedLine Instance {
@@ -38,13 +39,13 @@ namespace DottedLine {
         }
 
         GameObject GetOneDot() {
-            var gameObject = new GameObject();
-            gameObject.transform.localScale = Vector3.one * Size;
-            gameObject.transform.parent = transform;
+            var obj = new GameObject();
+            obj.transform.localScale = Vector3.one * Size;
+            obj.transform.parent = transform;
 
-            var sr = gameObject.AddComponent<SpriteRenderer>();
+            var sr = obj.AddComponent<SpriteRenderer>();
             sr.sprite = Dot;
-            return gameObject;
+            return obj;
         }
 
         public void DrawDottedLine(Vector2 start, Vector2 end) {

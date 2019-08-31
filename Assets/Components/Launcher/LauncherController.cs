@@ -1,14 +1,12 @@
-﻿using ComponentScripts;
-using JetBrains.Annotations;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class LauncherController : MonoBehaviour
 {
 
-	[NotNull] [SerializeField] private LauncherDragController launcher;
+	[SerializeField] private LauncherDragController launcher;
 
-	[NotNull] private LauncherDragController launcherInstance;
+	private LauncherDragController launcherInstance;
 	
 	private void PointerDrag (PointerEventData eventData)
 	{

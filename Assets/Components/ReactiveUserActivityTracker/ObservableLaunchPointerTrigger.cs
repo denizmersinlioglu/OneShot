@@ -9,8 +9,8 @@ public class ObservableLaunchPointerTrigger : ObservableTriggerBase, IPointerDow
 
     public float IntervalSecond = 0.5f;
 
-    Subject < (Vector2, Vector2, Vector2) > onLaunchPointerDown;
-    Subject < (Vector2, Vector2, Vector2) > onMovePointerDown;
+    Subject<(Vector2, Vector2, Vector2)> onLaunchPointerDown;
+    Subject<(Vector2, Vector2, Vector2)> onMovePointerDown;
 
     float? raiseTime;
 
@@ -33,13 +33,13 @@ public class ObservableLaunchPointerTrigger : ObservableTriggerBase, IPointerDow
             onMovePointerDown.OnNext((startPoint ?? Vector2.zero, currentPoint, diff));
         }
     }
-    public IObservable < (Vector2 start, Vector2 end, Vector2 diff) > OnLaunchPointerAsObservable() {
-        var newSubject = new Subject < (Vector2, Vector2, Vector2) > ();
+    public IObservable<(Vector2 start, Vector2 end, Vector2 diff)> OnLaunchPointerAsObservable() {
+        var newSubject = new Subject<(Vector2, Vector2, Vector2)>();
         return onLaunchPointerDown ?? (onLaunchPointerDown = newSubject);
     }
 
-    public IObservable < (Vector2 start, Vector2 current, Vector2 diff) > OnMovePointerAsObservable() {
-        var newSubject = new Subject < (Vector2, Vector2, Vector2) > ();
+    public IObservable<(Vector2 start, Vector2 current, Vector2 diff)> OnMovePointerAsObservable() {
+        var newSubject = new Subject<(Vector2, Vector2, Vector2)>();
         return onMovePointerDown ?? (onMovePointerDown = newSubject);
     }
     protected override void RaiseOnCompletedOnDestroy() {
