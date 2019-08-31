@@ -65,6 +65,7 @@ public class CannonScript : MonoBehaviour {
 
     void SetTrajectoryPoints(Vector3 pStartPosition, Vector2 pVelocity) {
         var count = TrajectoryPointCount;
+        var basePosition = (Vector2) Ball.transform.position;
         var velocity = Mathf.Sqrt((pVelocity.x * pVelocity.x) + (pVelocity.y * pVelocity.y));
         var angle = Mathf.Rad2Deg * (Mathf.Atan2(pVelocity.y, pVelocity.x));
         var fTime = 0f;
@@ -76,7 +77,8 @@ public class CannonScript : MonoBehaviour {
 
             var dx = velocity * fTime * Mathf.Cos(angle * Mathf.Deg2Rad);
             var dy = velocity * fTime * Mathf.Sin(angle * Mathf.Deg2Rad) - (gravity * fTime * fTime / 2.0f);
-            trajectoryPoints[i].transform.position = new Vector2(pStartPosition.x + dx, pStartPosition.y + dy);
+
+            trajectoryPoints[i].transform.position = basePosition + new Vector2(pStartPosition.x + dx, pStartPosition.y + dy);
             trajectoryPoints[i].transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(pVelocity.y - gravity * fTime, pVelocity.x) * Mathf.Rad2Deg);
 
             trajectoryPoints[i].GetComponent<SpriteRenderer>().enabled = true;
