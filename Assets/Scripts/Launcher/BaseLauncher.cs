@@ -10,6 +10,7 @@ public class BaseLauncher: MonoBehaviour {
     public float TrajectoryStep = 0.02f;
     public int TrajectoryPointCount = 30;
     public float ThrowPower = 50;
+    public float ThrowPowerLimit = 15;
 
     private BaseProjectile Ball {
         get { return FindObjectOfType<BaseProjectile>(); }
@@ -33,19 +34,22 @@ public class BaseLauncher: MonoBehaviour {
             .RepeatUntilDestroy(this)
             .Subscribe(
                 x => {
-                    Vector2 vel = GetForceFrom(Ball.transform.position, Camera.main.ScreenToWorldPoint(x));
-                    float angle = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg;
+                    var force = GetForceFrom(Ball.transform.position, Camera.main.ScreenToWorldPoint(x));
+                    float angle = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
                     transform.eulerAngles = new Vector3(0, 0, angle);
-                    SetupTrajectory(transform.position, vel / Ball.GetComponent<Rigidbody2D>().mass);
+                    SetupTrajectory(transform.position, force / Ball.GetComponent<Rigidbody2D>().mass);
+                   
+                    
                 })
             .AddTo(this);
 
         this.UpdateAsObservable()
             .Where(_ => Input.GetMouseButtonUp(0))
+            .Select(_ => Input.mousePosition)
             .Subscribe(
-                _ => {
+                x => {
                     ThrowBall();
-                    trajectoryPoints.ForEach(x => Destroy(x.gameObject));
+                    trajectoryPoints.ForEach(p => Destroy(p.gameObject));
                     Destroy(gameObject);
                 }) 
             .AddTo(this);
@@ -59,7 +63,14 @@ public class BaseLauncher: MonoBehaviour {
     }
 
     private Vector2 GetForceFrom(Vector2 fromPos, Vector2 toPos) {
-        return (new Vector2(toPos.x, toPos.y) - new Vector2(fromPos.x, fromPos.y)) * ThrowPower;
+        var distance = new Vector2(toPos.x, toPos.y) - new Vector2(fromPos.x, fromPos.y);
+        var force = distance * ThrowPower;
+        if (force.magnitude > ThrowPowerLimit) {
+            var scaleFactor = ThrowPowerLimit / force.magnitude;
+            var scaleVector = new Vector2(scaleFactor, scaleFactor);
+            force.Scale(scaleVector);
+        }
+        return force;
     }
 
     void SetupTrajectory(Vector3 startPos, Vector2 vel) {
