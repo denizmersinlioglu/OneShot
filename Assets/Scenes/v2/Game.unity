@@ -315,6 +315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 433581591}
   - component: {fileID: 433581590}
+  - component: {fileID: 433581592}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -335,7 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: Game
-  duration: 1
+  duration: 0.5
   color: {r: 0, g: 0, b: 0, a: 1}
   restartOnDoubleClick: 1
 --- !u!4 &433581591
@@ -352,6 +353,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433581592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433581589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a6f7a4995afa43f3a8c853cfe9bb531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &539885213
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,7 +721,9 @@ MonoBehaviour:
   TrajectoryStep: 0.01
   TrajectoryPointCount: 30
   ThrowPower: 10
-  ThrowPowerLimit: 12
+  ThrowPowerMaxLimit: 15
+  ThrowPowerMinLimit: 5
+  TopMargin: 150
 --- !u!222 &777927136
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -986,23 +1001,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edc5e7a8a5bcb4acf98d4521e8a88aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactable: 1
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 915006578}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: AnimatedButton+ButtonClickedEvent, Assembly-CSharp-firstpass, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!95 &915006580
 Animator:
   serializedVersion: 3
@@ -1309,7 +1307,7 @@ Camera:
   m_GameObject: {fileID: 977668290}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1885,16 +1883,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1816976996807698, guid: 111ec6ae607535a47b461fb610c1e62c, type: 3}
+      propertyPath: m_Name
+      value: BaseProjectile
+      objectReference: {fileID: 0}
     - target: {fileID: 3608525571173205358, guid: 111ec6ae607535a47b461fb610c1e62c,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 55521d61e20de4bdbadadba81ed5f303,
         type: 3}
-    - target: {fileID: 1816976996807698, guid: 111ec6ae607535a47b461fb610c1e62c, type: 3}
-      propertyPath: m_Name
-      value: BaseProjectile
-      objectReference: {fileID: 0}
     - target: {fileID: 4205893368933770, guid: 111ec6ae607535a47b461fb610c1e62c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2074,8 +2072,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 14fb81c25f6ad4e8dadd177a914c1ee7, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: c8e8df169d3904cab8365d464655d292, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2508,6 +2506,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6745827262661036933, guid: 73e87d8a9d10b4a0a85d3ed605e40b52,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6745827262661036933, guid: 73e87d8a9d10b4a0a85d3ed605e40b52,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6745827262661036933, guid: 73e87d8a9d10b4a0a85d3ed605e40b52,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.9245283
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e87d8a9d10b4a0a85d3ed605e40b52, type: 3}

@@ -20,8 +20,8 @@ public class SceneTransition : MonoBehaviour {
                 scene = SceneManager.GetActiveScene().name;
                 PerformTransition();
                  //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            });
-
+            })
+            .AddTo(this);
     }
 
     public void PerformTransition() {
