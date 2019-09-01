@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour {
 
     private void Start() {
         Ball.OnBallCollided += UpdateHitCount;
-        Targets.ToList().ForEach(x => x.OnDestroy += UpdateTargetCount);
+        //Targets.ToList().ForEach(x => x.OnDestroy += UpdateTargetCount);
     }
 
     private void UpdateHitCount() {
@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour {
 
     private void OnDisable() {
         Ball.OnBallCollided -= UpdateHitCount;
-        Targets.ToList().ForEach(x => x.OnDestroy -= UpdateTargetCount);
+        //Targets.ToList().ForEach(x => x.OnDestroy -= UpdateTargetCount);
     }
 
 }
