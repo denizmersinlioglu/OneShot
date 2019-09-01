@@ -37,9 +37,9 @@ public class BaseLauncher : MonoBehaviour {
             .RepeatUntilDestroy(this)
             .Subscribe(
                 x => {
+                    //Debug.Log(string.Format("{0} : {1}", force.magnitude, IsValidThrowPoint(x)));
                     if (IsValidThrowPoint(x)) {
                         var force = GetForceFrom(Ball.transform.position, Camera.main.ScreenToWorldPoint(x));
-                        Debug.Log(string.Format("{0} : {1}", force.magnitude, IsValidThrowPoint(x)));
                         float angle = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
                         transform.eulerAngles = new Vector3(0, 0, angle);
                         SetupTrajectory(transform.position, force / Ball.GetComponent<Rigidbody2D>().mass);
