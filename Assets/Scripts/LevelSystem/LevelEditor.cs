@@ -140,7 +140,7 @@ namespace LevelSystem {
 
                 GUILayout.Space(15);
 
-                level.GravityConstant = EditorGUILayout.FloatField("Gravitiy", level.GravityConstant, expandOption);
+                level.GravityScale = EditorGUILayout.FloatField("Gravitiy", level.GravityScale, expandOption);
 
                 GUILayout.Space(5);
 

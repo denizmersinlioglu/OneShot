@@ -3,41 +3,45 @@ using TMPro;
 using UniRx;
 using System.Linq;
 using System;
+using LevelSystem;
 
 public class GameManager : MonoBehaviour {
 
     [SerializeField]
     private TextMeshProUGUI HitCountText;
 
-    public int Level;
+    public Level LevelPrefab;
 
-    public int HitCount = 10;
+    public int HitCount;
     private int TargetsToDestory;
     private int DestroyedTargetCount;
-    readonly private CompositeDisposable disposibles = new CompositeDisposable();
-
-    private BaseProjectile Ball {
-        get { return FindObjectOfType<BaseProjectile>(); }
-    }
-
-    private BaseTarget[] Targets {
-        get { return FindObjectsOfType<BaseTarget>(); }
-    }
-
-    private void SetupGame() {
-        Application.targetFrameRate = 60;
-        DestroyedTargetCount = 0;
-        TargetsToDestory = Targets.Length;
-        HitCountText.text = HitCount.ToString();
-    }
 
     void Start() {
+        Application.targetFrameRate = 60;
 
-        SetupGame();
-        
+        var instance = Instantiate(LevelPrefab, Vector3.zero, Quaternion.identity);
+        SetupGame(instance);
+        SubscribeTo(instance);
+        SetupLauncher(instance);
+    }
+
+    private void SetupLauncher(Level level) {
+        var launcher = GetComponent<BaseLauncher>();
+        launcher.Setup(level);
+    }
+
+    private void SetupGame(Level level) {
+        this.DestroyedTargetCount = 0;
+        this.TargetsToDestory = level.Targets.Length;
+        this.HitCountText.text = level.MaxHitCount.ToString();
+        this.HitCount = level.MaxHitCount;
+    }
+
+    private void SubscribeTo(Level level) {
+
         Observable.FromEvent(
-                    h => Ball.OnBallCollided += h,
-                    h => Ball.OnBallCollided -= h)
+                    h => level.Projectile.OnBallCollided += h,
+                    h => level.Projectile.OnBallCollided -= h)
                 .ObserveOnMainThread()
                 .Delay(TimeSpan.FromMilliseconds(100))
                 .Subscribe(_ => {
@@ -45,7 +49,7 @@ public class GameManager : MonoBehaviour {
                     HitCount--;
                     HitCountText.text = HitCount.ToString();
 
-                    print("Destored Target Count: " + DestroyedTargetCount );
+                    print("Destored Target Count: " + DestroyedTargetCount);
                     print("Total Target Count: " + TargetsToDestory);
 
                     if (HitCount <= 0 && DestroyedTargetCount != TargetsToDestory) {
@@ -55,10 +59,12 @@ public class GameManager : MonoBehaviour {
                         Debug.Log("Level Completed");
                     }
                 })
-                .AddTo(disposibles);
+                .AddTo(this);
 
 
-        Targets.ToList().ForEach(target => {
+        level.Targets.ToList().ForEach(target => {
+            target.OnCollisonEntered += x => print("Target hit with id: " + x.GetInstanceID());
+
             Observable.FromEvent<BaseTarget>(
                     h => target.OnCollisonEntered += h,
                     h => target.OnCollisonEntered -= h)
@@ -66,10 +72,10 @@ public class GameManager : MonoBehaviour {
                 .Subscribe(x => {
                     print("Target hit with id: " + x.GetInstanceID());
                 })
-                .AddTo(disposibles);
+                .AddTo(this);
         });
 
-        Targets.ToList().ForEach(target => {
+        level.Targets.ToList().ForEach(target => {
             Observable.FromEvent<BaseTarget>(
                     h => target.OnDestroy += h,
                     h => target.OnDestroy -= h)
@@ -79,11 +85,7 @@ public class GameManager : MonoBehaviour {
                     x.Destroy();
                     DestroyedTargetCount++;
                 })
-                .AddTo(disposibles);
+                .AddTo(this);
         });
-    }
-
-    private void OnDestroy() {
-        disposibles.Dispose();
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Reflection;
 using UnityEngine;
+using LevelSystem;
 
 public class BaseProjectile : MonoBehaviour {
 
@@ -11,6 +11,10 @@ public class BaseProjectile : MonoBehaviour {
     private float CreateOnHitLifeTime = 2f;
 
     public Action OnBallCollided;
+
+    public void Setup(Level level) {
+        GetComponent<Rigidbody2D>().gravityScale = level.GravityScale;
+    }
 
     private void OnCollisionEnter2D(Collision2D other) {
         OnBallCollided?.Invoke();

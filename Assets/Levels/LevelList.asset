@@ -13,9 +13,5 @@ MonoBehaviour:
   m_Name: LevelList
   m_EditorClassIdentifier: Assembly-CSharp:LevelSystem:LevelDatabase
   List:
-  - index: 1
-    LevelStructure: {fileID: 0}
-    MaxHitCount: 0
-    GravityConstant: 0
-    ProjectileFriction: 0
-    ProjectileBounce: 0
+  - {fileID: 7576694127591219453, guid: b457d92632cdb46c6a8630a3db21b49e, type: 3}
+  - {fileID: 0}
