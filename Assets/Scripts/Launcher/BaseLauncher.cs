@@ -63,9 +63,6 @@ public class BaseLauncher : MonoBehaviour {
                     }
                 })
             .AddTo(this);
-
-
-
     }
 
     private void ThrowBall() {

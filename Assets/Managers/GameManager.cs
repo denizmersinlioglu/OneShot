@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private TextMeshProUGUI HitCountText;
 
-    readonly CompositeDisposable disposibles = new CompositeDisposable();
+    public int Level;
+
     public int HitCount = 10;
     private int TargetsToDestory;
     private int DestroyedTargetCount;
+    readonly private CompositeDisposable disposibles = new CompositeDisposable();
 
     private BaseProjectile Ball {
         get { return FindObjectOfType<BaseProjectile>(); }
