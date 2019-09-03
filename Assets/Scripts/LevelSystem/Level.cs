@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UniRx;
 
 namespace LevelSystem {
 
@@ -8,6 +9,9 @@ namespace LevelSystem {
         public BaseProjectile Projectile;
         [HideInInspector]
         public BaseTarget[] Targets;
+
+        [HideInInspector]
+        public CompositeDisposable disposables = new CompositeDisposable();
 
         public int index;
 
@@ -23,6 +27,10 @@ namespace LevelSystem {
             Targets = LevelStructure.GetComponentsInChildren<BaseTarget>();
             Projectile.GetComponent<Rigidbody2D>().gravityScale = GravityScale;
         }
-       
+
+        private void OnDestroy() {
+            disposables.Dispose();
+        }
+
     }
 }

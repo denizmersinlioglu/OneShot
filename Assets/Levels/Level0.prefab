@@ -50,7 +50,7 @@ MonoBehaviour:
   index: 0
   LevelStructure: {fileID: 4146179907630586120}
   MaxHitCount: 12
-  GravityScale: -0.5
+  GravityScale: 1
   ProjectileFriction: 0.1
   ProjectileBounce: 1
 --- !u!1001 &4146179907883290331

@@ -17,16 +17,15 @@ public class BaseLauncher : MonoBehaviour {
 
     private float GravityScale;
 
+    CompositeDisposable disposables;
+
     private List<GameObject> trajectoryPoints;
 
     private BaseProjectile Projectile;
 
     public void Setup(Level level) {
-        GravityScale = level.GravityScale;
-        Projectile = level.Projectile;
-    }
+        disposables = new CompositeDisposable();
 
-    void Start() {
         trajectoryPoints = new List<GameObject>();
         for (int i = 0; i < TrajectoryPointCount; i++) {
             GameObject dot = (GameObject)Instantiate(TrajectoryPointPrefeb);
@@ -34,43 +33,15 @@ public class BaseLauncher : MonoBehaviour {
             trajectoryPoints.Insert(i, dot);
         }
 
-        this.UpdateAsObservable()
-            .Where(_ => Input.GetMouseButtonDown(0))
-            .SelectMany(_ => gameObject.UpdateAsObservable())
-            .TakeUntil(this.UpdateAsObservable().Where(_ => Input.GetMouseButtonUp(0)))
-            .Select(_ => Input.mousePosition)
-            .Where(x => x.y < Screen.height - TopMargin)
-            .RepeatUntilDestroy(this)
-            .Subscribe(
-                x => {
-                    //Debug.Log(string.Format("{0} : {1}", force.magnitude, IsValidThrowPoint(x)));
-                    if (IsValidThrowPoint(x)) {
-                        var force = GetForceFrom(Projectile.transform.position, Camera.main.ScreenToWorldPoint(x));
-                        float angle = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
-                        transform.eulerAngles = new Vector3(0, 0, angle);
-                        SetupTrajectory(transform.position, force / Projectile.GetComponent<Rigidbody2D>().mass);
-                    } else {
-                        trajectoryPoints.ForEach(p => p.GetComponent<SpriteRenderer>().enabled = false);
-                    }
-                })
-            .AddTo(this);
-
-        this.UpdateAsObservable()
-            .Where(_ => Input.GetMouseButtonUp(0))
-            .Select(_ => Input.mousePosition)
-            .Subscribe(
-                x => {
-                    if (x.y < Screen.height - TopMargin && IsValidThrowPoint(x)) {
-                        ThrowBall();
-                        this.enabled = false;
-                        trajectoryPoints.ForEach(p => Destroy(p.gameObject));
-                    } else {
-                        trajectoryPoints.ForEach(p => p.GetComponent<SpriteRenderer>().enabled = false);
-                    }
-                })
-            .AddTo(this);
+        GravityScale = level.GravityScale;
+        Projectile = level.Projectile;
+        setupSubscriptions();
     }
 
+    private void OnDisable() {
+        disposables.Dispose();
+    }
+   
     private void ThrowBall() {
         Projectile.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
         var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -92,6 +63,44 @@ public class BaseLauncher : MonoBehaviour {
             force.Scale(scaleVector);
         }
         return -force;
+    }
+
+    private void setupSubscriptions() {
+        this.UpdateAsObservable()
+            .Where(_ => Input.GetMouseButtonDown(0))
+            .SelectMany(_ => gameObject.UpdateAsObservable())
+            .TakeUntil(this.UpdateAsObservable().Where(_ => Input.GetMouseButtonUp(0)))
+            .Select(_ => Input.mousePosition)
+            .Where(x => x.y < Screen.height - TopMargin)
+            .RepeatUntilDestroy(this)
+            .Subscribe(
+                x => {
+                    //Debug.Log(string.Format("{0} : {1}", force.magnitude, IsValidThrowPoint(x)));
+                    if (IsValidThrowPoint(x)) {
+                        var force = GetForceFrom(Projectile.transform.position, Camera.main.ScreenToWorldPoint(x));
+                        float angle = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
+                        transform.eulerAngles = new Vector3(0, 0, angle);
+                        SetupTrajectory(transform.position, force / Projectile.GetComponent<Rigidbody2D>().mass);
+                    } else {
+                        trajectoryPoints.ForEach(p => p.GetComponent<SpriteRenderer>().enabled = false);
+                    }
+                })
+            .AddTo(disposables);
+
+        this.UpdateAsObservable()
+            .Where(_ => Input.GetMouseButtonUp(0))
+            .Select(_ => Input.mousePosition)
+            .Subscribe(
+                x => {
+                    if (x.y < Screen.height - TopMargin && IsValidThrowPoint(x)) {
+                        ThrowBall();
+                        this.enabled = false;
+                        trajectoryPoints.ForEach(p => Destroy(p.gameObject));
+                    } else {
+                        trajectoryPoints.ForEach(p => p.GetComponent<SpriteRenderer>().enabled = false);
+                    }
+                })
+            .AddTo(disposables);
     }
 
     void SetupTrajectory(Vector3 startPos, Vector2 vel) {

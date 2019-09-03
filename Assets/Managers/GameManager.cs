@@ -10,56 +10,78 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private TextMeshProUGUI HitCountText;
 
-    public Level LevelPrefab;
+    public Level[] Levels;
+    public IntReactiveProperty CurrentLevelIndex = new IntReactiveProperty(0);
 
-    public int HitCount;
-    private int TargetsToDestory;
-    private int DestroyedTargetCount;
+    CompositeDisposable disposables = new CompositeDisposable();
+
+    private readonly IntReactiveProperty HitCount = new IntReactiveProperty(0);
+    private readonly IntReactiveProperty TargetsToDestory = new IntReactiveProperty(0);
+    private readonly IntReactiveProperty DestroyedTargetCount = new IntReactiveProperty(0);
+
+
+    public void LoadGame(Level levelPrefab) {
+        var previousLevel = FindObjectOfType<Level>();
+        if (previousLevel != null) Destroy(previousLevel.gameObject);
+        SetupGame(Instantiate(levelPrefab, Vector3.zero, Quaternion.identity));
+    }
 
     void Start() {
         Application.targetFrameRate = 60;
-
-        var instance = Instantiate(LevelPrefab, Vector3.zero, Quaternion.identity);
-        SetupGame(instance);
-        SubscribeTo(instance);
-        SetupLauncher(instance);
+        CurrentLevelIndex.AsObservable()
+            .ObserveOnMainThread()
+            .Subscribe(x => LoadGame(Levels[x]))
+            .AddTo(disposables);
     }
 
-    private void SetupLauncher(Level level) {
-        var launcher = GetComponent<BaseLauncher>();
-        launcher.Setup(level);
+    private void OnDestroy() {
+        disposables.Dispose();
+    }
+
+    private void LoadNextLevel() {
+        Destroy(FindObjectOfType<Level>());
     }
 
     private void SetupGame(Level level) {
-        this.DestroyedTargetCount = 0;
-        this.TargetsToDestory = level.Targets.Length;
-        this.HitCountText.text = level.MaxHitCount.ToString();
-        this.HitCount = level.MaxHitCount;
+        GetComponent<BaseLauncher>().Setup(level);
+
+        DestroyedTargetCount.Value = 0;
+        TargetsToDestory.Value = level.Targets.Length;
+        HitCount.Select(x => x.ToString()).SubscribeToText(HitCountText);
+        HitCount.Value = level.MaxHitCount;
+        SubscribeTo(level);
     }
 
     private void SubscribeTo(Level level) {
 
+        Observable.CombineLatest(HitCount, DestroyedTargetCount, TargetsToDestory)
+            .Where(x => x[0] <= 0 && x[1] != x[2])
+            .Take(1)
+            .Subscribe(_ => {
+                Debug.Log("Level Failed");
+                GetComponent<SceneTransition>().ReloadScene();
+            })
+            .AddTo(disposables);
+
+        Observable.CombineLatest(HitCount, DestroyedTargetCount, TargetsToDestory)
+            .Where(x => x[0] >= 0 && x[1] == x[2])
+            .Take(1)
+            .Subscribe(_ => {
+                Debug.Log("Level Completed");
+                GetComponent<SceneTransition>().ReloadScene();
+            })
+            .AddTo(disposables);
+
         Observable.FromEvent(
                     h => level.Projectile.OnBallCollided += h,
                     h => level.Projectile.OnBallCollided -= h)
-                .ObserveOnMainThread()
-                .Delay(TimeSpan.FromMilliseconds(100))
-                .Subscribe(_ => {
-                    if (HitCount <= 0) { return; }
-                    HitCount--;
-                    HitCountText.text = HitCount.ToString();
-
-                    print("Destored Target Count: " + DestroyedTargetCount);
-                    print("Total Target Count: " + TargetsToDestory);
-
-                    if (HitCount <= 0 && DestroyedTargetCount != TargetsToDestory) {
-                        Debug.Log("Level Failerd");
-                        GetComponent<SceneTransition>().ReloadScene();
-                    } else if (HitCount >= 0 && DestroyedTargetCount == TargetsToDestory) {
-                        Debug.Log("Level Completed");
-                    }
-                })
-                .AddTo(this);
+            .ObserveOnMainThread()
+            .TakeUntil(HitCount.Where(x => x <= 0))
+            .Delay(TimeSpan.FromMilliseconds(100))
+            .Subscribe(_ => {
+                HitCount.Value--;
+            })
+            .AddTo(disposables);
 
 
         level.Targets.ToList().ForEach(target => {
@@ -72,10 +94,8 @@ public class GameManager : MonoBehaviour {
                 .Subscribe(x => {
                     print("Target hit with id: " + x.GetInstanceID());
                 })
-                .AddTo(this);
-        });
+                .AddTo(disposables);
 
-        level.Targets.ToList().ForEach(target => {
             Observable.FromEvent<BaseTarget>(
                     h => target.OnDestroy += h,
                     h => target.OnDestroy -= h)
@@ -83,9 +103,9 @@ public class GameManager : MonoBehaviour {
                 .Subscribe(x => {
                     print("Target destroyed with id: " + x.GetInstanceID());
                     x.Destroy();
-                    DestroyedTargetCount++;
+                    DestroyedTargetCount.Value++;
                 })
-                .AddTo(this);
+                .AddTo(disposables);
         });
     }
 }
