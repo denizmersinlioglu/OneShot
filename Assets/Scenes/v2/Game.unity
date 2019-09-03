@@ -330,6 +330,8 @@ MonoBehaviour:
   Levels:
   - {fileID: 7576694127591219453, guid: b457d92632cdb46c6a8630a3db21b49e, type: 3}
   - {fileID: 2983007236751148806, guid: 9c431bf6786a3425cacb1cb8fae8674b, type: 3}
+  CurrentLevelIndex:
+    value: 0
 --- !u!114 &433581593
 MonoBehaviour:
   m_ObjectHideFlags: 0
