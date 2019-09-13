@@ -16,14 +16,14 @@ public class SceneTransition : MonoBehaviour {
 
         clickStream.Buffer(clickStream.Throttle(TimeSpan.FromMilliseconds(250)))
             .Where(xs => xs.Count >= 2)
-            .Subscribe(_ => {
-                scene = SceneManager.GetActiveScene().name;
-                PerformTransition();
-                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            })
+            .Subscribe(_ => ReloadScene())
             .AddTo(this);
     }
 
+    public void ReloadScene() {
+        scene = SceneManager.GetActiveScene().name;
+        PerformTransition();
+    }
     public void PerformTransition() {
         Transition.LoadLevel(scene, duration, color);
     }
